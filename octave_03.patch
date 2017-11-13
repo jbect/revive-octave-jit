@@ -1,0 +1,22 @@
+# HG changeset patch
+# User Julien Bect <jbect@users.sourceforge.net>
+# Date 1508332708 -7200
+#      Wed Oct 18 15:18:28 2017 +0200
+# Node ID a47e758f233dc130af6c1694661207497fb82e98
+# Parent  be9a78bf67f340ea21ebf6e3e6941ade876a8229
+pt-loop.cc: Add missing header pt-jit.h
+
+* libinterp/parse-tree/pt-loop.cc: Add missing header pt-jit.h, which is needed
+  for the definition of jit_info.
+
+diff -r be9a78bf67f3 -r a47e758f233d libinterp/parse-tree/pt-loop.h
+--- a/libinterp/parse-tree/pt-loop.h	Wed Nov 01 08:21:13 2017 +0100
++++ b/libinterp/parse-tree/pt-loop.h	Wed Oct 18 15:18:28 2017 +0200
+@@ -30,6 +30,7 @@
+ #include "pt-cmd.h"
+ #include "pt-walk.h"
+ #include "symtab.h"
++#include "pt-jit.h"
+ 
+ class jit_info;
+ 

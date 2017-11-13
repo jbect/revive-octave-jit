@@ -1,0 +1,47 @@
+# HG changeset patch
+# User Julien Bect <jbect@users.sourceforge.net>
+# Date 1500828978 -7200
+#      Sun Jul 23 18:56:18 2017 +0200
+# Node ID 9f83200ad6f8b4018421416b75473df2b2880980
+# Parent  0ba792ef8ced457256b233afb8f3428118774041
+jit: pt-jit.cc: Add type argument to CreateConstInBoundsGEP1_32 (LLVM >= 3.7)
+
+* libinterp/corefcn/pt-jit.cc: Add type argument to CreateConstInBoundsGEP1_32,
+  as needed in LLVM >= 3.7.  FIXME: autoconf.
+
+diff -r 0ba792ef8ced -r 9f83200ad6f8 libinterp/parse-tree/pt-jit.cc
+--- a/libinterp/parse-tree/pt-jit.cc	Sat Jul 22 13:43:43 2017 +0200
++++ b/libinterp/parse-tree/pt-jit.cc	Sun Jul 23 18:56:18 2017 +0200
+@@ -1318,10 +1318,9 @@
+ 
+     // argument is an array of octave_base_value*, or octave_base_value**
+     llvm::Type *arg_type = any->to_llvm (); // this is octave_base_value*
+-    arg_type = arg_type->getPointerTo ();
+     llvm::FunctionType *ft;
+-    ft = llvm::FunctionType::get (llvm::Type::getVoidTy (context), arg_type,
+-                                  false);
++    ft = llvm::FunctionType::get (llvm::Type::getVoidTy (context),
++                                  arg_type->getPointerTo (), false);
+     function = llvm::Function::Create (ft, llvm::Function::ExternalLinkage,
+                                        "foobar", module);
+ 
+@@ -1333,7 +1332,8 @@
+         llvm::Value *arg = &*(function->arg_begin ());
+         for (size_t i = 0; i < argument_vec.size (); ++i)
+           {
+-            llvm::Value *loaded_arg = builder.CreateConstInBoundsGEP1_32 (arg, i);
++            // llvm::Value *loaded_arg = builder.CreateConstInBoundsGEP1_32 (arg, i);         // LLVM <= 3.6
++            llvm::Value *loaded_arg = builder.CreateConstInBoundsGEP1_32 (arg_type, arg, i);  // LLVM >= 3.7
+             arguments[argument_vec[i].first] = loaded_arg;
+           }
+ 
+@@ -2262,7 +2262,8 @@
+         for (size_t i = 0; i < nargs; ++i)
+           {
+             llvm::Value *arg;
+-            arg = builder.CreateConstInBoundsGEP1_32 (wrapper_arg, i);
++            // arg = builder.CreateConstInBoundsGEP1_32 (wrapper_arg, i);                  // LLVM <= 3.6
++            arg = builder.CreateConstInBoundsGEP1_32 (any_t->to_llvm (), wrapper_arg, i);  // LLVM >= 3.7
+             arg = builder.CreateLoad (arg);
+ 
+             jit_type *arg_type = argument_types[i];

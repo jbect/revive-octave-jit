@@ -1,0 +1,28 @@
+# HG changeset patch
+# User Julien Bect <jbect@users.sourceforge.net>
+# Date 1500723823 -7200
+#      Sat Jul 22 13:43:43 2017 +0200
+# Node ID 0ba792ef8ced457256b233afb8f3428118774041
+# Parent  688e6041d332a44746fa2c963a076d91d1cdb239
+jit: jit-typeinfo.cc: Do not use assignment with llvm::Twine objects
+
+* libinterp/corefcn/jit-typeinfo.cc: Do not use assignment with llvm::Twine
+  objects.  Such assignments were allowed in LLVM 3.4 but have been disallowed
+  since LLVM 3.5.
+
+diff -r 688e6041d332 -r 0ba792ef8ced libinterp/parse-tree/jit-typeinfo.cc
+--- a/libinterp/parse-tree/jit-typeinfo.cc	Fri Jul 21 07:32:44 2017 +0200
++++ b/libinterp/parse-tree/jit-typeinfo.cc	Sat Jul 22 13:43:43 2017 +0200
+@@ -1176,9 +1176,9 @@
+ 
+     for (int op = 0; op < octave_value::num_binary_ops; ++op)
+       {
+-        llvm::Twine fn_name ("octave_jit_binary_any_any_");
+-        fn_name = fn_name + llvm::Twine (op);
+-
++        const llvm::Twine &fn_name =
++          "octave_jit_binary_any_any_" + llvm::Twine (op);
++ 
+         fn = create_internal (fn_name, any, any, any);
+         fn.mark_can_error ();
+         llvm::BasicBlock *block = fn.new_block ();

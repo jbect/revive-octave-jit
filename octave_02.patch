@@ -1,0 +1,35 @@
+# HG changeset patch
+# User Julien Bect <jbect@users.sourceforge.net>
+# Date 1509520873 -3600
+#      Wed Nov 01 08:21:13 2017 +0100
+# Node ID be9a78bf67f340ea21ebf6e3e6941ade876a8229
+# Parent  9de5a26d323ce7ebdf5f9a69436d44eebce77c0e
+libinterp/parse-tree/module.mk: Add LLVM flags to libparse_tree_la
+
+* libinterp/parse-tree/module.mk: Add LLVM flags to libparse_tree_la
+
+diff -r 9de5a26d323c -r be9a78bf67f3 libinterp/parse-tree/module.mk
+--- a/libinterp/parse-tree/module.mk	Tue Oct 17 21:35:23 2017 +0200
++++ b/libinterp/parse-tree/module.mk	Wed Nov 01 08:21:13 2017 +0100
+@@ -111,11 +111,18 @@
+ 
+ %canon_reldir%_libparse_tree_la_SOURCES = $(PARSE_TREE_SRC)
+ 
+-%canon_reldir%_libparse_tree_la_CPPFLAGS = $(libinterp_liboctinterp_la_CPPFLAGS)
++%canon_reldir%_libparse_tree_la_CPPFLAGS = \
++  $(libinterp_liboctinterp_la_CPPFLAGS) \
++  $(LLVM_CPPFLAGS)
+ 
+-%canon_reldir%_libparse_tree_la_CFLAGS = $(AM_CFLAGS) $(WARN_CFLAGS)
++%canon_reldir%_libparse_tree_la_CFLAGS = \
++  $(AM_CFLAGS) \
++  $(WARN_CFLAGS)
+ 
+-%canon_reldir%_libparse_tree_la_CXXFLAGS = $(AM_CXXFLAGS) $(WARN_CXXFLAGS)
++%canon_reldir%_libparse_tree_la_CXXFLAGS = \
++  $(AM_CXXFLAGS) \
++  $(WARN_CXXFLAGS) \
++  $(LLVM_CXXFLAGS)
+ 
+ libinterp_EXTRA_DIST += \
+   %reldir%/oct-parse.in.yy \

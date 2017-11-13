@@ -1,0 +1,23 @@
+# HG changeset patch
+# User Julien Bect <jbect@users.sourceforge.net>
+# Date 1508268923 -7200
+#      Tue Oct 17 21:35:23 2017 +0200
+# Node ID 9de5a26d323ce7ebdf5f9a69436d44eebce77c0e
+# Parent  b8cb5a05955e2df0488cc14710faee5a6ff2a5b4
+pt-jit.cc: Fix syntax error introduced by cset 5cb3a2bb5e1e
+
+* libinterp/parse-tree/pt-jit.cc: Fix syntax error introduced
+  by cset 5cb3a2bb5e1e
+
+diff -r b8cb5a05955e -r 9de5a26d323c libinterp/parse-tree/pt-jit.cc
+--- a/libinterp/parse-tree/pt-jit.cc	Fri Nov 10 14:54:36 2017 -0500
++++ b/libinterp/parse-tree/pt-jit.cc	Tue Oct 17 21:35:23 2017 +0200
+@@ -2412,7 +2412,7 @@
+ 
+       // do not store for loop bounds temporary
+       if (name.size () && name[0] != '#')
+-        symtab::assign (arguments[i].first, real_arguments[i]);
++        symtab.assign (arguments[i].first, real_arguments[i]);
+     }
+ 
+   octave_quit ();

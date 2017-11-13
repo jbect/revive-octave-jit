@@ -1,0 +1,40 @@
+# HG changeset patch
+# User Julien Bect <jbect@users.sourceforge.net>
+# Date 1500897264 -7200
+#      Mon Jul 24 13:54:24 2017 +0200
+# Node ID 67f5fe07e31f2d50e3a21383b7e881d9dd31d63b
+# Parent  9f83200ad6f8b4018421416b75473df2b2880980
+jit: pt-jit.cc: Fix llvm::raw_fd_ostream syntax
+
+* libinterp/corefcn/pt-jit.cc: Fix llvm::raw_fd_ostream syntax for use with LLVM
+  3.6 and later.  FIXME: Check final arg.  FIXME: autoconf.
+
+diff -r 9f83200ad6f8 -r 67f5fe07e31f libinterp/parse-tree/pt-jit.cc
+--- a/libinterp/parse-tree/pt-jit.cc	Sun Jul 23 18:56:18 2017 +0200
++++ b/libinterp/parse-tree/pt-jit.cc	Mon Jul 24 13:54:24 2017 +0200
+@@ -2187,14 +2187,17 @@
+ 
+     if (Vdebug_jit)
+       {
+-        std::string error;
+-#if defined (RAW_FD_OSTREAM_ARG_IS_LLVM_SYS_FS)
+-        llvm::raw_fd_ostream fout ("test.bc", error,
+-                                   llvm::sys::fs::F_Binary);
+-#else
+-        llvm::raw_fd_ostream fout ("test.bc", error,
+-                                   llvm::raw_fd_ostream::F_Binary);
+-#endif
++        // This should be OK in LLVM 3.6 -- 3.8 (and later ?)
++        std::error_code ec;
++        llvm::raw_fd_ostream fout ("test.bc", ec, llvm::sys::fs::F_None);
++
++        //      std::string error;
++        //#if defined (RAW_FD_OSTREAM_ARG_IS_LLVM_SYS_FS)
++        //      llvm::raw_fd_ostream fout ("test.bc", error, llvm::sys::fs::F_Binary);
++        //#else
++        //      llvm::raw_fd_ostream fout ("test.bc", error, llvm::raw_fd_ostream::F_Binary);
++        //#endif
++
+         llvm::WriteBitcodeToFile (module, fout);
+       }
+   }
