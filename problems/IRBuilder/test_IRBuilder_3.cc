@@ -1,8 +1,8 @@
-// This works with LLVM 3.9 but not with LLVM 3.8
+// This works in LLVM 3.8 but not in LLVM 3.9
 
 /*
    g++ -I`llvm-config --includedir` -L`llvm-config --libdir` \
-       test_IRBuilder_2.cc                                   \
+       test_IRBuilder_3.cc                                   \
        `llvm-config --libs` `llvm-config --system-libs`
 */
 
@@ -14,7 +14,7 @@ using namespace llvm;
 int main ()
 {
   LLVMContext c;
-  IRBuilder<ConstantFolder,IRBuilderDefaultInserter>  irb (c);
+  IRBuilder<true, ConstantFolder, IRBuilderDefaultInserter<true> >  irb (c);
 
   return 0;
 }
