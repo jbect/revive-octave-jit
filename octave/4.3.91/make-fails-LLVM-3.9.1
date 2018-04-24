@@ -1,0 +1,699 @@
+  GEN      oct-conf-post.h
+config.status: creating oct-conf-post.h-tmp
+config.status: executing oct-conf-post.h commands
+  GEN      build-aux/subst-default-vals.sh
+config.status: creating build-aux/subst-default-vals.sh-tmp
+config.status: executing build-aux/subst-default-vals.sh commands
+  GEN      libinterp/corefcn/mk-mxarray-h.sh
+config.status: creating libinterp/corefcn/mk-mxarray-h.sh-tmp
+config.status: executing libinterp/corefcn/mk-mxarray-h.sh commands
+  GEN      libinterp/mk-version-h.sh
+config.status: creating libinterp/mk-version-h.sh-tmp
+config.status: executing libinterp/mk-version-h.sh commands
+  GEN      octave-config.h
+  GEN      build-aux/subst-script-vals.sh
+config.status: creating build-aux/subst-script-vals.sh-tmp
+config.status: executing build-aux/subst-script-vals.sh commands
+make  check-recursive
+make[1] : on entre dans le répertoire « /home/bect/.local/src/octave »
+Making check in libgnu
+make[2] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+make  check-recursive
+make[3] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+make[4] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+make[4]: rien à faire pour « check-am ».
+make[4] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+make[3] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+make[2] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+make[2] : on entre dans le répertoire « /home/bect/.local/src/octave »
+  GEN      oct-conf-post.h
+config.status: creating oct-conf-post.h-tmp
+config.status: executing oct-conf-post.h commands
+  GEN      octave-config.h
+  GEN      libinterp/mk-version-h.sh
+config.status: creating libinterp/mk-version-h.sh-tmp
+config.status: executing libinterp/mk-version-h.sh commands
+  GEN      libinterp/corefcn/mk-mxarray-h.sh
+config.status: creating libinterp/corefcn/mk-mxarray-h.sh-tmp
+config.status: executing libinterp/corefcn/mk-mxarray-h.sh commands
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-jit-typeinfo.lo
+In file included from libinterp/parse-tree/jit-typeinfo.h:36:0,
+                 from libinterp/parse-tree/jit-typeinfo.cc:67:
+libinterp/parse-tree/jit-util.h:74:9: error: ‘llvm::IRBuilderDefaultInserter’ is not a template
+   class IRBuilderDefaultInserter;
+         ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libinterp/parse-tree/jit-typeinfo.cc:60:0:
+/home/bect/.local/include/llvm/IR/IRBuilder.h:61:7: note: previous declaration here
+ class IRBuilderDefaultInserter {
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libinterp/parse-tree/jit-typeinfo.h:36:0,
+                 from libinterp/parse-tree/jit-typeinfo.cc:67:
+libinterp/parse-tree/jit-util.h:77:9: error: redeclared with 3 template parameters
+   class IRBuilder;
+         ^~~~~~~~~
+In file included from libinterp/parse-tree/jit-typeinfo.cc:60:0:
+/home/bect/.local/include/llvm/IR/IRBuilder.h:566:7: note: previous declaration ‘template<class T, class Inserter> class llvm::IRBuilder’ used 2 template parameters
+ class IRBuilder : public IRBuilderBase, public Inserter {
+       ^~~~~~~~~
+In file included from libinterp/parse-tree/jit-typeinfo.h:36:0,
+                 from libinterp/parse-tree/jit-typeinfo.cc:67:
+libinterp/parse-tree/jit-util.h:79:43: error: ‘llvm::IRBuilderDefaultInserter’ is not a template
+   typedef IRBuilder<true, ConstantFolder, IRBuilderDefaultInserter<true>>
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-util.h:79:72: error: wrong number of template arguments (3, should be at least 0)
+   typedef IRBuilder<true, ConstantFolder, IRBuilderDefaultInserter<true>>
+                                                                        ^~
+In file included from libinterp/parse-tree/jit-typeinfo.cc:60:0:
+/home/bect/.local/include/llvm/IR/IRBuilder.h:566:7: note: provided for ‘template<class T, class Inserter> class llvm::IRBuilder’
+ class IRBuilder : public IRBuilderBase, public Inserter {
+       ^~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:79:39: error: ‘getGlobalContext’ is not a member of ‘llvm’
+   static llvm::LLVMContext& context = llvm::getGlobalContext ();
+                                       ^~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, const std::vector<llvm::Value*, std::allocator<llvm::Value*> >&) const’:
+libinterp/parse-tree/jit-typeinfo.cc:687:46: error: request for member ‘GetInsertBlock’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::BasicBlock *insert_block = builder.GetInsertBlock ();
+                                              ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:713:21: error: request for member ‘CreateStore’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+             builder.CreateStore (arg, alloca);
+                     ^~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:720:40: error: request for member ‘CreateCall’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::CallInst *callinst = builder.CreateCall (m_llvm_function, llvm_args);
+                                        ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:733:23: error: request for member ‘CreateLoad’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+         ret = builder.CreateLoad (sret_mem);
+                       ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_function::argument(llvm::IRBuilderD&, size_t) const’:
+libinterp/parse-tree/jit-typeinfo.cc:761:22: error: request for member ‘CreateLoad’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       return builder.CreateLoad (&*iter);
+                      ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘void octave::jit_function::do_return(llvm::IRBuilderD&, llvm::Value*, bool)’:
+libinterp/parse-tree/jit-typeinfo.cc:780:21: error: request for member ‘CreateStore’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+             builder.CreateStore (rval, &*(m_llvm_function->arg_begin ()));
+                     ^~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:781:21: error: request for member ‘CreateRetVoid’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+             builder.CreateRetVoid ();
+                     ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:784:19: error: request for member ‘CreateRet’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+           builder.CreateRet (rval);
+                   ^~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:787:15: error: request for member ‘CreateRetVoid’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       builder.CreateRetVoid ();
+               ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_index_operation::create_arg_array(llvm::IRBuilderD&, const octave::jit_function&, size_t, size_t) const’:
+libinterp/parse-tree/jit-typeinfo.cc:978:25: error: request for member ‘CreateInsertValue’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+         array = builder.CreateInsertValue (array, idx, i - start_idx);
+                         ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:981:38: error: request for member ‘CreateAlloca’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *array_mem = builder.CreateAlloca (array_t);
+                                      ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:982:13: error: request for member ‘CreateStore’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     builder.CreateStore (array, array_mem);
+             ^~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:983:20: error: request for member ‘CreateBitCast’ in ‘builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return builder.CreateBitCast (array_mem, scalar_t->getPointerTo ());
+                    ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘virtual octave::jit_function* octave::jit_paren_subsref::generate_matrix(const signature_vec&) const’:
+libinterp/parse-tree/jit-typeinfo.cc:1014:74: error: no matching function for call to ‘octave::jit_paren_subsref::create_arg_array(llvm::IRBuilder<>&, octave::jit_function&, int, std::vector<octave::jit_type*>::size_type) const’
+     llvm::Value *array = create_arg_array (builder, *fn, 1, types.size ());
+                                                                          ^
+libinterp/parse-tree/jit-typeinfo.cc:966:3: note: candidate: llvm::Value* octave::jit_index_operation::create_arg_array(llvm::IRBuilderD&, const octave::jit_function&, size_t, size_t) const
+   jit_index_operation::create_arg_array (llvm::IRBuilderD& builder,
+   ^~~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:966:3: note:   no known conversion for argument 1 from ‘llvm::IRBuilder<>’ to ‘llvm::IRBuilderD& {aka int&}’
+libinterp/parse-tree/jit-typeinfo.cc:1017:48: error: no matching function for call to ‘octave::jit_function::argument(llvm::IRBuilder<>&, int)’
+     llvm::Value *mat = fn->argument (builder, 0);
+                                                ^
+libinterp/parse-tree/jit-typeinfo.cc:747:3: note: candidate: llvm::Value* octave::jit_function::argument(llvm::IRBuilderD&, size_t) const
+   jit_function::argument (llvm::IRBuilderD& builder, size_t idx) const
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:747:3: note:   no known conversion for argument 1 from ‘llvm::IRBuilder<>’ to ‘llvm::IRBuilderD& {aka int&}’
+libinterp/parse-tree/jit-typeinfo.cc:1018:72: error: no matching function for call to ‘octave::jit_function::call(llvm::IRBuilder<>&, llvm::Value*&, llvm::Value*&, llvm::Value*&)’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem);
+                                                                        ^
+libinterp/parse-tree/jit-typeinfo.cc:677:3: note: candidate: llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, const std::vector<llvm::Value*, std::allocator<llvm::Value*> >&) const
+   jit_function::call (llvm::IRBuilderD& builder,
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:677:3: note:   candidate expects 2 arguments, 4 provided
+libinterp/parse-tree/jit-typeinfo.cc:662:3: note: candidate: llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, const std::vector<octave::jit_value*>&) const
+   jit_function::call (llvm::IRBuilderD& builder,
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:662:3: note:   candidate expects 2 arguments, 4 provided
+In file included from libinterp/parse-tree/jit-typeinfo.cc:67:0:
+libinterp/parse-tree/jit-typeinfo.h:277:19: note: candidate: template<class ... Args> llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, octave::jit_function::arg_vec&, llvm::Value*, Args ...) const
+     llvm::Value * call (llvm::IRBuilderD& builder, arg_vec& in_args,
+                   ^~~~
+libinterp/parse-tree/jit-typeinfo.h:277:19: note:   template argument deduction/substitution failed:
+libinterp/parse-tree/jit-typeinfo.cc:1018:72: note:   cannot convert ‘builder’ (type ‘llvm::IRBuilder<>’) to type ‘llvm::IRBuilderD& {aka int&}’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem);
+                                                                        ^
+In file included from libinterp/parse-tree/jit-typeinfo.cc:67:0:
+libinterp/parse-tree/jit-typeinfo.h:285:19: note: candidate: template<class T, class ... Args> llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, octave::jit_function::arg_vec&, T*, Args ...) const
+     llvm::Value * call (llvm::IRBuilderD& builder, arg_vec& in_args,
+                   ^~~~
+libinterp/parse-tree/jit-typeinfo.h:285:19: note:   template argument deduction/substitution failed:
+libinterp/parse-tree/jit-typeinfo.cc:1018:72: note:   cannot convert ‘builder’ (type ‘llvm::IRBuilder<>’) to type ‘llvm::IRBuilderD& {aka int&}’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem);
+                                                                        ^
+In file included from libinterp/parse-tree/jit-typeinfo.cc:67:0:
+libinterp/parse-tree/jit-typeinfo.h:293:19: note: candidate: template<class ... Args> llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, llvm::Value*, Args ...) const
+     llvm::Value * call (llvm::IRBuilderD& builder, llvm::Value * arg1,
+                   ^~~~
+libinterp/parse-tree/jit-typeinfo.h:293:19: note:   template argument deduction/substitution failed:
+libinterp/parse-tree/jit-typeinfo.cc:1018:72: note:   cannot convert ‘builder’ (type ‘llvm::IRBuilder<>’) to type ‘llvm::IRBuilderD& {aka int&}’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem);
+                                                                        ^
+In file included from libinterp/parse-tree/jit-typeinfo.cc:67:0:
+libinterp/parse-tree/jit-typeinfo.h:303:19: note: candidate: template<class T, class ... Args> llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, T*, Args ...) const
+     llvm::Value * call (llvm::IRBuilderD& builder, T * arg1,
+                   ^~~~
+libinterp/parse-tree/jit-typeinfo.h:303:19: note:   template argument deduction/substitution failed:
+libinterp/parse-tree/jit-typeinfo.cc:1018:72: note:   cannot convert ‘builder’ (type ‘llvm::IRBuilder<>’) to type ‘llvm::IRBuilderD& {aka int&}’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem);
+                                                                        ^
+libinterp/parse-tree/jit-typeinfo.cc:1019:32: error: no matching function for call to ‘octave::jit_function::do_return(llvm::IRBuilder<>&, llvm::Value*&)’
+     fn->do_return (builder, ret);
+                                ^
+libinterp/parse-tree/jit-typeinfo.cc:767:3: note: candidate: void octave::jit_function::do_return(llvm::IRBuilderD&, llvm::Value*, bool)
+   jit_function::do_return (llvm::IRBuilderD& builder, llvm::Value *rval,
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:767:3: note:   no known conversion for argument 1 from ‘llvm::IRBuilder<>’ to ‘llvm::IRBuilderD& {aka int&}’
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘virtual octave::jit_function* octave::jit_paren_subsasgn::generate_matrix(const signature_vec&) const’:
+libinterp/parse-tree/jit-typeinfo.cc:1067:78: error: no matching function for call to ‘octave::jit_paren_subsasgn::create_arg_array(llvm::IRBuilder<>&, octave::jit_function&, int, std::vector<octave::jit_type*>::size_type) const’
+     llvm::Value *array = create_arg_array (builder, *fn, 1, types.size () - 1);
+                                                                              ^
+libinterp/parse-tree/jit-typeinfo.cc:966:3: note: candidate: llvm::Value* octave::jit_index_operation::create_arg_array(llvm::IRBuilderD&, const octave::jit_function&, size_t, size_t) const
+   jit_index_operation::create_arg_array (llvm::IRBuilderD& builder,
+   ^~~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:966:3: note:   no known conversion for argument 1 from ‘llvm::IRBuilder<>’ to ‘llvm::IRBuilderD& {aka int&}’
+libinterp/parse-tree/jit-typeinfo.cc:1071:48: error: no matching function for call to ‘octave::jit_function::argument(llvm::IRBuilder<>&, int)’
+     llvm::Value *mat = fn->argument (builder, 0);
+                                                ^
+libinterp/parse-tree/jit-typeinfo.cc:747:3: note: candidate: llvm::Value* octave::jit_function::argument(llvm::IRBuilderD&, size_t) const
+   jit_function::argument (llvm::IRBuilderD& builder, size_t idx) const
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:747:3: note:   no known conversion for argument 1 from ‘llvm::IRBuilder<>’ to ‘llvm::IRBuilderD& {aka int&}’
+libinterp/parse-tree/jit-typeinfo.cc:1072:66: error: no matching function for call to ‘octave::jit_function::argument(llvm::IRBuilder<>&, std::vector<octave::jit_type*>::size_type)’
+     llvm::Value *value = fn->argument (builder, types.size () - 1);
+                                                                  ^
+libinterp/parse-tree/jit-typeinfo.cc:747:3: note: candidate: llvm::Value* octave::jit_function::argument(llvm::IRBuilderD&, size_t) const
+   jit_function::argument (llvm::IRBuilderD& builder, size_t idx) const
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:747:3: note:   no known conversion for argument 1 from ‘llvm::IRBuilder<>’ to ‘llvm::IRBuilderD& {aka int&}’
+libinterp/parse-tree/jit-typeinfo.cc:1073:79: error: no matching function for call to ‘octave::jit_function::call(llvm::IRBuilder<>&, llvm::Value*&, llvm::Value*&, llvm::Value*&, llvm::Value*&)’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem, value);
+                                                                               ^
+libinterp/parse-tree/jit-typeinfo.cc:677:3: note: candidate: llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, const std::vector<llvm::Value*, std::allocator<llvm::Value*> >&) const
+   jit_function::call (llvm::IRBuilderD& builder,
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:677:3: note:   candidate expects 2 arguments, 5 provided
+libinterp/parse-tree/jit-typeinfo.cc:662:3: note: candidate: llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, const std::vector<octave::jit_value*>&) const
+   jit_function::call (llvm::IRBuilderD& builder,
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:662:3: note:   candidate expects 2 arguments, 5 provided
+In file included from libinterp/parse-tree/jit-typeinfo.cc:67:0:
+libinterp/parse-tree/jit-typeinfo.h:277:19: note: candidate: template<class ... Args> llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, octave::jit_function::arg_vec&, llvm::Value*, Args ...) const
+     llvm::Value * call (llvm::IRBuilderD& builder, arg_vec& in_args,
+                   ^~~~
+libinterp/parse-tree/jit-typeinfo.h:277:19: note:   template argument deduction/substitution failed:
+libinterp/parse-tree/jit-typeinfo.cc:1073:79: note:   cannot convert ‘builder’ (type ‘llvm::IRBuilder<>’) to type ‘llvm::IRBuilderD& {aka int&}’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem, value);
+                                                                               ^
+In file included from libinterp/parse-tree/jit-typeinfo.cc:67:0:
+libinterp/parse-tree/jit-typeinfo.h:285:19: note: candidate: template<class T, class ... Args> llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, octave::jit_function::arg_vec&, T*, Args ...) const
+     llvm::Value * call (llvm::IRBuilderD& builder, arg_vec& in_args,
+                   ^~~~
+libinterp/parse-tree/jit-typeinfo.h:285:19: note:   template argument deduction/substitution failed:
+libinterp/parse-tree/jit-typeinfo.cc:1073:79: note:   cannot convert ‘builder’ (type ‘llvm::IRBuilder<>’) to type ‘llvm::IRBuilderD& {aka int&}’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem, value);
+                                                                               ^
+In file included from libinterp/parse-tree/jit-typeinfo.cc:67:0:
+libinterp/parse-tree/jit-typeinfo.h:293:19: note: candidate: template<class ... Args> llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, llvm::Value*, Args ...) const
+     llvm::Value * call (llvm::IRBuilderD& builder, llvm::Value * arg1,
+                   ^~~~
+libinterp/parse-tree/jit-typeinfo.h:293:19: note:   template argument deduction/substitution failed:
+libinterp/parse-tree/jit-typeinfo.cc:1073:79: note:   cannot convert ‘builder’ (type ‘llvm::IRBuilder<>’) to type ‘llvm::IRBuilderD& {aka int&}’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem, value);
+                                                                               ^
+In file included from libinterp/parse-tree/jit-typeinfo.cc:67:0:
+libinterp/parse-tree/jit-typeinfo.h:303:19: note: candidate: template<class T, class ... Args> llvm::Value* octave::jit_function::call(llvm::IRBuilderD&, T*, Args ...) const
+     llvm::Value * call (llvm::IRBuilderD& builder, T * arg1,
+                   ^~~~
+libinterp/parse-tree/jit-typeinfo.h:303:19: note:   template argument deduction/substitution failed:
+libinterp/parse-tree/jit-typeinfo.cc:1073:79: note:   cannot convert ‘builder’ (type ‘llvm::IRBuilder<>’) to type ‘llvm::IRBuilderD& {aka int&}’
+     llvm::Value *ret = m_paren_scalar->call (builder, mat, array, nelem, value);
+                                                                               ^
+libinterp/parse-tree/jit-typeinfo.cc:1074:32: error: no matching function for call to ‘octave::jit_function::do_return(llvm::IRBuilder<>&, llvm::Value*&)’
+     fn->do_return (builder, ret);
+                                ^
+libinterp/parse-tree/jit-typeinfo.cc:767:3: note: candidate: void octave::jit_function::do_return(llvm::IRBuilderD&, llvm::Value*, bool)
+   jit_function::do_return (llvm::IRBuilderD& builder, llvm::Value *rval,
+   ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:767:3: note:   no known conversion for argument 1 from ‘llvm::IRBuilder<>’ to ‘llvm::IRBuilderD& {aka int&}’
+libinterp/parse-tree/jit-typeinfo.cc: In constructor ‘octave::jit_typeinfo::jit_typeinfo()’:
+libinterp/parse-tree/jit-typeinfo.cc:1146:51: error: cannot convert ‘llvm::LLVMContext’ to ‘llvm::IRBuilderD {aka int}’ in initialization
+       m_builder_ptr (new llvm::IRBuilderD (context)),
+                                                   ^
+libinterp/parse-tree/jit-typeinfo.cc:1308:19: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+         m_builder.SetInsertPoint (block);
+                   ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1370:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1376:38: error: request for member ‘CreateFCmpUEQ’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *check = m_builder.CreateFCmpUEQ (zero,
+                                      ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1378:17: error: request for member ‘CreateCondBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateCondBr (check, warn_block, normal_block);
+                 ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1380:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (warn_block);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1382:17: error: request for member ‘CreateBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateBr (normal_block);
+                 ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1384:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (normal_block);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1385:36: error: request for member ‘CreateFDiv’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *ret = m_builder.CreateFDiv (fn.argument (m_builder, 0),
+                                    ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1409:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1413:23: error: request for member ‘CreateFAdd’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       val = m_builder.CreateFAdd (val, one);
+                       ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1420:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1424:23: error: request for member ‘CreateFSub’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       val = m_builder.CreateFSub (val, one);
+                       ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1431:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1435:23: error: request for member ‘CreateFMul’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       val = m_builder.CreateFMul (val, mone);
+                       ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1449:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1453:37: error: request for member ‘CreateFAdd’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *real = m_builder.CreateFAdd (complex_real (lhs),
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1455:37: error: request for member ‘CreateFAdd’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *imag = m_builder.CreateFAdd (complex_imag (lhs),
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1464:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1468:37: error: request for member ‘CreateFSub’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *real = m_builder.CreateFSub (complex_real (lhs),
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1470:37: error: request for member ‘CreateFSub’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *imag = m_builder.CreateFSub (complex_imag (lhs),
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1496:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1505:36: error: request for member ‘CreateFCmpUEQ’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *cmp = m_builder.CreateFCmpUEQ (complex_imag (rhs), fzero);
+                                    ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1506:17: error: request for member ‘CreateCondBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateCondBr (cmp, scalar_mul, complex_mul);
+                 ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1508:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (scalar_mul);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1510:24: error: request for member ‘CreateFMul’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       temp = m_builder.CreateFMul (lhs, temp);
+                        ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1513:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (complex_mul);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1514:37: error: request for member ‘CreateFMul’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       temp = complex_new (m_builder.CreateFMul (lhs, complex_real (rhs)),
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1515:37: error: request for member ‘CreateFMul’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+                           m_builder.CreateFMul (lhs, complex_imag (rhs)));
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1528:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1532:37: error: request for member ‘CreateFAdd’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *real = m_builder.CreateFAdd (lhs, complex_real (rhs));
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1543:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1547:37: error: request for member ‘CreateFSub’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *real = m_builder.CreateFSub (complex_real (lhs), rhs);
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1555:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1559:37: error: request for member ‘CreateFSub’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *real = m_builder.CreateFSub (lhs, complex_real (rhs));
+                                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1588:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1599:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1602:21: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+         = m_builder.CreateExtractValue (fn.argument (m_builder, 0), 3);
+                     ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1604:36: error: request for member ‘CreateICmpULT’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *ret = m_builder.CreateICmpULT (idx, nelem);
+                                    ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1613:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1616:37: error: request for member ‘CreateSIToFP’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *didx = m_builder.CreateSIToFP (idx, m_scalar_t);
+                                     ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1618:37: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *base = m_builder.CreateExtractValue (rng, 0);
+                                     ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1619:36: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *inc = m_builder.CreateExtractValue (rng, 2);
+                                    ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1621:36: error: request for member ‘CreateFMul’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *ret = m_builder.CreateFMul (didx, inc);
+                                    ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1622:23: error: request for member ‘CreateFAdd’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       ret = m_builder.CreateFAdd (base, ret);
+                       ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1636:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1641:38: error: request for member ‘CreateFCmpUNE’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *check = m_builder.CreateFCmpUNE (fn.argument (m_builder, 0),
+                                      ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1643:17: error: request for member ‘CreateCondBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateCondBr (check, error_block, normal_block);
+                 ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1645:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (error_block);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1647:17: error: request for member ‘CreateBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateBr (normal_block);
+                 ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1648:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (normal_block);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1651:36: error: request for member ‘CreateFCmpONE’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *ret = m_builder.CreateFCmpONE (fn.argument (m_builder, 0), zero);
+                                    ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1668:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1679:23: error: request for member ‘CreateInsertValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       rng = m_builder.CreateInsertValue (rng, base, 0);
+                       ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1680:23: error: request for member ‘CreateInsertValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       rng = m_builder.CreateInsertValue (rng, limit, 1);
+                       ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1681:23: error: request for member ‘CreateInsertValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       rng = m_builder.CreateInsertValue (rng, inc, 2);
+                       ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1682:23: error: request for member ‘CreateInsertValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       rng = m_builder.CreateInsertValue (rng, nelem, 3);
+                       ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1700:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1710:40: error: request for member ‘CreateFPToSI’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *int_idx = m_builder.CreateFPToSI (idx, m_index_t);
+                                        ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1711:42: error: request for member ‘CreateSIToFP’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *check_idx = m_builder.CreateSIToFP (int_idx, m_scalar_t);
+                                          ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1712:38: error: request for member ‘CreateFCmpUNE’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *cond0 = m_builder.CreateFCmpUNE (idx, check_idx);
+                                      ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1713:38: error: request for member ‘CreateICmpSLT’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *cond1 = m_builder.CreateICmpSLT (int_idx, one_idx);
+                                      ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1714:37: error: request for member ‘CreateOr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *cond = m_builder.CreateOr (cond0, cond1);
+                                     ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1719:17: error: request for member ‘CreateCondBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateCondBr (cond, conv_error, normal);
+                 ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1721:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (conv_error);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1723:17: error: request for member ‘CreateBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateBr (done);
+                 ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1725:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (normal);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1727:21: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+         = m_builder.CreateExtractValue (mat, llvm::ArrayRef<unsigned> (2));
+                     ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1728:24: error: request for member ‘CreateICmpSGT’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       cond = m_builder.CreateICmpSGT (int_idx, len);
+                        ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1732:17: error: request for member ‘CreateCondBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateCondBr (cond, bounds_error, success);
+                 ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1734:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (bounds_error);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1736:17: error: request for member ‘CreateBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateBr (done);
+                 ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1738:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (success);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1739:37: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *data = m_builder.CreateExtractValue (mat,
+                                     ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1741:36: error: request for member ‘CreateInBoundsGEP’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *gep = m_builder.CreateInBoundsGEP (data, int_idx);
+                                    ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1742:36: error: request for member ‘CreateLoad’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *ret = m_builder.CreateLoad (gep);
+                                    ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1743:17: error: request for member ‘CreateBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateBr (done);
+                 ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1745:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (done);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1748:17: error: request for member ‘Insert’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.Insert (merge);
+                 ^~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1764:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1773:40: error: request for member ‘CreateFPToSI’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *int_idx = m_builder.CreateFPToSI (idx, m_index_t);
+                                        ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1774:42: error: request for member ‘CreateSIToFP’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *check_idx = m_builder.CreateSIToFP (int_idx, m_scalar_t);
+                                          ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1775:38: error: request for member ‘CreateFCmpUNE’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *cond0 = m_builder.CreateFCmpUNE (idx, check_idx);
+                                      ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1776:38: error: request for member ‘CreateICmpSLT’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *cond1 = m_builder.CreateICmpSLT (int_idx, one_idx);
+                                      ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1777:37: error: request for member ‘CreateOr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *cond = m_builder.CreateOr (cond0, cond1);
+                                     ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1783:17: error: request for member ‘CreateCondBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateCondBr (cond, conv_error, normal);
+                 ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1784:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (conv_error);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1786:17: error: request for member ‘CreateBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateBr (done);
+                 ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1788:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (normal);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1789:36: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *len = m_builder.CreateExtractValue (mat, 2);
+                                    ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1790:25: error: request for member ‘CreateICmpSGT’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       cond0 = m_builder.CreateICmpSGT (int_idx, len);
+                         ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1792:39: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *rcount = m_builder.CreateExtractValue (mat, 0);
+                                       ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1793:26: error: request for member ‘CreateLoad’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       rcount = m_builder.CreateLoad (rcount);
+                          ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1794:25: error: request for member ‘CreateICmpSGT’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       cond1 = m_builder.CreateICmpSGT (rcount, one_int);
+                         ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1795:24: error: request for member ‘CreateOr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       cond = m_builder.CreateOr (cond0, cond1);
+                        ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1799:17: error: request for member ‘CreateCondBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateCondBr (cond, bounds_error, success);
+                 ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1802:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (bounds_error);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1805:17: error: request for member ‘CreateBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateBr (done);
+                 ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1807:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (success);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1809:21: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+         = m_builder.CreateExtractValue (mat, llvm::ArrayRef<unsigned> (1));
+                     ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1810:36: error: request for member ‘CreateInBoundsGEP’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *gep = m_builder.CreateInBoundsGEP (data, int_idx);
+                                    ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1811:17: error: request for member ‘CreateStore’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateStore (value, gep);
+                 ^~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1812:17: error: request for member ‘CreateBr’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.CreateBr (done);
+                 ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1814:17: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.SetInsertPoint (done);
+                 ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1817:17: error: request for member ‘Insert’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       m_builder.Insert (merge);
+                 ^~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1833:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1836:36: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       llvm::Value *ret = m_builder.CreateExtractValue (mat, 2);
+                                    ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1837:42: error: request for member ‘CreateSIToFP’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+       fn.do_return (m_builder, m_builder.CreateSIToFP (ret, m_scalar_t));
+                                          ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1897:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:1908:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘void octave::jit_typeinfo::add_binary_op(octave::jit_type*, int, int)’:
+libinterp/parse-tree/jit-typeinfo.cc:2078:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (block);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2082:34: error: request for member ‘CreateBinOp’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *ret = m_builder.CreateBinOp (temp, fn.argument (m_builder, 0),
+                                  ^~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘void octave::jit_typeinfo::add_binary_icmp(octave::jit_type*, int, int)’:
+libinterp/parse-tree/jit-typeinfo.cc:2098:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (block);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2101:34: error: request for member ‘CreateICmp’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *ret = m_builder.CreateICmp (temp, fn.argument (m_builder, 0),
+                                  ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘void octave::jit_typeinfo::add_binary_fcmp(octave::jit_type*, int, int)’:
+libinterp/parse-tree/jit-typeinfo.cc:2117:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (block);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2120:34: error: request for member ‘CreateFCmp’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *ret = m_builder.CreateFCmp (temp, fn.argument (m_builder, 0),
+                                  ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘octave::jit_function octave::jit_typeinfo::create_identity(octave::jit_type*)’:
+libinterp/parse-tree/jit-typeinfo.cc:2140:19: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+         m_builder.SetInsertPoint (body);
+                   ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_typeinfo::do_insert_error_check(llvm::IRBuilderD&)’:
+libinterp/parse-tree/jit-typeinfo.cc:2151:21: error: request for member ‘CreateLoad’ in ‘abuilder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return abuilder.CreateLoad (m_lerror_state);
+                     ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_typeinfo::do_insert_interrupt_check(llvm::IRBuilderD&)’:
+libinterp/parse-tree/jit-typeinfo.cc:2157:36: error: request for member ‘CreateLoad’ in ‘abuilder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::LoadInst *val = abuilder.CreateLoad (m_loctave_interrupt_state);
+                                    ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2159:21: error: request for member ‘CreateICmpSGT’ in ‘abuilder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return abuilder.CreateICmpSGT (val, abuilder.getInt32 (0));
+                     ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2159:50: error: request for member ‘getInt32’ in ‘abuilder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return abuilder.CreateICmpSGT (val, abuilder.getInt32 (0));
+                                                  ^~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘void octave::jit_typeinfo::register_intrinsic(const string&, size_t, octave::jit_type*, const std::vector<octave::jit_type*>&)’:
+libinterp/parse-tree/jit-typeinfo.cc:2199:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2205:34: error: request for member ‘CreateCall’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *ret = m_builder.CreateCall (ifun, fargs);
+                                  ^~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘void octave::jit_typeinfo::register_generic(const string&, octave::jit_type*, const std::vector<octave::jit_type*>&)’:
+libinterp/parse-tree/jit-typeinfo.cc:2235:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (block);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2245:27: error: request for member ‘CreateInsertValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+         array = m_builder.CreateInsertValue (array,
+                           ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2249:40: error: request for member ‘CreateAlloca’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *array_mem = m_builder.CreateAlloca (array_t);
+                                        ^~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2250:15: error: request for member ‘CreateStore’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.CreateStore (array, array_mem);
+               ^~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2251:23: error: request for member ‘CreateBitCast’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     array = m_builder.CreateBitCast (array_mem, m_any_t->getPointerTo ());
+                       ^~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘octave::jit_function octave::jit_typeinfo::mirror_binary(const octave::jit_function&)’:
+libinterp/parse-tree/jit-typeinfo.cc:2278:15: error: request for member ‘SetInsertPoint’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     m_builder.SetInsertPoint (body);
+               ^~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_typeinfo::do_pack_complex(llvm::IRBuilderD&, llvm::Value*) const’:
+libinterp/parse-tree/jit-typeinfo.cc:2292:29: error: request for member ‘CreateExtractValue’ in ‘bld’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *real = bld.CreateExtractValue (cplx, 0);
+                             ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2293:29: error: request for member ‘CreateExtractValue’ in ‘bld’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *imag = bld.CreateExtractValue (cplx, 1);
+                             ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2298:15: error: request for member ‘CreateInsertValue’ in ‘bld’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     ret = bld.CreateInsertValue (ret, real, re_idx);
+               ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2299:16: error: request for member ‘CreateInsertValue’ in ‘bld’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return bld.CreateInsertValue (ret, imag, im_idx);
+                ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In static member function ‘static llvm::Value* octave::jit_typeinfo::unpack_complex(llvm::IRBuilderD&, llvm::Value*)’:
+libinterp/parse-tree/jit-typeinfo.cc:2309:29: error: request for member ‘CreateExtractValue’ in ‘bld’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *real = bld.CreateExtractValue (result, re_idx);
+                             ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2310:29: error: request for member ‘CreateExtractValue’ in ‘bld’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     llvm::Value *imag = bld.CreateExtractValue (result, im_idx);
+                             ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2313:15: error: request for member ‘CreateInsertValue’ in ‘bld’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     ret = bld.CreateInsertValue (ret, real, 0);
+               ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc:2314:16: error: request for member ‘CreateInsertValue’ in ‘bld’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return bld.CreateInsertValue (ret, imag, 1);
+                ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_typeinfo::complex_real(llvm::Value*)’:
+libinterp/parse-tree/jit-typeinfo.cc:2320:22: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return m_builder.CreateExtractValue (cx, 0);
+                      ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_typeinfo::complex_real(llvm::Value*, llvm::Value*)’:
+libinterp/parse-tree/jit-typeinfo.cc:2326:22: error: request for member ‘CreateInsertValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return m_builder.CreateInsertValue (cx, real, 0);
+                      ^~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_typeinfo::complex_imag(llvm::Value*)’:
+libinterp/parse-tree/jit-typeinfo.cc:2332:22: error: request for member ‘CreateExtractValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return m_builder.CreateExtractValue (cx, 1);
+                      ^~~~~~~~~~~~~~~~~~
+libinterp/parse-tree/jit-typeinfo.cc: In member function ‘llvm::Value* octave::jit_typeinfo::complex_imag(llvm::Value*, llvm::Value*)’:
+libinterp/parse-tree/jit-typeinfo.cc:2338:22: error: request for member ‘CreateInsertValue’ in ‘((octave::jit_typeinfo*)this)->octave::jit_typeinfo::m_builder’, which is of non-class type ‘llvm::IRBuilderD {aka int}’
+     return m_builder.CreateInsertValue (cx, imag, 1);
+                      ^~~~~~~~~~~~~~~~~
+Makefile:20029 : la recette pour la cible « libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-jit-typeinfo.lo » a échouée
+make[2]: *** [libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-jit-typeinfo.lo] Erreur 1
+make[2] : on quitte le répertoire « /home/bect/.local/src/octave »
+Makefile:26457 : la recette pour la cible « check-recursive » a échouée
+make[1]: *** [check-recursive] Erreur 1
+make[1] : on quitte le répertoire « /home/bect/.local/src/octave »
+Makefile:26748 : la recette pour la cible « check » a échouée
+make: *** [check] Erreur 2
