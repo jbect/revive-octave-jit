@@ -1,0 +1,3674 @@
+./bootstrap: Bootstrapping from checked-out octave sources...
+running: libtoolize --install --copy
+libtoolize:   error: 'build-aux/config.guess' is newer: use '--force' to overwrite
+libtoolize:   error: 'build-aux/config.sub' is newer: use '--force' to overwrite
+libtoolize:   error: 'build-aux/install-sh' is newer: use '--force' to overwrite
+libtoolize: Consider adding '-I m4' to ACLOCAL_AMFLAGS in Makefile.am.
+./bootstrap: gnulib/gnulib-tool  --import --no-changelog --aux-dir build-aux --doc-base doc --lib libgnu --m4-base m4/ --source-base libgnu/ --tests-base tests --local-dir gl --libtool --import ...
+Module list with included dependencies (indented):
+    absolute-header
+    alloca
+    alloca-opt
+    allocator
+  areadlink
+    areadlink-with-size
+    assure
+    at-internal
+  base64
+    bitrotate
+    builtin-expect
+    c-ctype
+    c-strcase
+    c-strcaseeq
+    c99
+  canonicalize
+    careadlinkat
+  chdir
+    chdir-long
+  clock-time
+    cloexec
+  close
+  closedir
+    configmake
+  crypto/md2
+  crypto/md4
+  crypto/md5
+  crypto/sha1
+  crypto/sha256
+  crypto/sha512
+    d-ino
+    d-type
+    dirent
+    dirfd
+    dirname
+    dirname-lgpl
+    dosname
+    double-slash-root
+    dup
+  dup2
+    environ
+    errno
+    error
+    exitfail
+    extensions
+    extern-inline
+    fchdir
+  fcntl
+    fcntl-h
+    fd-hook
+    fd-safer-flag
+    fdopendir
+    file-set
+  filemode
+    filename
+    filenamecat-lgpl
+    flexmember
+    float
+  fnmatch
+    fpieee
+  fpucw
+  frexp
+  frexpf
+  fseek
+    fseeko
+    fstat
+    fstatat
+  ftell
+    ftello
+  ftruncate
+  getcwd
+    getcwd-lgpl
+    getdtablesize
+  gethostname
+    getlogin_r
+  getopt-gnu
+    getopt-posix
+    getprogname
+  getrusage
+    gettext-h
+  gettimeofday
+  glob
+    gperf
+    hard-locale
+    hash
+    hash-pjw
+    hash-triple
+    havelib
+    host-cpu-c-abi
+    iconv
+    iconv-h
+    iconv_open
+    include_next
+    inline
+    intprops
+  isatty
+    isnand-nolibm
+  largefile
+    libc-config
+    limits-h
+  link
+  localcharset
+    localtime-buffer
+    lock
+    lseek
+  lstat
+  malloc-gnu
+    malloc-posix
+    malloca
+    math
+    mbrtowc
+    mbsinit
+    mbsrtowcs
+    memchr
+    mempcpy
+    memrchr
+    minmax
+  mkdir
+  mkfifo
+  mkostemp
+  mktime
+    mktime-internal
+    msvc-inval
+    msvc-nothrow
+    multiarch
+  nanosleep
+    nocrash
+  nproc
+    nstrftime
+  open
+    openat
+    openat-die
+    openat-h
+  opendir
+    pathmax
+  pipe-posix
+  progname
+  putenv
+    raise
+  readdir
+    readlink
+    realloc-posix
+  rewinddir
+  rmdir
+    same
+    same-inode
+    save-cwd
+    scratch_buffer
+    secure_getenv
+  select
+    setenv
+  sigaction
+  signal
+    signal-h
+  sigprocmask
+    size_max
+    snippet/_Noreturn
+    snippet/arg-nonnull
+    snippet/c++defs
+    snippet/unused-parameter
+    snippet/warn-on-use
+    snprintf
+    socketlib
+    sockets
+    socklen
+    ssize_t
+  stat
+    stat-time
+  std-gnu11
+    stdalign
+    stdbool
+  stddef
+    stdint
+  stdio
+    stdlib
+    strcase
+  strdup-posix
+    streq
+  strerror
+    strerror-override
+  strftime
+    striconveh
+    striconveha
+    string
+    strings
+    strndup
+    strnlen
+    strnlen1
+  strptime
+  strsignal
+  symlink
+    sys_resource
+    sys_select
+    sys_socket
+  sys_stat
+  sys_time
+  sys_times
+    sys_types
+    sys_uio
+    sys_utsname
+  sys_wait
+  tempname
+    threadlib
+    time
+    time_r
+    time_rz
+    timegm
+    tls
+    tmpdir
+  tmpfile
+    tzset
+    u64
+  uname
+    uniconv/base
+  uniconv/u8-conv-from-enc
+  uniconv/u8-conv-to-enc
+  unistd
+    unistd-safer
+    unistr/base
+    unistr/u8-check
+    unistr/u8-mblen
+    unistr/u8-mbtouc
+    unistr/u8-mbtouc-unsafe
+    unistr/u8-mbtoucr
+    unistr/u8-prev
+    unistr/u8-uctomb
+    unitypes
+  unlink
+  unsetenv
+    vasnprintf
+  vasprintf
+    verify
+  waitpid
+    wchar
+    wctype-h
+    xalloc
+    xalloc-die
+    xalloc-oversized
+    xgetcwd
+    xsize
+    xstrndup
+Notice from module error:
+  If you are using GNU gettext version 0.16.1 or older, add the following options
+  to XGETTEXT_OPTIONS in your po/Makevars:
+    --flag=error:3:c-format --flag=error_at_line:5:c-format
+Notice from module localcharset:
+  If your package's tests make use of the locale_charset() function directly or
+  indirectly, you may need to define the CHARSETALIASDIR environment variable,
+  so that "make check" works before "make install". In Makefile.am syntax:
+  TESTS_ENVIRONMENT += @LOCALCHARSET_TESTS_ENVIRONMENT@
+Notice from module strftime:
+  This module is obsolete. Use module 'nstrftime' instead.
+Notice from module vasprintf:
+  If you are using GNU gettext version 0.16.1 or older, add the following options
+  to XGETTEXT_OPTIONS in your po/Makevars:
+    --flag=asprintf:2:c-format --flag=vasprintf:2:c-format
+File list:
+  build-aux/config.rpath
+  lib/_Noreturn.h
+  lib/alloca.c
+  lib/alloca.in.h
+  lib/allocator.c
+  lib/allocator.h
+  lib/areadlink-with-size.c
+  lib/areadlink.c
+  lib/areadlink.h
+  lib/arg-nonnull.h
+  lib/asnprintf.c
+  lib/asprintf.c
+  lib/assure.h
+  lib/at-func.c
+  lib/base64.c
+  lib/base64.h
+  lib/basename-lgpl.c
+  lib/basename.c
+  lib/bitrotate.c
+  lib/bitrotate.h
+  lib/c++defs.h
+  lib/c-ctype.c
+  lib/c-ctype.h
+  lib/c-strcase.h
+  lib/c-strcasecmp.c
+  lib/c-strcaseeq.h
+  lib/c-strncasecmp.c
+  lib/canonicalize.c
+  lib/canonicalize.h
+  lib/careadlinkat.c
+  lib/careadlinkat.h
+  lib/cdefs.h
+  lib/chdir-long.c
+  lib/chdir-long.h
+  lib/cloexec.c
+  lib/cloexec.h
+  lib/close.c
+  lib/closedir.c
+  lib/config.charset
+  lib/dirent-private.h
+  lib/dirent.in.h
+  lib/dirfd.c
+  lib/dirname-lgpl.c
+  lib/dirname.c
+  lib/dirname.h
+  lib/dosname.h
+  lib/dup-safer-flag.c
+  lib/dup-safer.c
+  lib/dup.c
+  lib/dup2.c
+  lib/errno.in.h
+  lib/error.c
+  lib/error.h
+  lib/exitfail.c
+  lib/exitfail.h
+  lib/fchdir.c
+  lib/fcntl.c
+  lib/fcntl.in.h
+  lib/fd-hook.c
+  lib/fd-hook.h
+  lib/fd-safer-flag.c
+  lib/fd-safer.c
+  lib/fdopendir.c
+  lib/file-set.c
+  lib/file-set.h
+  lib/filemode.c
+  lib/filemode.h
+  lib/filename.h
+  lib/filenamecat-lgpl.c
+  lib/filenamecat.h
+  lib/flexmember.h
+  lib/float+.h
+  lib/float.c
+  lib/float.in.h
+  lib/fnmatch.c
+  lib/fnmatch.in.h
+  lib/fnmatch_loop.c
+  lib/fpucw.h
+  lib/frexp.c
+  lib/frexpf.c
+  lib/fseek.c
+  lib/fseeko.c
+  lib/fstat.c
+  lib/fstatat.c
+  lib/ftell.c
+  lib/ftello.c
+  lib/ftruncate.c
+  lib/getcwd-lgpl.c
+  lib/getcwd.c
+  lib/getdtablesize.c
+  lib/gethostname.c
+  lib/getlogin_r.c
+  lib/getopt-cdefs.in.h
+  lib/getopt-core.h
+  lib/getopt-ext.h
+  lib/getopt-pfx-core.h
+  lib/getopt-pfx-ext.h
+  lib/getopt.c
+  lib/getopt.in.h
+  lib/getopt1.c
+  lib/getopt_int.h
+  lib/getprogname.c
+  lib/getprogname.h
+  lib/getrusage.c
+  lib/gettext.h
+  lib/gettimeofday.c
+  lib/gl_openssl.h
+  lib/glob-libc.h
+  lib/glob.c
+  lib/glob.in.h
+  lib/glob_internal.h
+  lib/glob_pattern_p.c
+  lib/globfree.c
+  lib/glthread/lock.c
+  lib/glthread/lock.h
+  lib/glthread/threadlib.c
+  lib/glthread/tls.c
+  lib/glthread/tls.h
+  lib/hard-locale.c
+  lib/hard-locale.h
+  lib/hash-pjw.c
+  lib/hash-pjw.h
+  lib/hash-triple.c
+  lib/hash-triple.h
+  lib/hash.c
+  lib/hash.h
+  lib/iconv.c
+  lib/iconv.in.h
+  lib/iconv_close.c
+  lib/iconv_open-aix.gperf
+  lib/iconv_open-hpux.gperf
+  lib/iconv_open-irix.gperf
+  lib/iconv_open-osf.gperf
+  lib/iconv_open-solaris.gperf
+  lib/iconv_open.c
+  lib/iconveh.h
+  lib/intprops.h
+  lib/isatty.c
+  lib/isnan.c
+  lib/isnand-nolibm.h
+  lib/isnand.c
+  lib/itold.c
+  lib/libc-config.h
+  lib/limits.in.h
+  lib/link.c
+  lib/localcharset.c
+  lib/localcharset.h
+  lib/localtime-buffer.c
+  lib/localtime-buffer.h
+  lib/lseek.c
+  lib/lstat.c
+  lib/malloc.c
+  lib/malloc/scratch_buffer.h
+  lib/malloc/scratch_buffer_grow.c
+  lib/malloc/scratch_buffer_grow_preserve.c
+  lib/malloc/scratch_buffer_set_array_size.c
+  lib/malloca.c
+  lib/malloca.h
+  lib/math.c
+  lib/math.in.h
+  lib/mbrtowc.c
+  lib/mbsinit.c
+  lib/mbsrtowcs-impl.h
+  lib/mbsrtowcs-state.c
+  lib/mbsrtowcs.c
+  lib/md2.c
+  lib/md2.h
+  lib/md4.c
+  lib/md4.h
+  lib/md5.c
+  lib/md5.h
+  lib/memchr.c
+  lib/memchr.valgrind
+  lib/mempcpy.c
+  lib/memrchr.c
+  lib/minmax.h
+  lib/mkdir.c
+  lib/mkfifo.c
+  lib/mkostemp.c
+  lib/mktime-internal.h
+  lib/mktime.c
+  lib/msvc-inval.c
+  lib/msvc-inval.h
+  lib/msvc-nothrow.c
+  lib/msvc-nothrow.h
+  lib/nanosleep.c
+  lib/nproc.c
+  lib/nproc.h
+  lib/nstrftime.c
+  lib/open.c
+  lib/openat-die.c
+  lib/openat-priv.h
+  lib/openat-proc.c
+  lib/openat.c
+  lib/openat.h
+  lib/opendir.c
+  lib/pathmax.h
+  lib/pipe-safer.c
+  lib/pipe.c
+  lib/printf-args.c
+  lib/printf-args.h
+  lib/printf-parse.c
+  lib/printf-parse.h
+  lib/progname.c
+  lib/progname.h
+  lib/putenv.c
+  lib/raise.c
+  lib/readdir.c
+  lib/readlink.c
+  lib/realloc.c
+  lib/ref-add.sin
+  lib/ref-del.sin
+  lib/rewinddir.c
+  lib/rmdir.c
+  lib/same-inode.h
+  lib/same.c
+  lib/same.h
+  lib/save-cwd.c
+  lib/save-cwd.h
+  lib/scratch_buffer.h
+  lib/secure_getenv.c
+  lib/select.c
+  lib/setenv.c
+  lib/sha1.c
+  lib/sha1.h
+  lib/sha256.c
+  lib/sha256.h
+  lib/sha512.c
+  lib/sha512.h
+  lib/sig-handler.c
+  lib/sig-handler.h
+  lib/sigaction.c
+  lib/siglist.h
+  lib/signal.in.h
+  lib/sigprocmask.c
+  lib/size_max.h
+  lib/snprintf.c
+  lib/sockets.c
+  lib/sockets.h
+  lib/stat-time.c
+  lib/stat-time.h
+  lib/stat-w32.c
+  lib/stat-w32.h
+  lib/stat.c
+  lib/stdalign.in.h
+  lib/stdbool.in.h
+  lib/stddef.in.h
+  lib/stdint.in.h
+  lib/stdio-impl.h
+  lib/stdio.in.h
+  lib/stdlib.in.h
+  lib/strcasecmp.c
+  lib/strdup.c
+  lib/streq.h
+  lib/strerror-override.c
+  lib/strerror-override.h
+  lib/strerror.c
+  lib/strftime.h
+  lib/striconveh.c
+  lib/striconveh.h
+  lib/striconveha.c
+  lib/striconveha.h
+  lib/string.in.h
+  lib/strings.in.h
+  lib/stripslash.c
+  lib/strncasecmp.c
+  lib/strndup.c
+  lib/strnlen.c
+  lib/strnlen1.c
+  lib/strnlen1.h
+  lib/strptime.c
+  lib/strsignal.c
+  lib/symlink.c
+  lib/sys_resource.in.h
+  lib/sys_select.in.h
+  lib/sys_socket.c
+  lib/sys_socket.in.h
+  lib/sys_stat.in.h
+  lib/sys_time.in.h
+  lib/sys_times.in.h
+  lib/sys_types.in.h
+  lib/sys_uio.in.h
+  lib/sys_utsname.in.h
+  lib/sys_wait.in.h
+  lib/tempname.c
+  lib/tempname.h
+  lib/time-internal.h
+  lib/time.in.h
+  lib/time_r.c
+  lib/time_rz.c
+  lib/timegm.c
+  lib/tmpdir.c
+  lib/tmpdir.h
+  lib/tmpfile.c
+  lib/tzset.c
+  lib/u64.c
+  lib/u64.h
+  lib/uname.c
+  lib/uniconv.in.h
+  lib/uniconv/u8-conv-from-enc.c
+  lib/uniconv/u8-conv-to-enc.c
+  lib/unistd--.h
+  lib/unistd-safer.h
+  lib/unistd.c
+  lib/unistd.in.h
+  lib/unistr.in.h
+  lib/unistr/u8-check.c
+  lib/unistr/u8-mblen.c
+  lib/unistr/u8-mbtouc-aux.c
+  lib/unistr/u8-mbtouc-unsafe-aux.c
+  lib/unistr/u8-mbtouc-unsafe.c
+  lib/unistr/u8-mbtouc.c
+  lib/unistr/u8-mbtoucr.c
+  lib/unistr/u8-prev.c
+  lib/unistr/u8-uctomb-aux.c
+  lib/unistr/u8-uctomb.c
+  lib/unitypes.in.h
+  lib/unlink.c
+  lib/unsetenv.c
+  lib/unused-parameter.h
+  lib/vasnprintf.c
+  lib/vasnprintf.h
+  lib/vasprintf.c
+  lib/verify.h
+  lib/w32sock.h
+  lib/waitpid.c
+  lib/warn-on-use.h
+  lib/wchar.in.h
+  lib/wctype-h.c
+  lib/wctype.in.h
+  lib/xalloc-die.c
+  lib/xalloc-oversized.h
+  lib/xalloc.h
+  lib/xgetcwd.c
+  lib/xgetcwd.h
+  lib/xmalloc.c
+  lib/xsize.c
+  lib/xsize.h
+  lib/xstrndup.c
+  lib/xstrndup.h
+  m4/00gnulib.m4
+  m4/__inline.m4
+  m4/absolute-header.m4
+  m4/alloca.m4
+  m4/asm-underscore.m4
+  m4/base64.m4
+  m4/builtin-expect.m4
+  m4/canonicalize.m4
+  m4/chdir-long.m4
+  m4/clock_time.m4
+  m4/close.m4
+  m4/closedir.m4
+  m4/codeset.m4
+  m4/configmake.m4
+  m4/d-ino.m4
+  m4/d-type.m4
+  m4/dirent_h.m4
+  m4/dirfd.m4
+  m4/dirname.m4
+  m4/double-slash-root.m4
+  m4/dup.m4
+  m4/dup2.m4
+  m4/eealloc.m4
+  m4/environ.m4
+  m4/errno_h.m4
+  m4/error.m4
+  m4/exponentd.m4
+  m4/extensions.m4
+  m4/extern-inline.m4
+  m4/fchdir.m4
+  m4/fcntl-o.m4
+  m4/fcntl.m4
+  m4/fcntl_h.m4
+  m4/fdopendir.m4
+  m4/filemode.m4
+  m4/filenamecat.m4
+  m4/flexmember.m4
+  m4/float_h.m4
+  m4/fnmatch.m4
+  m4/fpieee.m4
+  m4/frexp.m4
+  m4/frexpf.m4
+  m4/fseek.m4
+  m4/fseeko.m4
+  m4/fstat.m4
+  m4/fstatat.m4
+  m4/ftell.m4
+  m4/ftello.m4
+  m4/ftruncate.m4
+  m4/getcwd-abort-bug.m4
+  m4/getcwd-path-max.m4
+  m4/getcwd.m4
+  m4/getdtablesize.m4
+  m4/gethostname.m4
+  m4/getlogin.m4
+  m4/getlogin_r.m4
+  m4/getopt.m4
+  m4/getprogname.m4
+  m4/getrusage.m4
+  m4/gettimeofday.m4
+  m4/gl-openssl.m4
+  m4/glibc21.m4
+  m4/glob.m4
+  m4/gnulib-common.m4
+  m4/hard-locale.m4
+  m4/host-cpu-c-abi.m4
+  m4/iconv.m4
+  m4/iconv_h.m4
+  m4/iconv_open.m4
+  m4/include_next.m4
+  m4/inline.m4
+  m4/intmax_t.m4
+  m4/inttypes_h.m4
+  m4/isatty.m4
+  m4/isnand.m4
+  m4/largefile.m4
+  m4/lib-ld.m4
+  m4/lib-link.m4
+  m4/lib-prefix.m4
+  m4/libunistring-base.m4
+  m4/limits-h.m4
+  m4/link.m4
+  m4/localcharset.m4
+  m4/locale-fr.m4
+  m4/locale-ja.m4
+  m4/locale-zh.m4
+  m4/localtime-buffer.m4
+  m4/lock.m4
+  m4/longlong.m4
+  m4/lseek.m4
+  m4/lstat.m4
+  m4/malloc.m4
+  m4/malloca.m4
+  m4/math_h.m4
+  m4/mathfunc.m4
+  m4/mbrtowc.m4
+  m4/mbsinit.m4
+  m4/mbsrtowcs.m4
+  m4/mbstate_t.m4
+  m4/md4.m4
+  m4/md5.m4
+  m4/memchr.m4
+  m4/mempcpy.m4
+  m4/memrchr.m4
+  m4/minmax.m4
+  m4/mkdir.m4
+  m4/mkfifo.m4
+  m4/mkostemp.m4
+  m4/mktime.m4
+  m4/mmap-anon.m4
+  m4/mode_t.m4
+  m4/msvc-inval.m4
+  m4/msvc-nothrow.m4
+  m4/multiarch.m4
+  m4/nanosleep.m4
+  m4/nocrash.m4
+  m4/nproc.m4
+  m4/nstrftime.m4
+  m4/off_t.m4
+  m4/open-cloexec.m4
+  m4/open.m4
+  m4/openat.m4
+  m4/opendir.m4
+  m4/pathmax.m4
+  m4/pipe.m4
+  m4/printf.m4
+  m4/pthread_rwlock_rdlock.m4
+  m4/putenv.m4
+  m4/raise.m4
+  m4/readdir.m4
+  m4/readlink.m4
+  m4/realloc.m4
+  m4/rewinddir.m4
+  m4/rmdir.m4
+  m4/same.m4
+  m4/save-cwd.m4
+  m4/secure_getenv.m4
+  m4/select.m4
+  m4/setenv.m4
+  m4/sha1.m4
+  m4/sha256.m4
+  m4/sha512.m4
+  m4/sigaction.m4
+  m4/signal_h.m4
+  m4/signalblocking.m4
+  m4/size_max.m4
+  m4/snprintf.m4
+  m4/socketlib.m4
+  m4/sockets.m4
+  m4/socklen.m4
+  m4/sockpfaf.m4
+  m4/ssize_t.m4
+  m4/st_dm_mode.m4
+  m4/stat-time.m4
+  m4/stat.m4
+  m4/std-gnu11.m4
+  m4/stdalign.m4
+  m4/stdbool.m4
+  m4/stddef_h.m4
+  m4/stdint.m4
+  m4/stdint_h.m4
+  m4/stdio_h.m4
+  m4/stdlib_h.m4
+  m4/strcase.m4
+  m4/strdup.m4
+  m4/strerror.m4
+  m4/string_h.m4
+  m4/strings_h.m4
+  m4/strndup.m4
+  m4/strnlen.m4
+  m4/strptime.m4
+  m4/strsignal.m4
+  m4/symlink.m4
+  m4/sys_resource_h.m4
+  m4/sys_select_h.m4
+  m4/sys_socket_h.m4
+  m4/sys_stat_h.m4
+  m4/sys_time_h.m4
+  m4/sys_times_h.m4
+  m4/sys_types_h.m4
+  m4/sys_uio_h.m4
+  m4/sys_utsname_h.m4
+  m4/sys_wait_h.m4
+  m4/tempname.m4
+  m4/threadlib.m4
+  m4/time_h.m4
+  m4/time_r.m4
+  m4/time_rz.m4
+  m4/timegm.m4
+  m4/tls.m4
+  m4/tm_gmtoff.m4
+  m4/tmpdir.m4
+  m4/tmpfile.m4
+  m4/tzset.m4
+  m4/uname.m4
+  m4/unistd-safer.m4
+  m4/unistd_h.m4
+  m4/unlink.m4
+  m4/vasnprintf.m4
+  m4/vasprintf.m4
+  m4/waitpid.m4
+  m4/warn-on-use.m4
+  m4/wchar_h.m4
+  m4/wchar_t.m4
+  m4/wctype_h.m4
+  m4/wint_t.m4
+  m4/xalloc.m4
+  m4/xgetcwd.m4
+  m4/xsize.m4
+  m4/xstrndup.m4
+Finished.
+
+You may need to add #include directives for the following .h files.
+  #include <dirent.h>
+  #include <fcntl.h>
+  #include <fnmatch.h>
+  #include <getopt.h>
+  #include <glob.h>
+  #include <math.h>
+  #include <signal.h>
+  #include <stddef.h>
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include <string.h>
+  #include <sys/resource.h>
+  #include <sys/select.h>
+  #include <sys/stat.h>
+  #include <sys/time.h>
+  #include <sys/times.h>
+  #include <sys/utsname.h>
+  #include <sys/wait.h>
+  #include <time.h>
+  #include <unistd.h>
+  #include "areadlink.h"
+  #include "base64.h"
+  #include "canonicalize.h"
+  #include "filemode.h"
+  #include "fpucw.h"
+  #include "localcharset.h"
+  #include "md2.h"
+  #include "md4.h"
+  #include "md5.h"
+  #include "nproc.h"
+  #include "progname.h"
+  #include "sha1.h"
+  #include "sha256.h"
+  #include "sha512.h"
+  #include "strftime.h"
+  #include "tempname.h"
+  #include "uniconv.h"
+
+You may need to use the following Makefile variables when linking.
+Use them in <program>_LDADD when linking a program, or
+in <library>_a_LDFLAGS or <library>_la_LDFLAGS when linking a library.
+  $(FREXPF_LIBM)
+  $(FREXP_LIBM)
+  $(GETHOSTNAME_LIB)
+  $(LIBSOCKET)
+  $(LIB_CLOCK_GETTIME)
+  $(LIB_CRYPTO)
+  $(LIB_GETLOGIN)
+  $(LIB_NANOSLEEP)
+  $(LIB_SELECT)
+  $(LTLIBICONV) when linking with libtool, $(LIBICONV) otherwise
+  $(LTLIBINTL) when linking with libtool, $(LIBINTL) otherwise
+  $(LTLIBTHREAD) when linking with libtool, $(LIBTHREAD) otherwise
+
+Don't forget to
+  - add "libgnu/Makefile" to AC_CONFIG_FILES in ./configure.ac,
+  - mention "libgnu" in SUBDIRS in Makefile.am,
+  - mention "-I m4" in ACLOCAL_AMFLAGS in Makefile.am,
+  - mention "m4/gnulib-cache.m4" in EXTRA_DIST in Makefile.am,
+  - invoke gl_EARLY in ./configure.ac, right after AC_PROG_CC,
+  - invoke gl_INIT in ./configure.ac.
+generating source lists for liboctave/operators/module.mk...
+generating doc/interpreter/images.mk...
+generating libinterp/dldfcn/module.mk...
+running: AUTOPOINT=true LIBTOOLIZE=true autoreconf --verbose --install --force -I m4  --no-recursive
+autoreconf: Entering directory `.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal -I m4 --force 
+autoreconf: configure.ac: tracing
+autoreconf: running: true --copy --force
+autoreconf: running: /usr/bin/autoconf --include=m4 --force
+autoreconf: running: /usr/bin/autoheader --include=m4 --force
+autoreconf: running: automake --add-missing --copy --force-missing
+autoreconf: Leaving directory `.'
+./bootstrap: ln -fs ../gnulib/build-aux/install-sh build-aux/install-sh
+./bootstrap: ln -fs ../gnulib/build-aux/mdate-sh build-aux/mdate-sh
+./bootstrap: ln -fs ../gnulib/build-aux/texinfo.tex build-aux/texinfo.tex
+./bootstrap: ln -fs ../gnulib/build-aux/depcomp build-aux/depcomp
+./bootstrap: ln -fs ../gnulib/build-aux/config.guess build-aux/config.guess
+./bootstrap: ln -fs ../gnulib/build-aux/config.sub build-aux/config.sub
+./bootstrap: ln -fs gnulib/doc/INSTALL INSTALL
+./bootstrap: done.  Now you can run './configure'.
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+defining octlibdir to be ${libdir}/octave/${version}
+defining archlibdir to be ${libexecdir}/octave/${version}/exec/${canonical_host_type}
+defining localarchlibdir to be ${libexecdir}/octave/site/exec/${canonical_host_type}
+defining localapiarchlibdir to be ${libexecdir}/octave/${api_version}/site/exec/${canonical_host_type}
+defining localverarchlibdir to be ${libexecdir}/octave/${version}/site/exec/${canonical_host_type}
+defining octfiledir to be ${libdir}/octave/${version}/oct/${canonical_host_type}
+defining localoctfiledir to be ${libdir}/octave/site/oct/${canonical_host_type}
+defining localapioctfiledir to be ${libdir}/octave/site/oct/${api_version}/${canonical_host_type}
+defining localveroctfiledir to be ${libdir}/octave/${version}/site/oct/${canonical_host_type}
+defining octincludedir to be ${includedir}/octave-${version}/octave
+defining fcnfiledir to be ${datadir}/octave/${version}/m
+defining localfcnfiledir to be ${datadir}/octave/site/m
+defining localapifcnfiledir to be ${datadir}/octave/site/${api_version}/m
+defining localverfcnfiledir to be ${datadir}/octave/${version}/site/m
+defining octetcdir to be ${datadir}/octave/${version}/etc
+defining octlocaledir to be ${datadir}/octave/${version}/locale
+defining doc_cache_file to be ${octetcdir}/doc-cache
+defining octtestsdir to be ${octetcdir}/tests
+defining texi_macros_file to be ${octetcdir}/macros.texi
+defining imagedir to be ${datadir}/octave/${version}/imagelib
+defining octdatadir to be ${datadir}/octave/${version}/data
+defining octdocdir to be ${datadir}/octave/${version}/doc
+defining octfontsdir to be ${datadir}/octave/${version}/fonts
+defining startupfiledir to be ${fcnfiledir}/startup
+defining localstartupfiledir to be ${localfcnfiledir}/startup
+defining man1dir to be ${mandir}/man1
+defining man1ext to be .1
+defining infofile to be ${infodir}/octave.info
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for gawk... (cached) gawk
+checking for grep that handles long lines and -e... (cached) /bin/grep
+checking for gfind... no
+checking for find... find
+checking for a usable sed... /bin/sed
+checking for perl... perl
+checking for gperf... gperf
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+defining LFLAGS to be -I
+checking for bison... bison -y
+checking syntax of bison api.prefix (or name-prefix) declaration... api brace
+checking syntax of bison push/pull declaration... dash 
+checking for makeinfo... makeinfo
+checking for makeinfo support for @sortas command... yes
+checking for texi2dvi... texi2dvi
+checking for texi2pdf... texi2pdf
+checking for options to make reproducible archives with GNU tar... --owner=0 --group=0 --numeric-owner --sort=name
+checking whether ln -s works... yes
+checking for gs... gs
+checking for gnuplot... gnuplot
+checking for less... less
+checking for python... python
+checking for icotool... icotool
+checking for rsvg-convert... rsvg-convert
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking how to run the C preprocessor... gcc -E
+checking whether gcc needs -traditional... no
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking C++ compiler version number... 6.3.0
+checking whether stl_algo.h is broken... no
+checking C compiler version number... 6.3.0
+configure: defining __NO_MATH_INLINES avoids buggy GNU libc exp function
+checking size of void *... 8
+checking if compiler needs -Werror to reject unknown flags... no
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for OpenMP flag of C compiler... -fopenmp
+checking for OpenMP flag of C++ compiler... -fopenmp
+checking omp.h usability... yes
+checking omp.h presence... yes
+checking for omp.h... yes
+checking for omp_get_num_threads... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... (cached) ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+configure: defining FPICFLAG to be -fPIC
+configure: defining CPICFLAG to be -fPIC
+configure: defining CXXPICFLAG to be -fPIC
+configure: defining SH_LD to be g++
+configure: defining SH_LDFLAGS to be -shared
+configure: defining DL_LD to be g++
+configure: defining DL_LDFLAGS to be -shared
+configure: defining MKOCTFILE_DL_LDFLAGS to be -shared -Wl,-Bsymbolic
+configure: defining NO_OCT_FILE_STRIP to be false
+configure: defining TEMPLATE_AR to be ar
+configure: defining TEMPLATE_ARFLAGS to be cr
+configure: defining EXTERNAL_DLL_DEFS to be 
+configure: defining OCTAVE_DLL_DEFS to be 
+configure: defining OCTINTERP_DLL_DEFS to be 
+configure: defining OCTGUI_DLL_DEFS to be 
+configure: defining OCTGRAPHICS_DLL_DEFS to be 
+configure: defining library_path_var to be LD_LIBRARY_PATH
+checking for sin in -lm... yes
+checking for gfortran... gfortran
+checking whether we are using the GNU Fortran 77 compiler... yes
+checking whether gfortran accepts -g... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for gfortran option to produce PIC... -fPIC
+checking if gfortran PIC flag -fPIC works... yes
+checking if gfortran static flag -static works... yes
+checking if gfortran supports -c -o file.o... yes
+checking if gfortran supports -c -o file.o... (cached) yes
+checking whether the gfortran linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether a usable Fortran compiler was found... yes
+checking how to get verbose linking output from gfortran... -v
+checking for Fortran 77 libraries of gfortran...  -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. -lgfortran -lm -lquadmath
+checking for dummy main to link with Fortran 77 libraries... none
+checking for Fortran 77 name-mangling scheme... lower case, underscore, no extra underscore
+configure: defining FFLAGS to be -g -O2
+checking if sgemm_ is being linked in already... no
+checking for sgemm_ in -lopenblas... no
+checking for ATL_xerbla in -latlas... no
+checking for sgemm_ in -lblas... yes
+checking for dgemm_ in -ldgemm... no
+checking for sgemm_ in -lmkl_intel_lp64... no
+checking for sgemm_ in -lmkl... no
+checking for sgemm_ in -framework vecLib... no
+checking for sgemm_ in -lcxml... no
+checking for sgemm_ in -ldxml... no
+checking for sgemm_ in -lscs... no
+checking for sgemm_ in -lcomplib.sgimath... no
+checking for sgemm_ in -lblas... (cached) yes
+checking for sgemm_ in -lessl... no
+checking for sgemm_ in -lblas... (cached) yes
+checking whether LSAME is called correctly from Fortran... yes
+checking whether ISAMAX is called correctly from Fortran... yes
+checking whether SDOT is called correctly from Fortran... yes
+checking whether DDOT is called correctly from Fortran... yes
+checking whether CDOTU is called correctly from Fortran... yes
+checking whether ZDOTU is called correctly from Fortran... yes
+checking BLAS library integer size... 4
+checking for cheev_... no
+checking for cheev_ in -llapack... yes
+checking default size of Fortran INTEGER... 4
+checking whether gfortran accepts -ffloat-store... yes
+setting F77_FLOAT_STORE_FLAG to -ffloat-store
+checking whether g++ accepts -rdynamic... yes
+configure: defining CROSS_TOOL_PREFIX to be 
+configure: defining MKOCTFILE_AR to be ar
+configure: defining MKOCTFILE_CC to be gcc
+configure: defining MKOCTFILE_CXX to be g++
+configure: defining MKOCTFILE_DL_LD to be g++
+configure: defining MKOCTFILE_F77 to be gfortran
+configure: defining MKOCTFILE_LD_CXX to be g++
+configure: defining MKOCTFILE_RANLIB to be ranlib
+checking whether C++ supports dynamic auto arrays... yes
+checking for IEEE 754 data format... yes
+checking whether bit_and, bit_or, bit_xor are defined in the C++ library... yes
+checking whether complex class can set components independently... yes
+checking whether complex class can reference components independently... no
+checking whether fast integer arithmetics is usable... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for C/C++ restrict keyword... __restrict
+checking for canonicalize_file_name... yes
+checking for realpath... yes
+checking for readlinkat... yes
+checking for _set_invalid_parameter_handler... no
+checking for fchdir... yes
+checking for fcntl... yes
+checking for symlink... yes
+checking for fdopendir... yes
+checking for mempcpy... yes
+checking for btowc... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for mbsrtowcs... yes
+checking for wmemchr... yes
+checking for wmemcpy... yes
+checking for wmempcpy... yes
+checking for fstatat... yes
+checking for ftruncate... yes
+checking for getdtablesize... yes
+checking for getlogin_r... yes
+checking for getprogname... no
+checking for getexecname... no
+checking for getrusage... yes
+checking for gettimeofday... yes
+checking for getpwnam_r... yes
+checking for link... yes
+checking for lstat... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mprotect... yes
+checking for mkfifo... yes
+checking for mkostemp... yes
+checking for tzset... yes
+checking for openat... yes
+checking for pipe... yes
+checking for readlink... yes
+checking for fpathconf... yes
+checking for secure_getenv... yes
+checking for getuid... yes
+checking for geteuid... yes
+checking for getgid... yes
+checking for getegid... yes
+checking for setenv... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for siginterrupt... yes
+checking for snprintf... yes
+checking for strdup... yes
+checking for strndup... yes
+checking for strptime... yes
+checking for localtime_r... yes
+checking for timegm... yes
+checking for vasnprintf... no
+checking for iswcntrl... yes
+checking whether // is distinct from /... no
+checking whether realpath works... yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for dirent.h... yes
+checking for wctype.h... yes
+checking for sys/stat.h... (cached) yes
+checking for netdb.h... yes
+checking for getopt.h... yes
+checking for sys/cdefs.h... yes
+checking for sys/time.h... yes
+checking for glob.h... yes
+checking for iconv.h... yes
+checking for limits.h... yes
+checking for math.h... yes
+checking for sys/mman.h... yes
+checking for sys/select.h... yes
+checking for wchar.h... yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/resource.h... yes
+checking for sys/times.h... yes
+checking for sys/uio.h... yes
+checking for sys/utsname.h... yes
+checking for sys/wait.h... yes
+checking for features.h... yes
+checking for crtdefs.h... no
+checking whether byte ordering is bigendian... no
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... yes
+checking whether fchdir is declared... yes
+checking for working fcntl.h... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking for st_dm_mode in struct stat... no
+checking whether strmode is declared... no
+checking for mbstate_t... yes
+checking whether frexp() can be used without linking with libm... yes
+checking whether alarm is declared... yes
+checking whether frexp works... yes
+checking whether stdin defaults to large file offsets... yes
+checking whether fseeko is declared... yes
+checking for fseeko... yes
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking whether fchmodat is declared without a macro... yes
+checking whether fstat is declared without a macro... yes
+checking whether fstatat is declared without a macro... yes
+checking whether futimens is declared without a macro... yes
+checking whether lchmod is declared without a macro... yes
+checking whether lstat is declared without a macro... yes
+checking whether mkdirat is declared without a macro... yes
+checking whether mkfifo is declared without a macro... yes
+checking whether mkfifoat is declared without a macro... yes
+checking whether mknod is declared without a macro... yes
+checking whether mknodat is declared without a macro... yes
+checking whether stat is declared without a macro... yes
+checking whether utimensat is declared without a macro... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether ftello is declared... yes
+checking for ftello... yes
+checking whether ftello works... yes
+checking whether getcwd (NULL, 0) allocates memory for result... yes
+checking for getcwd with POSIX signature... yes
+checking whether getcwd is declared... yes
+checking whether getdtablesize is declared... yes
+checking whether getlogin_r is declared... yes
+checking whether getlogin is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking whether gettimeofday is declared without a macro... yes
+checking host CPU and C ABI... x86_64
+checking for ld... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for the common suffixes of directories in the library search path... lib,lib
+checking for iconv... yes
+checking for working iconv... yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking for inline... inline
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking whether limits.h has ULLONG_WIDTH etc.... no
+checking for nl_langinfo and CODESET... yes
+checking whether getc_unlocked is declared... yes
+checking whether we are using the GNU C Library >= 2.1 or uClibc... yes
+checking whether imported symbols can be declared weak... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking for multithread API to use... posix
+checking whether malloc, realloc, calloc are POSIX compliant... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for a traditional japanese locale... none
+checking for a transitional chinese locale... none
+checking for a french Unicode locale... fr_FR.UTF-8
+checking for a traditional french locale... none
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether memrchr is declared... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking whether time_t is signed... yes
+checking for working mktime... yes
+checking whether <sys/select.h> is self-contained... yes
+checking whether pselect is declared without a macro... yes
+checking whether select is declared without a macro... yes
+checking for library containing setsockopt... none needed
+checking whether select supports a 0 argument... yes
+checking whether select detects invalid fds... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct tm.tm_gmtoff... yes
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... mode_t
+checking for sigset_t... yes
+checking for long file names... yes
+checking whether setenv is declared... yes
+checking search.h usability... yes
+checking search.h presence... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking for uid_t in sys/types.h... yes
+checking whether snprintf returns a byte count as in C99... yes
+checking whether snprintf is declared... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for wchar_t... yes
+checking for wint_t... yes
+checking whether wint_t is too small... no
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h predates C++11... no
+checking whether stdint.h has UINTMAX_WIDTH etc.... no
+checking whether strdup is declared... yes
+checking whether strerror(0) succeeds... yes
+checking whether ffsl is declared without a macro... yes
+checking whether ffsll is declared without a macro... yes
+checking whether memmem is declared without a macro... yes
+checking whether mempcpy is declared without a macro... yes
+checking whether memrchr is declared without a macro... yes
+checking whether rawmemchr is declared without a macro... yes
+checking whether stpcpy is declared without a macro... yes
+checking whether stpncpy is declared without a macro... yes
+checking whether strchrnul is declared without a macro... yes
+checking whether strdup is declared without a macro... yes
+checking whether strncat is declared without a macro... yes
+checking whether strndup is declared without a macro... yes
+checking whether strnlen is declared without a macro... yes
+checking whether strpbrk is declared without a macro... yes
+checking whether strsep is declared without a macro... yes
+checking whether strcasestr is declared without a macro... yes
+checking whether strtok_r is declared without a macro... yes
+checking whether strerror_r is declared without a macro... yes
+checking whether strsignal is declared without a macro... yes
+checking whether strverscmp is declared without a macro... yes
+checking whether ffs is declared without a macro... yes
+checking whether strcasecmp is declared without a macro... yes
+checking whether strncasecmp is declared without a macro... yes
+checking whether strndup is declared... (cached) yes
+checking whether strnlen is declared... (cached) yes
+checking whether strsignal is declared... (cached) yes
+checking whether sys_siglist is declared... yes
+checking whether <sys/socket.h> is self-contained... yes
+checking for shutdown... yes
+checking whether <sys/socket.h> defines the SHUT_* macros... yes
+checking for struct sockaddr_storage... yes
+checking for sa_family_t... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking whether socket is declared without a macro... yes
+checking whether connect is declared without a macro... yes
+checking whether accept is declared without a macro... yes
+checking whether bind is declared without a macro... yes
+checking whether getpeername is declared without a macro... yes
+checking whether getsockname is declared without a macro... yes
+checking whether getsockopt is declared without a macro... yes
+checking whether listen is declared without a macro... yes
+checking whether recv is declared without a macro... yes
+checking whether send is declared without a macro... yes
+checking whether recvfrom is declared without a macro... yes
+checking whether sendto is declared without a macro... yes
+checking whether setsockopt is declared without a macro... yes
+checking whether shutdown is declared without a macro... yes
+checking whether accept4 is declared without a macro... yes
+checking for struct timespec in <time.h>... yes
+checking whether unsetenv is declared... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for intmax_t... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for alloca as a compiler built-in... yes
+checking for __builtin_expect... yes
+checking whether this system has an arbitrary file name length limit... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking for closedir... yes
+checking for d_ino member in directory struct... yes
+checking for d_type member in directory struct... yes
+checking whether alphasort is declared without a macro... yes
+checking whether closedir is declared without a macro... yes
+checking whether dirfd is declared without a macro... yes
+checking whether fdopendir is declared without a macro... yes
+checking whether opendir is declared without a macro... yes
+checking whether readdir is declared without a macro... yes
+checking whether rewinddir is declared without a macro... yes
+checking whether scandir is declared without a macro... yes
+checking for dirfd... yes
+checking whether dirfd is declared... (cached) yes
+checking whether dirfd is a macro... no
+checking whether // is distinct from /... (cached) no
+checking whether dup works... yes
+checking whether dup2 works... yes
+checking for error_at_line... yes
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking whether fcntl is declared without a macro... yes
+checking whether openat is declared without a macro... yes
+checking whether fdopendir is declared... (cached) yes
+checking whether fdopendir works... yes
+checking for flexible array member... yes
+checking whether conversion from 'int' to 'long double' works... yes
+checking for working POSIX fnmatch... yes
+checking whether frexpf can be used without linking with libm... yes
+checking whether frexpf works... yes
+checking for fseeko... (cached) yes
+checking whether fstatat (..., 0) works... yes
+checking for ftello... (cached) yes
+checking whether ftello works... (cached) yes
+checking whether getcwd handles long file names properly... yes
+checking for getpagesize... yes
+checking whether getcwd aborts when 4k < cwd_length < 16k... no
+checking whether getdtablesize works... yes
+checking for gethostname... yes
+checking for HOST_NAME_MAX... yes
+checking whether getlogin_r works with small buffers... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether __argv is declared... no
+checking whether gettimeofday clobbers localtime buffer... no
+checking for gettimeofday with POSIX signature... almost
+checking for GNU glob interface version 1 or 2... yes
+checking whether glob lists broken symlinks... no
+checking whether the compiler generally respects inline... yes
+checking whether isnan(double) can be used without linking with libm... yes
+checking whether the compiler supports the __inline keyword... yes
+checking whether link obeys POSIX... yes
+checking for pthread_rwlock_t... yes
+checking whether pthread_rwlock_rdlock prefers a writer to a reader... no
+checking whether lseek detects pipes... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... (cached) yes
+checking whether NAN macro works... yes
+checking whether HUGE_VAL works... yes
+checking whether acosf is declared without a macro... yes
+checking whether acosl is declared without a macro... yes
+checking whether asinf is declared without a macro... yes
+checking whether asinl is declared without a macro... yes
+checking whether atanf is declared without a macro... yes
+checking whether atanl is declared without a macro... yes
+checking whether cbrt is declared without a macro... yes
+checking whether cbrtf is declared without a macro... yes
+checking whether cbrtl is declared without a macro... yes
+checking whether ceilf is declared without a macro... yes
+checking whether ceill is declared without a macro... yes
+checking whether copysign is declared without a macro... yes
+checking whether copysignf is declared without a macro... yes
+checking whether copysignl is declared without a macro... yes
+checking whether cosf is declared without a macro... yes
+checking whether cosl is declared without a macro... yes
+checking whether coshf is declared without a macro... yes
+checking whether expf is declared without a macro... yes
+checking whether expl is declared without a macro... yes
+checking whether exp2 is declared without a macro... yes
+checking whether exp2f is declared without a macro... yes
+checking whether exp2l is declared without a macro... yes
+checking whether expm1 is declared without a macro... yes
+checking whether expm1f is declared without a macro... yes
+checking whether expm1l is declared without a macro... yes
+checking whether fabsf is declared without a macro... yes
+checking whether fabsl is declared without a macro... yes
+checking whether floorf is declared without a macro... yes
+checking whether floorl is declared without a macro... yes
+checking whether fma is declared without a macro... yes
+checking whether fmaf is declared without a macro... yes
+checking whether fmal is declared without a macro... yes
+checking whether fmod is declared without a macro... yes
+checking whether fmodf is declared without a macro... yes
+checking whether fmodl is declared without a macro... yes
+checking whether frexpf is declared without a macro... yes
+checking whether frexpl is declared without a macro... yes
+checking whether hypotf is declared without a macro... yes
+checking whether hypotl is declared without a macro... yes
+checking whether ilogb is declared without a macro... yes
+checking whether ilogbf is declared without a macro... yes
+checking whether ilogbl is declared without a macro... yes
+checking whether ldexpf is declared without a macro... yes
+checking whether ldexpl is declared without a macro... yes
+checking whether log is declared without a macro... yes
+checking whether logf is declared without a macro... yes
+checking whether logl is declared without a macro... yes
+checking whether log10 is declared without a macro... yes
+checking whether log10f is declared without a macro... yes
+checking whether log10l is declared without a macro... yes
+checking whether log1p is declared without a macro... yes
+checking whether log1pf is declared without a macro... yes
+checking whether log1pl is declared without a macro... yes
+checking whether log2 is declared without a macro... yes
+checking whether log2f is declared without a macro... yes
+checking whether log2l is declared without a macro... yes
+checking whether logb is declared without a macro... yes
+checking whether logbf is declared without a macro... yes
+checking whether logbl is declared without a macro... yes
+checking whether modf is declared without a macro... yes
+checking whether modff is declared without a macro... yes
+checking whether modfl is declared without a macro... yes
+checking whether powf is declared without a macro... yes
+checking whether remainder is declared without a macro... yes
+checking whether remainderf is declared without a macro... yes
+checking whether remainderl is declared without a macro... yes
+checking whether rint is declared without a macro... yes
+checking whether rintf is declared without a macro... yes
+checking whether rintl is declared without a macro... yes
+checking whether round is declared without a macro... yes
+checking whether roundf is declared without a macro... yes
+checking whether roundl is declared without a macro... yes
+checking whether sinf is declared without a macro... yes
+checking whether sinl is declared without a macro... yes
+checking whether sinhf is declared without a macro... yes
+checking whether sqrtf is declared without a macro... yes
+checking whether sqrtl is declared without a macro... yes
+checking whether tanf is declared without a macro... yes
+checking whether tanl is declared without a macro... yes
+checking whether tanhf is declared without a macro... yes
+checking whether trunc is declared without a macro... yes
+checking whether truncf is declared without a macro... yes
+checking whether truncl is declared without a macro... yes
+checking whether mbrtowc handles incomplete characters... guessing yes
+checking whether mbrtowc works as well as mbtowc... guessing yes
+checking whether mbrtowc handles a NULL pwc argument... yes
+checking whether mbrtowc handles a NULL string argument... yes
+checking whether mbrtowc has a correct return value... yes
+checking whether mbrtowc returns 0 when parsing a NUL character... guessing yes
+checking whether mbrtowc works on empty input... yes
+checking whether the C locale is free of encoding errors... no
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbsrtowcs works... yes
+checking for mempcpy... (cached) yes
+checking for memrchr... yes
+checking whether mkdir handles trailing slash... yes
+checking whether mkdir handles trailing dot... yes
+checking whether mkfifo rejects trailing slashes... yes
+checking for __mktime_internal... no
+checking for library containing nanosleep... none required
+checking for working nanosleep... no (mishandles large arguments)
+checking for sys/pstat.h... no
+checking for sys/sysmp.h... no
+checking for sys/param.h... (cached) yes
+checking for sys/sysctl.h... yes
+checking for sched_getaffinity... yes
+checking for sched_getaffinity_np... no
+checking for pstat_getdynamic... no
+checking for sysmp... no
+checking for sysctl... yes
+checking for glibc compatible sched_getaffinity... yes
+checking whether open recognizes a trailing slash... yes
+checking for opendir... yes
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking for putenv compatible with GNU and SVID... yes
+checking for raise... yes
+checking for sigprocmask... yes
+checking for readdir... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking for rewinddir... yes
+checking whether rmdir works... yes
+checking whether select supports a 0 argument... (cached) yes
+checking whether select detects invalid fds... (cached) yes
+checking whether setenv validates arguments... yes
+checking for struct sigaction.sa_sigaction... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking whether pthread_sigmask is declared without a macro... yes
+checking whether sigaction is declared without a macro... yes
+checking whether sigaddset is declared without a macro... yes
+checking whether sigdelset is declared without a macro... yes
+checking whether sigemptyset is declared without a macro... yes
+checking whether sigfillset is declared without a macro... yes
+checking whether sigismember is declared without a macro... yes
+checking whether sigpending is declared without a macro... yes
+checking whether sigprocmask is declared without a macro... yes
+checking for sigprocmask... (cached) yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for snprintf... (cached) yes
+checking whether snprintf respects a size of 1... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking for socklen_t... yes
+checking for ssize_t... yes
+checking whether stat handles trailing slashes on files... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for working stdalign.h... yes
+checking for max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking whether dprintf is declared without a macro... yes
+checking whether fpurge is declared without a macro... no
+checking whether fseeko is declared without a macro... yes
+checking whether ftello is declared without a macro... yes
+checking whether getdelim is declared without a macro... yes
+checking whether getline is declared without a macro... yes
+checking whether gets is declared without a macro... no
+checking whether pclose is declared without a macro... yes
+checking whether popen is declared without a macro... yes
+checking whether renameat is declared without a macro... yes
+checking whether snprintf is declared without a macro... yes
+checking whether tmpfile is declared without a macro... yes
+checking whether vdprintf is declared without a macro... yes
+checking whether vsnprintf is declared without a macro... yes
+checking whether _Exit is declared without a macro... yes
+checking whether atoll is declared without a macro... yes
+checking whether canonicalize_file_name is declared without a macro... yes
+checking whether getloadavg is declared without a macro... yes
+checking whether getsubopt is declared without a macro... yes
+checking whether grantpt is declared without a macro... yes
+checking whether initstate is declared without a macro... yes
+checking whether initstate_r is declared without a macro... yes
+checking whether mkdtemp is declared without a macro... yes
+checking whether mkostemp is declared without a macro... yes
+checking whether mkostemps is declared without a macro... yes
+checking whether mkstemp is declared without a macro... yes
+checking whether mkstemps is declared without a macro... yes
+checking whether posix_openpt is declared without a macro... yes
+checking whether ptsname is declared without a macro... yes
+checking whether ptsname_r is declared without a macro... yes
+checking whether qsort_r is declared without a macro... yes
+checking whether random is declared without a macro... yes
+checking whether random_r is declared without a macro... yes
+checking whether reallocarray is declared without a macro... no
+checking whether realpath is declared without a macro... yes
+checking whether rpmatch is declared without a macro... yes
+checking whether secure_getenv is declared without a macro... yes
+checking whether setenv is declared without a macro... yes
+checking whether setstate is declared without a macro... yes
+checking whether setstate_r is declared without a macro... yes
+checking whether srandom is declared without a macro... yes
+checking whether srandom_r is declared without a macro... yes
+checking whether strtod is declared without a macro... yes
+checking whether strtoll is declared without a macro... yes
+checking whether strtoull is declared without a macro... yes
+checking whether unlockpt is declared without a macro... yes
+checking whether unsetenv is declared without a macro... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking whether strncasecmp is declared... (cached) yes
+checking for working strerror function... yes
+checking for working strndup... yes
+checking for working strnlen... yes
+checking for strsignal... yes
+checking whether strsignal always returns a string... yes
+checking whether symlink handles trailing slash correctly... yes
+checking whether getrusage is declared without a macro... yes
+checking for nlink_t... (cached) yes
+checking whether fchmodat is declared without a macro... (cached) yes
+checking whether fstat is declared without a macro... (cached) yes
+checking whether fstatat is declared without a macro... (cached) yes
+checking whether futimens is declared without a macro... (cached) yes
+checking whether lchmod is declared without a macro... (cached) yes
+checking whether lstat is declared without a macro... (cached) yes
+checking whether mkdirat is declared without a macro... (cached) yes
+checking whether mkfifo is declared without a macro... (cached) yes
+checking whether mkfifoat is declared without a macro... (cached) yes
+checking whether mknod is declared without a macro... (cached) yes
+checking whether mknodat is declared without a macro... (cached) yes
+checking whether stat is declared without a macro... (cached) yes
+checking whether utimensat is declared without a macro... (cached) yes
+checking for struct tms... yes
+checking whether times is declared without a macro... yes
+checking for struct utsname... yes
+checking whether uname is declared without a macro... yes
+checking whether waitpid is declared without a macro... yes
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking whether localtime loops forever near extrema... no
+checking for timezone_t... no
+checking whether tmpfile should be overridden... no
+checking whether tzset clobbers localtime buffer... no
+checking for uname... yes
+checking whether chdir is declared without a macro... yes
+checking whether chown is declared without a macro... yes
+checking whether dup is declared without a macro... yes
+checking whether dup2 is declared without a macro... yes
+checking whether dup3 is declared without a macro... yes
+checking whether environ is declared without a macro... yes
+checking whether euidaccess is declared without a macro... yes
+checking whether faccessat is declared without a macro... yes
+checking whether fchdir is declared without a macro... yes
+checking whether fchownat is declared without a macro... yes
+checking whether fdatasync is declared without a macro... yes
+checking whether fsync is declared without a macro... yes
+checking whether ftruncate is declared without a macro... yes
+checking whether getcwd is declared without a macro... yes
+checking whether getdomainname is declared without a macro... yes
+checking whether getdtablesize is declared without a macro... yes
+checking whether getgroups is declared without a macro... yes
+checking whether gethostname is declared without a macro... yes
+checking whether getlogin is declared without a macro... yes
+checking whether getlogin_r is declared without a macro... yes
+checking whether getpagesize is declared without a macro... yes
+checking whether getusershell is declared without a macro... yes
+checking whether setusershell is declared without a macro... yes
+checking whether endusershell is declared without a macro... yes
+checking whether group_member is declared without a macro... yes
+checking whether isatty is declared without a macro... yes
+checking whether lchown is declared without a macro... yes
+checking whether link is declared without a macro... yes
+checking whether linkat is declared without a macro... yes
+checking whether lseek is declared without a macro... yes
+checking whether pipe is declared without a macro... yes
+checking whether pipe2 is declared without a macro... yes
+checking whether pread is declared without a macro... yes
+checking whether pwrite is declared without a macro... yes
+checking whether readlink is declared without a macro... yes
+checking whether readlinkat is declared without a macro... yes
+checking whether rmdir is declared without a macro... yes
+checking whether sethostname is declared without a macro... yes
+checking whether sleep is declared without a macro... yes
+checking whether symlink is declared without a macro... yes
+checking whether symlinkat is declared without a macro... yes
+checking whether truncate is declared without a macro... yes
+checking whether ttyname_r is declared without a macro... yes
+checking whether unlink is declared without a macro... yes
+checking whether unlinkat is declared without a macro... yes
+checking whether usleep is declared without a macro... yes
+checking whether unlink honors trailing slashes... yes
+checking whether unlink of a parent directory fails as it should... guessing yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking for ptrdiff_t... yes
+checking for vasprintf... yes
+checking whether btowc is declared without a macro... yes
+checking whether wctob is declared without a macro... yes
+checking whether mbsinit is declared without a macro... yes
+checking whether mbrtowc is declared without a macro... yes
+checking whether mbrlen is declared without a macro... yes
+checking whether mbsrtowcs is declared without a macro... yes
+checking whether mbsnrtowcs is declared without a macro... yes
+checking whether wcrtomb is declared without a macro... yes
+checking whether wcsrtombs is declared without a macro... yes
+checking whether wcsnrtombs is declared without a macro... yes
+checking whether wcwidth is declared without a macro... yes
+checking whether wmemchr is declared without a macro... yes
+checking whether wmemcmp is declared without a macro... yes
+checking whether wmemcpy is declared without a macro... yes
+checking whether wmemmove is declared without a macro... yes
+checking whether wmemset is declared without a macro... yes
+checking whether wcslen is declared without a macro... yes
+checking whether wcsnlen is declared without a macro... yes
+checking whether wcscpy is declared without a macro... yes
+checking whether wcpcpy is declared without a macro... yes
+checking whether wcsncpy is declared without a macro... yes
+checking whether wcpncpy is declared without a macro... yes
+checking whether wcscat is declared without a macro... yes
+checking whether wcsncat is declared without a macro... yes
+checking whether wcscmp is declared without a macro... yes
+checking whether wcsncmp is declared without a macro... yes
+checking whether wcscasecmp is declared without a macro... yes
+checking whether wcsncasecmp is declared without a macro... yes
+checking whether wcscoll is declared without a macro... yes
+checking whether wcsxfrm is declared without a macro... yes
+checking whether wcsdup is declared without a macro... yes
+checking whether wcschr is declared without a macro... yes
+checking whether wcsrchr is declared without a macro... yes
+checking whether wcscspn is declared without a macro... yes
+checking whether wcsspn is declared without a macro... yes
+checking whether wcspbrk is declared without a macro... yes
+checking whether wcsstr is declared without a macro... yes
+checking whether wcstok is declared without a macro... yes
+checking whether wcswidth is declared without a macro... yes
+checking whether wcsftime is declared without a macro... yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking whether wctype is declared without a macro... yes
+checking whether iswctype is declared without a macro... yes
+checking whether wctrans is declared without a macro... yes
+checking whether towctrans is declared without a macro... yes
+checking for stdint.h... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking floatingpoint.h usability... no
+checking floatingpoint.h presence... no
+checking for floatingpoint.h... no
+checking fpu_control.h usability... yes
+checking fpu_control.h presence... yes
+checking for fpu_control.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking for pthread.h... (cached) yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking termio.h usability... yes
+checking termio.h presence... yes
+checking for termio.h... yes
+checking sgtty.h usability... yes
+checking sgtty.h presence... yes
+checking for sgtty.h... yes
+checking conio.h usability... no
+checking conio.h presence... no
+checking for conio.h... no
+checking for int64_t... yes
+checking for mode_t... (cached) yes
+checking for off_t... yes
+checking for pid_t... (cached) yes
+checking for size_t... (cached) yes
+checking for ssize_t... yes
+checking for uid_t in sys/types.h... (cached) yes
+checking for uint64_t... yes
+checking for dev_t... yes
+checking for ino_t... yes
+checking for ptrdiff_t... (cached) yes
+checking for long long int... (cached) yes
+checking for unsigned long long int... (cached) yes
+checking size of long double... 16
+checking for struct stat.st_blksize... yes
+checking for struct stat.st_blocks... yes
+checking for struct stat.st_rdev... yes
+checking for struct group.gr_passwd... no
+checking for struct tm.tm_zone... (cached) yes
+checking whether g++ allows overload of char, int8_t, and uint8_t... yes
+checking for ctermid... yes
+checking for dup2... yes
+checking for endgrent... yes
+checking for endpwent... yes
+checking for execvp... yes
+checking for fork... yes
+checking for getegid... (cached) yes
+checking for geteuid... (cached) yes
+checking for getgid... (cached) yes
+checking for getgrent... yes
+checking for getgrgid... yes
+checking for getgrnam... yes
+checking for getpgrp... yes
+checking for getpid... yes
+checking for getppid... yes
+checking for getpwent... yes
+checking for getpwuid... yes
+checking for getuid... (cached) yes
+checking for isascii... yes
+checking for kill... yes
+checking for lgamma_r... yes
+checking for lgammaf_r... yes
+checking for realpath... (cached) yes
+checking for resolvepath... no
+checking for select... yes
+checking for setgrent... yes
+checking for setpwent... yes
+checking for setsid... yes
+checking for siglongjmp... yes
+checking for strsignal... (cached) yes
+checking for tcgetattr... yes
+checking for tcsetattr... yes
+checking for toascii... yes
+checking for umask... yes
+checking for waitpid... yes
+checking for _getch... no
+checking for _kbhit... no
+checking for MATH DEFINES in math.h... yes
+checking for getrusage... (cached) yes
+checking for getpwnam... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking whether closedir returns void... no
+checking for struct exception in math.h... yes
+checking whether sys_siglist is declared... (cached) yes
+checking libqhull/libqhull.h usability... yes
+checking libqhull/libqhull.h presence... yes
+checking for libqhull/libqhull.h... yes
+checking for qh_qhull in -lqhull... yes
+checking for qh_version in -lqhull... yes
+checking whether the qhull library works... yes
+checking pcre.h usability... yes
+checking pcre.h presence... yes
+checking for pcre.h... yes
+checking for pcre_compile in -lpcre... yes
+checking for library containing tputs... -lncurses
+checking for rl_set_keyboard_input_timeout in -lreadline... yes
+checking for library containing tputs... (cached) -lncurses
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for gzclearerr in -lz... yes
+checking bzlib.h usability... yes
+checking bzlib.h presence... yes
+checking for bzlib.h... yes
+checking for BZ2_bzCompressInit in -lbz2... yes
+checking for llvm-config... llvm-config
+checking whether gcc accepts -isystem .... yes
+configure: using -isystem for LLVM headers
+checking for LLVMBuildAdd in -lLLVM-3.6.2... no
+checking llvm/Support/TargetSelect.h usability... yes
+checking llvm/Support/TargetSelect.h presence... yes
+checking for llvm/Support/TargetSelect.h... yes
+checking llvm/IR/Function.h usability... yes
+checking llvm/IR/Function.h presence... yes
+checking for llvm/IR/Function.h... yes
+checking llvm/Support/IRBuilder.h usability... no
+checking llvm/Support/IRBuilder.h presence... no
+checking for llvm/Support/IRBuilder.h... no
+checking llvm/IR/IRBuilder.h usability... yes
+checking llvm/IR/IRBuilder.h presence... yes
+checking for llvm/IR/IRBuilder.h... yes
+checking llvm/Target/TargetData.h usability... no
+checking llvm/Target/TargetData.h presence... no
+checking for llvm/Target/TargetData.h... no
+checking llvm/IR/DataLayout.h usability... yes
+checking llvm/IR/DataLayout.h presence... yes
+checking for llvm/IR/DataLayout.h... yes
+checking llvm/IR/Verifier.h usability... yes
+checking llvm/IR/Verifier.h presence... yes
+checking for llvm/IR/Verifier.h... yes
+checking llvm/Analysis/BasicAliasAnalysis.h usability... no
+checking llvm/Analysis/BasicAliasAnalysis.h presence... no
+checking for llvm/Analysis/BasicAliasAnalysis.h... no
+checking check llvm::Function::addAttribute arg type is llvm::Attributes... no
+checking check LLVM::Function::addFnAttr arg type is llvm::Attributes... no
+checking check LLVM::CallInst::addAttribute arg type is llvm::Attributes... no
+checking check LLVM::raw_fd_ostream arg type is llvm::sys:fs... no
+checking check for LLVM::legacy::PassManager... yes
+checking hdf5.h usability... yes
+checking hdf5.h presence... yes
+checking for hdf5.h... yes
+checking for H5Gget_num_objs in -lhdf5... yes
+checking whether HDF5 library has enforced version 1.6 API... no
+checking fftw3.h usability... yes
+checking fftw3.h presence... yes
+checking for fftw3.h... yes
+checking for fftw_plan_dft_1d in -lfftw3... yes
+checking for fftw3.h... (cached) yes
+checking for fftwf_plan_dft_1d in -lfftw3f... yes
+checking for fftw3 multi-threading support... -lfftw3_threads
+checking for fftw3f multi-threading support... -lfftw3f_threads
+checking glpk/glpk.h usability... no
+checking glpk/glpk.h presence... no
+checking for glpk/glpk.h... no
+checking glpk.h usability... yes
+checking glpk.h presence... yes
+checking for glpk.h... yes
+checking for glp_simplex in -lglpk... yes
+checking whether the glpk library has glp_interior(glp_prob*, glp_iptcp*)... yes
+checking curl/curl.h usability... yes
+checking curl/curl.h presence... yes
+checking for curl/curl.h... yes
+checking for curl_easy_escape in -lcurl... yes
+checking for CURLOPT_DIRLISTONLY in curl/curl.h... yes
+checking sndfile.h usability... yes
+checking sndfile.h presence... yes
+checking for sndfile.h... yes
+checking for sf_open in -lsndfile... yes
+checking whether sndfile library is modern enough... yes
+checking portaudio.h usability... yes
+checking portaudio.h presence... yes
+checking for portaudio.h... yes
+checking for Pa_GetDeviceCount in -lportaudio -lasound -lm -lpthread... yes
+checking Magick++.h usability... yes
+checking Magick++.h presence... yes
+checking for Magick++.h... yes
+checking for Magick::ColorRGB in Magick++.h... yes
+checking for setlocale... yes
+checking for X... libraries , headers 
+checking for XrmInitialize in -lX11... yes
+checking whether /usr/bin/ld -m elf_x86_64 accepts -framework Carbon... no
+checking whether /usr/bin/ld -m elf_x86_64 accepts -framework OpenGL... no
+checking for GL/gl.h... yes
+checking for GL/glu.h... yes
+checking for GL/glext.h... yes
+checking for OpenGL/glext.h... no
+checking for glEnable in -lGL... yes
+checking for FT2... yes
+checking for FreeType2 version >= 9.03... yes
+checking for FT_Reference_Face... yes
+checking fontconfig.h usability... no
+checking fontconfig.h presence... no
+checking for fontconfig.h... no
+checking fontconfig/fontconfig.h usability... yes
+checking fontconfig/fontconfig.h presence... yes
+checking for fontconfig/fontconfig.h... yes
+checking for FcInit in -lfontconfig -lfreetype... yes
+checking gl2ps.h usability... yes
+checking gl2ps.h presence... yes
+checking for gl2ps.h... yes
+checking for gl2psLineJoin... no
+checking Qt version 5... checking for QT... no
+checking Qt version 4... checking for QT... yes
+checking for qtchooser... qtchooser
+checking for moc-qt4... moc-qt4
+checking for uic-qt4... uic-qt4
+checking for rcc-qt4... no
+checking for rcc... rcc
+checking for lrelease-qt4... lrelease-qt4
+checking for qcollectiongenerator-qt4... no
+checking for qcollectiongenerator... qcollectiongenerator
+checking for qhelpgenerator-qt4... no
+checking for qhelpgenerator... qhelpgenerator
+checking for setlocale... (cached) yes
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking util.h usability... no
+checking util.h presence... no
+checking for util.h... no
+checking for library containing openpty... -lutil
+checking for chmod... yes
+checking for chown... yes
+checking for ftruncate... (cached) yes
+checking for mmap... (cached) yes
+checking for munmap... yes
+checking for QAbstractItemModel::beginResetModel in <QAbstractItemModel>... yes
+checking QStandardPaths usability... no
+checking QStandardPaths presence... no
+checking for QStandardPaths... no
+checking for QGuiApplication::setDesktopFileName... no
+checking for QHeaderView::setSectionResizeMode... no
+checking for QHeaderView::setSectionsClickable... no
+checking for QHeaderView::setSectionsMovable... no
+checking for QHelpSearchQueryWidget::searchInput... no
+checking for qInstallMessageHandler... no
+checking for QLineEdit::setPlaceholderText in <QLinedEdit>... yes
+checking for QMouseEvent::localPos... no
+checking whether QObject::findChildren accepts Qt::FindChildOptions... no
+checking for QTabWidget::setMovable in <QTabWidget>... yes
+checking whether Qt message handler accepts QMessageLogContext... no
+checking for QFont::ForceIntegerMetrics in <QFont>... yes
+checking for QFont::Monospace in <QFont>... yes
+checking for QGuiApplication... no
+checking QOpenGLWidget usability... no
+checking QOpenGLWidget presence... no
+checking for QOpenGLWidget... no
+checking QGLWidget usability... yes
+checking QGLWidget presence... yes
+checking for QGLWidget... yes
+checking whether Qt works with OpenGL and GLU... yes
+checking QOffscreenSurface usability... no
+checking QOffscreenSurface presence... no
+checking for QOffscreenSurface... no
+checking whether Qt supports full offscreen OpenGL rendering... no
+checking for the QScintilla library for Qt 4... -lqscintilla2
+checking whether QScintilla has version 2.6.0 or later... yes
+checking Qsci/qscilexeroctave.h usability... yes
+checking Qsci/qscilexeroctave.h presence... yes
+checking for Qsci/qscilexeroctave.h... yes
+checking Qsci/qscilexermatlab.h usability... yes
+checking Qsci/qscilexermatlab.h presence... yes
+checking for Qsci/qscilexermatlab.h... yes
+checking for QsciScintilla::findFirstInSelection in <Qsci/qsciscintilla.h>... yes
+checking osmesa.h usability... no
+checking osmesa.h presence... no
+checking for osmesa.h... no
+checking GL/osmesa.h usability... yes
+checking GL/osmesa.h presence... yes
+checking for GL/osmesa.h... yes
+checking for OSMesaCreateContext in OSMesa... yes
+checking for fltk-config... /usr/bin/fltk-config
+checking for OpenGL support in FLTK... yes
+checking for sqr1up in -lqrupdate... yes
+checking for slup1up in -lqrupdate... yes
+checking for SuiteSparse_time in -lsuitesparseconfig... yes
+checking suitesparse/amd.h usability... yes
+checking suitesparse/amd.h presence... yes
+checking for suitesparse/amd.h... yes
+checking for amd_postorder in -lamd... yes
+checking suitesparse/camd.h usability... yes
+checking suitesparse/camd.h presence... yes
+checking for suitesparse/camd.h... yes
+checking for camd_postorder in -lcamd... yes
+checking suitesparse/colamd.h usability... yes
+checking suitesparse/colamd.h presence... yes
+checking for suitesparse/colamd.h... yes
+checking for colamd in -lcolamd... yes
+checking suitesparse/ccolamd.h usability... yes
+checking suitesparse/ccolamd.h presence... yes
+checking for suitesparse/ccolamd.h... yes
+checking for ccolamd in -lccolamd... yes
+checking suitesparse/cholmod.h usability... yes
+checking suitesparse/cholmod.h presence... yes
+checking for suitesparse/cholmod.h... yes
+checking for cholmod_l_start in -lcholmod... yes
+checking suitesparse/cs.h usability... yes
+checking suitesparse/cs.h presence... yes
+checking for suitesparse/cs.h... yes
+checking for cs_dl_sqr in -lcxsparse... yes
+checking whether CXSparse is version 2.2 or later... yes
+checking suitesparse/umfpack.h usability... yes
+checking suitesparse/umfpack.h presence... yes
+checking for suitesparse/umfpack.h... yes
+checking for umfpack_zl_get_determinant in -lumfpack... yes
+checking suitesparse/klu.h usability... yes
+checking suitesparse/klu.h presence... yes
+checking for suitesparse/klu.h... yes
+checking for klu_solve in -lklu... yes
+checking for UMFPACK separate complex matrix and rhs split... yes
+checking nvector/nvector_serial.h usability... yes
+checking nvector/nvector_serial.h presence... yes
+checking for nvector/nvector_serial.h... yes
+checking for N_VNew_Serial in -lsundials_nvecserial... yes
+checking ida/ida.h usability... yes
+checking ida/ida.h presence... yes
+checking for ida/ida.h... yes
+checking for IDAInit in -lsundials_ida... yes
+checking for ida/ida.h... (cached) yes
+checking ida.h usability... no
+checking ida.h presence... no
+checking for ida.h... no
+checking whether SUNDIALS IDA is configured with double precision realtype... yes
+checking ida/ida_dense.h usability... yes
+checking ida/ida_dense.h presence... yes
+checking for ida/ida_dense.h... yes
+checking ida_dense.h usability... no
+checking ida_dense.h presence... no
+checking for ida_dense.h... no
+checking whether SUNDIALS IDA includes the IDADENSE linear solver... yes
+checking ida/ida_klu.h usability... no
+checking ida/ida_klu.h presence... no
+checking for ida/ida_klu.h... no
+checking ida_klu.h usability... no
+checking ida_klu.h presence... no
+checking for ida_klu.h... no
+checking whether SUNDIALS IDA is configured with IDAKLU enabled... no
+configure: WARNING: SUNDIALS IDA library not configured with IDAKLU, ode15i and ode15s will not support the sparse Jacobian feature
+checking for dseupd in -larpack... yes
+checking whether the arpack library works... yes
+checking whether the arpack library is free of bugs... yes
+configure: WARNING: JAVA_HOME environment variable not initialized.  Auto-detection will proceed but is unreliable.
+checking for java... /usr/bin/java
+checking for javac... /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+checking for jar... /usr/lib/jvm/java-8-openjdk-amd64/bin/jar
+checking for Java version... 1.8.0_162
+checking for libjvm.so... /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server
+checking for include file <jni.h>... /usr/lib/jvm/java-8-openjdk-amd64/include
+checking whether gcc accepts -Wall... yes
+adding -Wall to WARN_CFLAGS
+checking whether gcc accepts -W... yes
+adding -W to WARN_CFLAGS
+checking whether gcc accepts -Wshadow... yes
+adding -Wshadow to WARN_CFLAGS
+checking whether gcc accepts -Wformat... yes
+adding -Wformat to WARN_CFLAGS
+checking whether gcc accepts -Wpointer-arith... yes
+adding -Wpointer-arith to WARN_CFLAGS
+checking whether gcc accepts -Wmissing-prototypes... yes
+adding -Wmissing-prototypes to WARN_CFLAGS
+checking whether gcc accepts -Wstrict-prototypes... yes
+adding -Wstrict-prototypes to WARN_CFLAGS
+checking whether gcc accepts -Wwrite-strings... yes
+adding -Wwrite-strings to WARN_CFLAGS
+checking whether gcc accepts -Wcast-align... yes
+adding -Wcast-align to WARN_CFLAGS
+checking whether gcc accepts -Wcast-qual... yes
+adding -Wcast-qual to WARN_CFLAGS
+checking whether g++ accepts -Wall... yes
+adding -Wall to WARN_CXXFLAGS
+checking whether g++ accepts -W... yes
+adding -W to WARN_CXXFLAGS
+checking whether g++ accepts -Wshadow... yes
+adding -Wshadow to WARN_CXXFLAGS
+checking whether g++ accepts -Wold-style-cast... yes
+adding -Wold-style-cast to WARN_CXXFLAGS
+checking whether g++ accepts -Wformat... yes
+adding -Wformat to WARN_CXXFLAGS
+checking whether g++ accepts -Wpointer-arith... yes
+adding -Wpointer-arith to WARN_CXXFLAGS
+checking whether g++ accepts -Wwrite-strings... yes
+adding -Wwrite-strings to WARN_CXXFLAGS
+checking whether g++ accepts -Wcast-align... yes
+adding -Wcast-align to WARN_CXXFLAGS
+checking whether g++ accepts -Wcast-qual... yes
+adding -Wcast-qual to WARN_CXXFLAGS
+checking for #pragma GCC diagnostic push/pop/ignore... yes
+checking whether gcc accepts -Wimplicit-fallthrough... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating build-aux/check-subst-vars.sh
+config.status: creating doc/doxyhtml/Doxyfile
+config.status: creating libgnu/Makefile
+config.status: creating oct-conf-post.h-tmp
+config.status: creating libgui/mk-default-qt-settings.sh-tmp
+config.status: creating liboctave/external/mk-f77-def.sh-tmp
+config.status: creating libinterp/corefcn/mk-mxarray-h.sh-tmp
+config.status: creating libinterp/mk-version-h.sh-tmp
+config.status: creating build-aux/subst-config-vals.sh-tmp
+config.status: creating build-aux/subst-cross-config-vals.sh-tmp
+config.status: creating build-aux/subst-default-vals.sh-tmp
+config.status: creating build-aux/subst-script-vals.sh-tmp
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing oct-conf-post.h commands
+config.status: executing libgui/mk-default-qt-settings.sh commands
+config.status: executing liboctave/external/mk-f77-def.sh commands
+config.status: executing libinterp/corefcn/mk-mxarray-h.sh commands
+config.status: executing libinterp/mk-version-h.sh commands
+config.status: executing build-aux/subst-config-vals.sh commands
+config.status: executing build-aux/subst-cross-config-vals.sh commands
+config.status: executing build-aux/subst-default-vals.sh commands
+config.status: executing build-aux/subst-script-vals.sh commands
+configure:
+
+Octave is now configured for x86_64-pc-linux-gnu
+
+  Source directory:              .
+  Installation prefix:           /home/bect/.local
+  C compiler:                    gcc  -pthread -fopenmp  -Wall -W -Wshadow -Wformat -Wpointer-arith -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -Wcast-align -Wcast-qual -g -O2
+  C++ compiler:                  g++  -pthread -fopenmp  -Wall -W -Wshadow -Wold-style-cast -Wformat -Wpointer-arith -Wwrite-strings -Wcast-align -Wcast-qual -g -O2
+  Fortran compiler:              gfortran -g -O2
+  Fortran libraries:              -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. -lgfortran -lm -lquadmath
+  Lex libraries:                 
+  LIBS:                          -lutil -lm  
+  LDFLAGS:                       
+  Extra LDFLAGS:                 
+
+  AMD CPPFLAGS:                  
+  AMD LDFLAGS:                   
+  AMD libraries:                 -lamd
+  ARPACK CPPFLAGS:               
+  ARPACK LDFLAGS:                
+  ARPACK libraries:              -larpack
+  BLAS libraries:                -lblas
+  BZ2 CPPFLAGS:                  
+  BZ2 LDFLAGS:                   
+  BZ2 libraries:                 -lbz2
+  CAMD CPPFLAGS:                 
+  CAMD LDFLAGS:                  
+  CAMD libraries:                -lcamd
+  CARBON libraries:              
+  CCOLAMD CPPFLAGS:              
+  CCOLAMD LDFLAGS:               
+  CCOLAMD libraries:             -lccolamd
+  CHOLMOD CPPFLAGS:              
+  CHOLMOD LDFLAGS:               
+  CHOLMOD libraries:             -lcholmod
+  COLAMD CPPFLAGS:               
+  COLAMD LDFLAGS:                
+  COLAMD libraries:              -lcolamd
+  CURL CPPFLAGS:                 
+  CURL LDFLAGS:                  
+  CURL libraries:                -lcurl
+  CXSPARSE CPPFLAGS:             
+  CXSPARSE LDFLAGS:              
+  CXSPARSE libraries:            -lcxsparse
+  DL libraries:                  -ldl
+  FFTW3 CPPFLAGS:                
+  FFTW3 LDFLAGS:                 
+  FFTW3 libraries:               -lfftw3_threads -lfftw3
+  FFTW3F CPPFLAGS:               
+  FFTW3F LDFLAGS:                
+  FFTW3F libraries:              -lfftw3f_threads -lfftw3f
+  FLTK CPPFLAGS:                 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/freetype2
+  FLTK LDFLAGS:                  
+  FLTK libraries:                -lfltk_gl -lfltk -lX11
+  fontconfig CPPFLAGS:           -I/usr/include/freetype2
+  fontconfig libraries:          -lfontconfig -lfreetype
+  FreeType2 CPPFLAGS:            -I/usr/include/freetype2
+  FreeType2 libraries:           -lfreetype
+  GLPK CPPFLAGS:                 
+  GLPK LDFLAGS:                  
+  GLPK libraries:                -lglpk
+  HDF5 CPPFLAGS:                 -I/usr/include/hdf5/serial
+  HDF5 LDFLAGS:                  -L/usr/lib/x86_64-linux-gnu/hdf5/serial
+  HDF5 libraries:                -lhdf5
+  Java home:                     /usr/lib/jvm/java-8-openjdk-amd64
+  Java JVM path:                 /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server
+  Java CPPFLAGS:                 -I/usr/lib/jvm/java-8-openjdk-amd64/include -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux
+  Java libraries:                
+  KLU CPPFLAGS:                  
+  KLU LDFLAGS:                   
+  KLU libraries:                 -lklu
+  LAPACK libraries:              -llapack
+  LLVM CPPFLAGS:                 -isystem /home/bect/.local/include
+  LLVM LDFLAGS:                  -L/home/bect/.local/lib
+  LLVM libraries:                -lLLVMLTO -lLLVMObjCARCOpts -lLLVMLinker -lLLVMBitWriter -lLLVMIRReader -lLLVMAsmParser -lLLVMXCoreDisassembler -lLLVMXCoreCodeGen -lLLVMXCoreDesc -lLLVMXCoreInfo -lLLVMXCoreAsmPrinter -lLLVMSystemZDisassembler -lLLVMSystemZCodeGen -lLLVMSystemZAsmParser -lLLVMSystemZDesc -lLLVMSystemZInfo -lLLVMSystemZAsmPrinter -lLLVMSparcDisassembler -lLLVMSparcCodeGen -lLLVMSparcAsmParser -lLLVMSparcDesc -lLLVMSparcInfo -lLLVMSparcAsmPrinter -lLLVMR600CodeGen -lLLVMipo -lLLVMVectorize -lLLVMR600AsmParser -lLLVMR600Desc -lLLVMR600Info -lLLVMR600AsmPrinter -lLLVMPowerPCDisassembler -lLLVMPowerPCCodeGen -lLLVMPowerPCAsmParser -lLLVMPowerPCDesc -lLLVMPowerPCInfo -lLLVMPowerPCAsmPrinter -lLLVMNVPTXCodeGen -lLLVMNVPTXDesc -lLLVMNVPTXInfo -lLLVMNVPTXAsmPrinter -lLLVMMSP430CodeGen -lLLVMMSP430Desc -lLLVMMSP430Info -lLLVMMSP430AsmPrinter -lLLVMMipsDisassembler -lLLVMMipsCodeGen -lLLVMMipsAsmParser -lLLVMMipsDesc -lLLVMMipsInfo -lLLVMMipsAsmPrinter -lLLVMHexagonDisassembler -lLLVMHexagonCodeGen -lLLVMHexagonDesc -lLLVMHexagonInfo -lLLVMCppBackendCodeGen -lLLVMCppBackendInfo -lLLVMARMDisassembler -lLLVMARMCodeGen -lLLVMARMAsmParser -lLLVMARMDesc -lLLVMARMInfo -lLLVMARMAsmPrinter -lLLVMAArch64Disassembler -lLLVMAArch64CodeGen -lLLVMAArch64AsmParser -lLLVMAArch64Desc -lLLVMAArch64Info -lLLVMAArch64AsmPrinter -lLLVMAArch64Utils -lLLVMTableGen -lLLVMDebugInfo -lLLVMOption -lLLVMX86Disassembler -lLLVMX86AsmParser -lLLVMX86CodeGen -lLLVMSelectionDAG -lLLVMAsmPrinter -lLLVMX86Desc -lLLVMMCDisassembler -lLLVMX86Info -lLLVMX86AsmPrinter -lLLVMX86Utils -lLLVMMCJIT -lLLVMLineEditor -lLLVMInstrumentation -lLLVMInterpreter -lLLVMExecutionEngine -lLLVMRuntimeDyld -lLLVMCodeGen -lLLVMScalarOpts -lLLVMProfileData -lLLVMObject -lLLVMMCParser -lLLVMBitReader -lLLVMInstCombine -lLLVMTransformUtils -lLLVMipa -lLLVMAnalysis -lLLVMTarget -lLLVMMC -lLLVMCore -lLLVMSupport -lrt -ldl -ltinfo -latomic -lpthread -lz -lm
+  Magick++ CPPFLAGS:             -I/usr/include/GraphicsMagick
+  Magick++ LDFLAGS:              
+  Magick++ libraries:            -lGraphicsMagick++ -lGraphicsMagick
+  OpenGL libraries:              -lGL -lGLU
+  PCRE CPPFLAGS:                 
+  PCRE LDFLAGS:                  
+  PCRE libraries:                -lpcre
+  PortAudio CPPFLAGS:            
+  PortAudio LDFLAGS:             
+  PortAudio libraries:           -lportaudio -lasound -lm -lpthread
+  PTHREAD flags:                 -pthread
+  PTHREAD libraries:             
+  QHULL CPPFLAGS:                
+  QHULL LDFLAGS:                 
+  QHULL libraries:               -lqhull
+  QRUPDATE CPPFLAGS:             
+  QRUPDATE LDFLAGS:              
+  QRUPDATE libraries:            -lqrupdate
+  Qt CPPFLAGS:                   -I/usr/include/qt4 -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I/usr/include/qt4/QtHelp -I/usr/include/qt4 -I/usr/include/qt4/QtNetwork -I/usr/include/qt4 -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/include/qt4/QtCore
+  Qt LDFLAGS:                    
+  Qt libraries:                  -lQtOpenGL -lQtGui -lQtHelp -lQtNetwork -lQtSql -lQtXml -lQtCore -lqscintilla2
+  Qt moc:                        moc-qt4 
+  Qt uic:                        uic-qt4 
+  Qt rcc:                        rcc -qt4
+  Qt lrelease:                   lrelease-qt4 
+  Qt qcollectiongenerator:       qcollectiongenerator -qt4
+  Qt qhelpgenerator:             qhelpgenerator -qt4
+  READLINE libraries:            -lreadline
+  Sndfile CPPFLAGS:              
+  Sndfile LDFLAGS:               
+  Sndfile libraries:             -lsndfile
+  SuiteSparse config libraries:  -lsuitesparseconfig
+  SUNDIALS IDA CPPFLAGS:         
+  SUNDIALS IDA LDFLAGS:          
+  SUNDIALS IDA libraries:        -lsundials_ida
+  SUNDIALS NVECTOR CPPFLAGS:     
+  SUNDIALS NVECTOR LDFLAGS:      
+  SUNDIALS NVECTOR libraries:    -lsundials_nvecserial
+  TERM libraries:                -lncurses
+  UMFPACK CPPFLAGS:              
+  UMFPACK LDFLAGS:               
+  UMFPACK libraries:             -lumfpack
+  X11 include flags:             
+  X11 libraries:                 -lX11
+  Z CPPFLAGS:                    
+  Z LDFLAGS:                     
+  Z libraries:                   -lz
+
+  Default pager:                 less
+  gnuplot:                       gnuplot
+
+  Build Octave Qt GUI:                  yes (version: 4)
+  JIT compiler for loops:               yes
+  Build Java interface:                 yes
+  Build static libraries:               no
+  Build shared libraries:               yes
+  Dynamic Linking:                      yes (dlopen)
+  Include support for GNU readline:     yes
+  64-bit array dims and indexing:       yes
+  64-bit BLAS array dims and indexing:  no
+  OpenMP SMP multithreading:            yes
+  Truncate intermediate FP results:     yes
+  Build cross tools:                    no
+  Build docs:                           yes
+
+configure: WARNING: SUNDIALS IDA library not configured with IDAKLU, ode15i and ode15s will not support the sparse Jacobian feature
+configure: WARNING: JAVA_HOME environment variable not initialized.  Auto-detection will proceed but is unreliable.
+configure: 
+configure: NOTE: Libraries or auxiliary programs may be skipped if they are not found
+configure: NOTE: OR if they are missing required features on your system.
+cd libgnu && make  all
+make[1] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+  GEN      alloca.h
+  GEN      configmake.h
+  GEN      dirent.h
+  GEN      fcntl.h
+  GEN      glob.h
+  GEN      iconv.h
+  GPERF    iconv_open-aix.h
+  GPERF    iconv_open-hpux.h
+  GPERF    iconv_open-irix.h
+  GPERF    iconv_open-osf.h
+  GPERF    iconv_open-solaris.h
+  GEN      limits.h
+  GEN      math.h
+  GEN      signal.h
+  GEN      stdint.h
+  GEN      stdio.h
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      strings.h
+  GEN      sys/resource.h
+  GEN      sys/select.h
+  GEN      sys/socket.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      sys/times.h
+  GEN      sys/types.h
+  GEN      sys/uio.h
+  GEN      sys/utsname.h
+  GEN      sys/wait.h
+  GEN      time.h
+  GEN      uniconv.h
+  GEN      unistd.h
+  GEN      unistr.h
+  GEN      unitypes.h
+  GEN      wchar.h
+  GEN      wctype.h
+make  all-recursive
+make[2] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+make[3] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+  CC       allocator.lo
+  CC       areadlink.lo
+  CC       areadlink-with-size.lo
+  CC       base64.lo
+  CC       bitrotate.lo
+  CC       c-ctype.lo
+  CC       c-strcasecmp.lo
+  CC       c-strncasecmp.lo
+  CC       canonicalize.lo
+  CC       careadlinkat.lo
+  CC       cloexec.lo
+  CC       md2.lo
+  CC       md4.lo
+  CC       md5.lo
+  CC       sha1.lo
+  CC       sha256.lo
+  CC       sha512.lo
+  CC       dirname.lo
+  CC       basename.lo
+  CC       dirname-lgpl.lo
+  CC       basename-lgpl.lo
+  CC       stripslash.lo
+  CC       exitfail.lo
+  CC       fd-hook.lo
+  CC       fd-safer-flag.lo
+  CC       dup-safer-flag.lo
+  CC       file-set.lo
+  CC       filemode.lo
+  CC       filenamecat-lgpl.lo
+  CC       getprogname.lo
+  CC       hard-locale.lo
+  CC       hash.lo
+  CC       hash-pjw.lo
+  CC       hash-triple.lo
+  CC       localcharset.lo
+  CC       glthread/lock.lo
+  CC       malloca.lo
+  CC       math.lo
+  CC       nproc.lo
+  CC       nstrftime.lo
+  CC       openat-die.lo
+  CC       progname.lo
+  CC       same.lo
+  CC       save-cwd.lo
+  CC       malloc/scratch_buffer_grow.lo
+  CC       malloc/scratch_buffer_grow_preserve.lo
+  CC       malloc/scratch_buffer_set_array_size.lo
+  CC       sig-handler.lo
+  CC       sockets.lo
+  CC       stat-time.lo
+  CC       striconveh.lo
+  CC       striconveha.lo
+  CC       strnlen1.lo
+  CC       sys_socket.lo
+  CC       tempname.lo
+  CC       glthread/threadlib.lo
+  CC       glthread/tls.lo
+  CC       tmpdir.lo
+  CC       u64.lo
+  CC       uniconv/u8-conv-from-enc.lo
+  CC       uniconv/u8-conv-to-enc.lo
+  CC       unistd.lo
+  CC       dup-safer.lo
+  CC       fd-safer.lo
+  CC       pipe-safer.lo
+  CC       unistr/u8-check.lo
+  CC       unistr/u8-mblen.lo
+  CC       unistr/u8-mbtouc.lo
+  CC       unistr/u8-mbtouc-aux.lo
+  CC       unistr/u8-mbtouc-unsafe.lo
+  CC       unistr/u8-mbtouc-unsafe-aux.lo
+  CC       unistr/u8-mbtoucr.lo
+  CC       unistr/u8-prev.lo
+  CC       unistr/u8-uctomb.lo
+  CC       unistr/u8-uctomb-aux.lo
+  CC       wctype-h.lo
+  CC       xmalloc.lo
+  CC       xalloc-die.lo
+  CC       xgetcwd.lo
+  CC       xsize.lo
+  CC       xstrndup.lo
+  CC       asnprintf.lo
+  CC       chdir-long.lo
+  CC       fcntl.lo
+  CC       glob.lo
+  CC       glob_pattern_p.lo
+  CC       globfree.lo
+  CC       localtime-buffer.lo
+  CC       mbrtowc.lo
+  CC       mktime.lo
+  CC       nanosleep.lo
+  CC       openat-proc.lo
+  CC       printf-args.lo
+  CC       printf-parse.lo
+  CC       time_rz.lo
+  CC       vasnprintf.lo
+  CCLD     libgnu.la
+  GEN      charset.alias
+  GEN      ref-add.sed
+  GEN      ref-del.sed
+make[3] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+make[2] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+make[1] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+  GEN      liboctave/operators/mx-ops.h
+  GEN      liboctave/operators/smx-ops.h
+  GEN      liboctave/operators/vx-ops.h
+  GEN      liboctave/operators/mx-cdm-dm.h
+  GEN      liboctave/operators/mx-dm-cdm.h
+  GEN      liboctave/operators/mx-cs-dm.h
+  GEN      liboctave/operators/mx-cs-m.h
+  GEN      liboctave/operators/mx-cs-nda.h
+  GEN      liboctave/operators/mx-cdm-cm.h
+  GEN      liboctave/operators/mx-cdm-m.h
+  GEN      liboctave/operators/mx-cdm-s.h
+  GEN      liboctave/operators/mx-cm-cdm.h
+  GEN      liboctave/operators/mx-cm-dm.h
+  GEN      liboctave/operators/mx-cm-m.h
+  GEN      liboctave/operators/mx-cnda-nda.h
+  GEN      liboctave/operators/mx-cm-s.h
+  GEN      liboctave/operators/mx-cnda-s.h
+  GEN      liboctave/operators/mx-dm-cs.h
+  GEN      liboctave/operators/mx-dm-cm.h
+  GEN      liboctave/operators/mx-m-cs.h
+  GEN      liboctave/operators/mx-nda-cs.h
+  GEN      liboctave/operators/mx-m-cdm.h
+  GEN      liboctave/operators/mx-m-cm.h
+  GEN      liboctave/operators/mx-nda-cnda.h
+  GEN      liboctave/operators/mx-s-cdm.h
+  GEN      liboctave/operators/mx-s-cm.h
+  GEN      liboctave/operators/mx-s-cnda.h
+  GEN      liboctave/operators/mx-dm-m.h
+  GEN      liboctave/operators/mx-m-dm.h
+  GEN      liboctave/operators/mx-fcdm-fdm.h
+  GEN      liboctave/operators/mx-fdm-fcdm.h
+  GEN      liboctave/operators/mx-fcs-fdm.h
+  GEN      liboctave/operators/mx-fcs-fm.h
+  GEN      liboctave/operators/mx-fcs-fnda.h
+  GEN      liboctave/operators/mx-fcdm-fcm.h
+  GEN      liboctave/operators/mx-fcdm-fm.h
+  GEN      liboctave/operators/mx-fcdm-fs.h
+  GEN      liboctave/operators/mx-fcm-fcdm.h
+  GEN      liboctave/operators/mx-fcm-fdm.h
+  GEN      liboctave/operators/mx-fcm-fm.h
+  GEN      liboctave/operators/mx-fcnda-fnda.h
+  GEN      liboctave/operators/mx-fcm-fs.h
+  GEN      liboctave/operators/mx-fcnda-fs.h
+  GEN      liboctave/operators/mx-fdm-fcs.h
+  GEN      liboctave/operators/mx-fdm-fcm.h
+  GEN      liboctave/operators/mx-fm-fcs.h
+  GEN      liboctave/operators/mx-fnda-fcs.h
+  GEN      liboctave/operators/mx-fm-fcdm.h
+  GEN      liboctave/operators/mx-fm-fcm.h
+  GEN      liboctave/operators/mx-fnda-fcnda.h
+  GEN      liboctave/operators/mx-fs-fcdm.h
+  GEN      liboctave/operators/mx-fs-fcm.h
+  GEN      liboctave/operators/mx-fs-fcnda.h
+  GEN      liboctave/operators/mx-fdm-fm.h
+  GEN      liboctave/operators/mx-fm-fdm.h
+  GEN      liboctave/operators/mx-pm-m.h
+  GEN      liboctave/operators/mx-m-pm.h
+  GEN      liboctave/operators/mx-pm-cm.h
+  GEN      liboctave/operators/mx-cm-pm.h
+  GEN      liboctave/operators/mx-pm-fm.h
+  GEN      liboctave/operators/mx-fm-pm.h
+  GEN      liboctave/operators/mx-pm-fcm.h
+  GEN      liboctave/operators/mx-fcm-pm.h
+  GEN      liboctave/operators/mx-s-i8nda.h
+  GEN      liboctave/operators/mx-i8nda-s.h
+  GEN      liboctave/operators/mx-s-ui8nda.h
+  GEN      liboctave/operators/mx-ui8nda-s.h
+  GEN      liboctave/operators/mx-s-i16nda.h
+  GEN      liboctave/operators/mx-i16nda-s.h
+  GEN      liboctave/operators/mx-s-ui16nda.h
+  GEN      liboctave/operators/mx-ui16nda-s.h
+  GEN      liboctave/operators/mx-s-i32nda.h
+  GEN      liboctave/operators/mx-i32nda-s.h
+  GEN      liboctave/operators/mx-s-ui32nda.h
+  GEN      liboctave/operators/mx-ui32nda-s.h
+  GEN      liboctave/operators/mx-s-i64nda.h
+  GEN      liboctave/operators/mx-i64nda-s.h
+  GEN      liboctave/operators/mx-s-ui64nda.h
+  GEN      liboctave/operators/mx-ui64nda-s.h
+  GEN      liboctave/operators/mx-fs-i8nda.h
+  GEN      liboctave/operators/mx-i8nda-fs.h
+  GEN      liboctave/operators/mx-fs-ui8nda.h
+  GEN      liboctave/operators/mx-ui8nda-fs.h
+  GEN      liboctave/operators/mx-fs-i16nda.h
+  GEN      liboctave/operators/mx-i16nda-fs.h
+  GEN      liboctave/operators/mx-fs-ui16nda.h
+  GEN      liboctave/operators/mx-ui16nda-fs.h
+  GEN      liboctave/operators/mx-fs-i32nda.h
+  GEN      liboctave/operators/mx-i32nda-fs.h
+  GEN      liboctave/operators/mx-fs-ui32nda.h
+  GEN      liboctave/operators/mx-ui32nda-fs.h
+  GEN      liboctave/operators/mx-fs-i64nda.h
+  GEN      liboctave/operators/mx-i64nda-fs.h
+  GEN      liboctave/operators/mx-fs-ui64nda.h
+  GEN      liboctave/operators/mx-ui64nda-fs.h
+  GEN      liboctave/operators/mx-nda-i8.h
+  GEN      liboctave/operators/mx-i8-nda.h
+  GEN      liboctave/operators/mx-nda-ui8.h
+  GEN      liboctave/operators/mx-ui8-nda.h
+  GEN      liboctave/operators/mx-nda-i16.h
+  GEN      liboctave/operators/mx-i16-nda.h
+  GEN      liboctave/operators/mx-nda-ui16.h
+  GEN      liboctave/operators/mx-ui16-nda.h
+  GEN      liboctave/operators/mx-nda-i32.h
+  GEN      liboctave/operators/mx-i32-nda.h
+  GEN      liboctave/operators/mx-nda-ui32.h
+  GEN      liboctave/operators/mx-ui32-nda.h
+  GEN      liboctave/operators/mx-nda-i64.h
+  GEN      liboctave/operators/mx-i64-nda.h
+  GEN      liboctave/operators/mx-nda-ui64.h
+  GEN      liboctave/operators/mx-ui64-nda.h
+  GEN      liboctave/operators/mx-fnda-i8.h
+  GEN      liboctave/operators/mx-i8-fnda.h
+  GEN      liboctave/operators/mx-fnda-ui8.h
+  GEN      liboctave/operators/mx-ui8-fnda.h
+  GEN      liboctave/operators/mx-fnda-i16.h
+  GEN      liboctave/operators/mx-i16-fnda.h
+  GEN      liboctave/operators/mx-fnda-ui16.h
+  GEN      liboctave/operators/mx-ui16-fnda.h
+  GEN      liboctave/operators/mx-fnda-i32.h
+  GEN      liboctave/operators/mx-i32-fnda.h
+  GEN      liboctave/operators/mx-fnda-ui32.h
+  GEN      liboctave/operators/mx-ui32-fnda.h
+  GEN      liboctave/operators/mx-fnda-i64.h
+  GEN      liboctave/operators/mx-i64-fnda.h
+  GEN      liboctave/operators/mx-fnda-ui64.h
+  GEN      liboctave/operators/mx-ui64-fnda.h
+  GEN      liboctave/operators/mx-nda-i8nda.h
+  GEN      liboctave/operators/mx-i8nda-nda.h
+  GEN      liboctave/operators/mx-nda-ui8nda.h
+  GEN      liboctave/operators/mx-ui8nda-nda.h
+  GEN      liboctave/operators/mx-nda-i16nda.h
+  GEN      liboctave/operators/mx-i16nda-nda.h
+  GEN      liboctave/operators/mx-nda-ui16nda.h
+  GEN      liboctave/operators/mx-ui16nda-nda.h
+  GEN      liboctave/operators/mx-nda-i32nda.h
+  GEN      liboctave/operators/mx-i32nda-nda.h
+  GEN      liboctave/operators/mx-nda-ui32nda.h
+  GEN      liboctave/operators/mx-ui32nda-nda.h
+  GEN      liboctave/operators/mx-nda-i64nda.h
+  GEN      liboctave/operators/mx-i64nda-nda.h
+  GEN      liboctave/operators/mx-nda-ui64nda.h
+  GEN      liboctave/operators/mx-ui64nda-nda.h
+  GEN      liboctave/operators/mx-fnda-i8nda.h
+  GEN      liboctave/operators/mx-i8nda-fnda.h
+  GEN      liboctave/operators/mx-fnda-ui8nda.h
+  GEN      liboctave/operators/mx-ui8nda-fnda.h
+  GEN      liboctave/operators/mx-fnda-i16nda.h
+  GEN      liboctave/operators/mx-i16nda-fnda.h
+  GEN      liboctave/operators/mx-fnda-ui16nda.h
+  GEN      liboctave/operators/mx-ui16nda-fnda.h
+  GEN      liboctave/operators/mx-fnda-i32nda.h
+  GEN      liboctave/operators/mx-i32nda-fnda.h
+  GEN      liboctave/operators/mx-fnda-ui32nda.h
+  GEN      liboctave/operators/mx-ui32nda-fnda.h
+  GEN      liboctave/operators/mx-fnda-i64nda.h
+  GEN      liboctave/operators/mx-i64nda-fnda.h
+  GEN      liboctave/operators/mx-fnda-ui64nda.h
+  GEN      liboctave/operators/mx-ui64nda-fnda.h
+  GEN      liboctave/operators/mx-i8nda-ui8.h
+  GEN      liboctave/operators/mx-i8nda-i16.h
+  GEN      liboctave/operators/mx-i8nda-ui16.h
+  GEN      liboctave/operators/mx-i8nda-i32.h
+  GEN      liboctave/operators/mx-i8nda-ui32.h
+  GEN      liboctave/operators/mx-i8nda-i64.h
+  GEN      liboctave/operators/mx-i8nda-ui64.h
+  GEN      liboctave/operators/mx-i16nda-i8.h
+  GEN      liboctave/operators/mx-i16nda-ui8.h
+  GEN      liboctave/operators/mx-i16nda-ui16.h
+  GEN      liboctave/operators/mx-i16nda-i32.h
+  GEN      liboctave/operators/mx-i16nda-ui32.h
+  GEN      liboctave/operators/mx-i16nda-i64.h
+  GEN      liboctave/operators/mx-i16nda-ui64.h
+  GEN      liboctave/operators/mx-i32nda-i8.h
+  GEN      liboctave/operators/mx-i32nda-ui8.h
+  GEN      liboctave/operators/mx-i32nda-i16.h
+  GEN      liboctave/operators/mx-i32nda-ui16.h
+  GEN      liboctave/operators/mx-i32nda-ui32.h
+  GEN      liboctave/operators/mx-i32nda-i64.h
+  GEN      liboctave/operators/mx-i32nda-ui64.h
+  GEN      liboctave/operators/mx-i64nda-i8.h
+  GEN      liboctave/operators/mx-i64nda-ui8.h
+  GEN      liboctave/operators/mx-i64nda-i16.h
+  GEN      liboctave/operators/mx-i64nda-ui16.h
+  GEN      liboctave/operators/mx-i64nda-i32.h
+  GEN      liboctave/operators/mx-i64nda-ui32.h
+  GEN      liboctave/operators/mx-i64nda-ui64.h
+  GEN      liboctave/operators/mx-ui8nda-i8.h
+  GEN      liboctave/operators/mx-ui8nda-i16.h
+  GEN      liboctave/operators/mx-ui8nda-ui16.h
+  GEN      liboctave/operators/mx-ui8nda-i32.h
+  GEN      liboctave/operators/mx-ui8nda-ui32.h
+  GEN      liboctave/operators/mx-ui8nda-i64.h
+  GEN      liboctave/operators/mx-ui8nda-ui64.h
+  GEN      liboctave/operators/mx-ui16nda-i8.h
+  GEN      liboctave/operators/mx-ui16nda-ui8.h
+  GEN      liboctave/operators/mx-ui16nda-i16.h
+  GEN      liboctave/operators/mx-ui16nda-i32.h
+  GEN      liboctave/operators/mx-ui16nda-ui32.h
+  GEN      liboctave/operators/mx-ui16nda-i64.h
+  GEN      liboctave/operators/mx-ui16nda-ui64.h
+  GEN      liboctave/operators/mx-ui32nda-i8.h
+  GEN      liboctave/operators/mx-ui32nda-ui8.h
+  GEN      liboctave/operators/mx-ui32nda-i16.h
+  GEN      liboctave/operators/mx-ui32nda-ui16.h
+  GEN      liboctave/operators/mx-ui32nda-i32.h
+  GEN      liboctave/operators/mx-ui32nda-i64.h
+  GEN      liboctave/operators/mx-ui32nda-ui64.h
+  GEN      liboctave/operators/mx-ui64nda-i8.h
+  GEN      liboctave/operators/mx-ui64nda-ui8.h
+  GEN      liboctave/operators/mx-ui64nda-i16.h
+  GEN      liboctave/operators/mx-ui64nda-ui16.h
+  GEN      liboctave/operators/mx-ui64nda-i32.h
+  GEN      liboctave/operators/mx-ui64nda-ui32.h
+  GEN      liboctave/operators/mx-ui64nda-i64.h
+  GEN      liboctave/operators/mx-i8-ui8nda.h
+  GEN      liboctave/operators/mx-i8-i16nda.h
+  GEN      liboctave/operators/mx-i8-ui16nda.h
+  GEN      liboctave/operators/mx-i8-i32nda.h
+  GEN      liboctave/operators/mx-i8-ui32nda.h
+  GEN      liboctave/operators/mx-i8-i64nda.h
+  GEN      liboctave/operators/mx-i8-ui64nda.h
+  GEN      liboctave/operators/mx-i16-i8nda.h
+  GEN      liboctave/operators/mx-i16-ui8nda.h
+  GEN      liboctave/operators/mx-i16-ui16nda.h
+  GEN      liboctave/operators/mx-i16-i32nda.h
+  GEN      liboctave/operators/mx-i16-ui32nda.h
+  GEN      liboctave/operators/mx-i16-i64nda.h
+  GEN      liboctave/operators/mx-i16-ui64nda.h
+  GEN      liboctave/operators/mx-i32-i8nda.h
+  GEN      liboctave/operators/mx-i32-ui8nda.h
+  GEN      liboctave/operators/mx-i32-i16nda.h
+  GEN      liboctave/operators/mx-i32-ui16nda.h
+  GEN      liboctave/operators/mx-i32-ui32nda.h
+  GEN      liboctave/operators/mx-i32-i64nda.h
+  GEN      liboctave/operators/mx-i32-ui64nda.h
+  GEN      liboctave/operators/mx-i64-i8nda.h
+  GEN      liboctave/operators/mx-i64-ui8nda.h
+  GEN      liboctave/operators/mx-i64-i16nda.h
+  GEN      liboctave/operators/mx-i64-ui16nda.h
+  GEN      liboctave/operators/mx-i64-i32nda.h
+  GEN      liboctave/operators/mx-i64-ui32nda.h
+  GEN      liboctave/operators/mx-i64-ui64nda.h
+  GEN      liboctave/operators/mx-ui8-i8nda.h
+  GEN      liboctave/operators/mx-ui8-i16nda.h
+  GEN      liboctave/operators/mx-ui8-ui16nda.h
+  GEN      liboctave/operators/mx-ui8-i32nda.h
+  GEN      liboctave/operators/mx-ui8-ui32nda.h
+  GEN      liboctave/operators/mx-ui8-i64nda.h
+  GEN      liboctave/operators/mx-ui8-ui64nda.h
+  GEN      liboctave/operators/mx-ui16-i8nda.h
+  GEN      liboctave/operators/mx-ui16-ui8nda.h
+  GEN      liboctave/operators/mx-ui16-i16nda.h
+  GEN      liboctave/operators/mx-ui16-i32nda.h
+  GEN      liboctave/operators/mx-ui16-ui32nda.h
+  GEN      liboctave/operators/mx-ui16-i64nda.h
+  GEN      liboctave/operators/mx-ui16-ui64nda.h
+  GEN      liboctave/operators/mx-ui32-i8nda.h
+  GEN      liboctave/operators/mx-ui32-ui8nda.h
+  GEN      liboctave/operators/mx-ui32-i16nda.h
+  GEN      liboctave/operators/mx-ui32-ui16nda.h
+  GEN      liboctave/operators/mx-ui32-i32nda.h
+  GEN      liboctave/operators/mx-ui32-i64nda.h
+  GEN      liboctave/operators/mx-ui32-ui64nda.h
+  GEN      liboctave/operators/mx-ui64-i8nda.h
+  GEN      liboctave/operators/mx-ui64-ui8nda.h
+  GEN      liboctave/operators/mx-ui64-i16nda.h
+  GEN      liboctave/operators/mx-ui64-ui16nda.h
+  GEN      liboctave/operators/mx-ui64-i32nda.h
+  GEN      liboctave/operators/mx-ui64-ui32nda.h
+  GEN      liboctave/operators/mx-ui64-i64nda.h
+  GEN      liboctave/operators/mx-i8nda-ui8nda.h
+  GEN      liboctave/operators/mx-i8nda-i16nda.h
+  GEN      liboctave/operators/mx-i8nda-ui16nda.h
+  GEN      liboctave/operators/mx-i8nda-i32nda.h
+  GEN      liboctave/operators/mx-i8nda-ui32nda.h
+  GEN      liboctave/operators/mx-i8nda-i64nda.h
+  GEN      liboctave/operators/mx-i8nda-ui64nda.h
+  GEN      liboctave/operators/mx-i16nda-i8nda.h
+  GEN      liboctave/operators/mx-i16nda-ui8nda.h
+  GEN      liboctave/operators/mx-i16nda-ui16nda.h
+  GEN      liboctave/operators/mx-i16nda-i32nda.h
+  GEN      liboctave/operators/mx-i16nda-ui32nda.h
+  GEN      liboctave/operators/mx-i16nda-i64nda.h
+  GEN      liboctave/operators/mx-i16nda-ui64nda.h
+  GEN      liboctave/operators/mx-i32nda-i8nda.h
+  GEN      liboctave/operators/mx-i32nda-ui8nda.h
+  GEN      liboctave/operators/mx-i32nda-i16nda.h
+  GEN      liboctave/operators/mx-i32nda-ui16nda.h
+  GEN      liboctave/operators/mx-i32nda-ui32nda.h
+  GEN      liboctave/operators/mx-i32nda-i64nda.h
+  GEN      liboctave/operators/mx-i32nda-ui64nda.h
+  GEN      liboctave/operators/mx-i64nda-i8nda.h
+  GEN      liboctave/operators/mx-i64nda-ui8nda.h
+  GEN      liboctave/operators/mx-i64nda-i16nda.h
+  GEN      liboctave/operators/mx-i64nda-ui16nda.h
+  GEN      liboctave/operators/mx-i64nda-i32nda.h
+  GEN      liboctave/operators/mx-i64nda-ui32nda.h
+  GEN      liboctave/operators/mx-i64nda-ui64nda.h
+  GEN      liboctave/operators/mx-ui8nda-i8nda.h
+  GEN      liboctave/operators/mx-ui8nda-i16nda.h
+  GEN      liboctave/operators/mx-ui8nda-ui16nda.h
+  GEN      liboctave/operators/mx-ui8nda-i32nda.h
+  GEN      liboctave/operators/mx-ui8nda-ui32nda.h
+  GEN      liboctave/operators/mx-ui8nda-i64nda.h
+  GEN      liboctave/operators/mx-ui8nda-ui64nda.h
+  GEN      liboctave/operators/mx-ui16nda-i8nda.h
+  GEN      liboctave/operators/mx-ui16nda-ui8nda.h
+  GEN      liboctave/operators/mx-ui16nda-i16nda.h
+  GEN      liboctave/operators/mx-ui16nda-i32nda.h
+  GEN      liboctave/operators/mx-ui16nda-ui32nda.h
+  GEN      liboctave/operators/mx-ui16nda-i64nda.h
+  GEN      liboctave/operators/mx-ui16nda-ui64nda.h
+  GEN      liboctave/operators/mx-ui32nda-i8nda.h
+  GEN      liboctave/operators/mx-ui32nda-ui8nda.h
+  GEN      liboctave/operators/mx-ui32nda-i16nda.h
+  GEN      liboctave/operators/mx-ui32nda-ui16nda.h
+  GEN      liboctave/operators/mx-ui32nda-i32nda.h
+  GEN      liboctave/operators/mx-ui32nda-i64nda.h
+  GEN      liboctave/operators/mx-ui32nda-ui64nda.h
+  GEN      liboctave/operators/mx-ui64nda-i8nda.h
+  GEN      liboctave/operators/mx-ui64nda-ui8nda.h
+  GEN      liboctave/operators/mx-ui64nda-i16nda.h
+  GEN      liboctave/operators/mx-ui64nda-ui16nda.h
+  GEN      liboctave/operators/mx-ui64nda-i32nda.h
+  GEN      liboctave/operators/mx-ui64nda-ui32nda.h
+  GEN      liboctave/operators/mx-ui64nda-i64nda.h
+  GEN      liboctave/operators/vx-ccv-cv.h
+  GEN      liboctave/operators/vx-ccv-s.h
+  GEN      liboctave/operators/vx-crv-rv.h
+  GEN      liboctave/operators/vx-crv-s.h
+  GEN      liboctave/operators/vx-cs-cv.h
+  GEN      liboctave/operators/vx-cs-rv.h
+  GEN      liboctave/operators/vx-cv-ccv.h
+  GEN      liboctave/operators/vx-cv-cs.h
+  GEN      liboctave/operators/vx-rv-crv.h
+  GEN      liboctave/operators/vx-rv-cs.h
+  GEN      liboctave/operators/vx-s-ccv.h
+  GEN      liboctave/operators/vx-s-crv.h
+  GEN      liboctave/operators/vx-fccv-fcv.h
+  GEN      liboctave/operators/vx-fccv-fs.h
+  GEN      liboctave/operators/vx-fcrv-frv.h
+  GEN      liboctave/operators/vx-fcrv-fs.h
+  GEN      liboctave/operators/vx-fcs-fcv.h
+  GEN      liboctave/operators/vx-fcs-frv.h
+  GEN      liboctave/operators/vx-fcv-fccv.h
+  GEN      liboctave/operators/vx-fcv-fcs.h
+  GEN      liboctave/operators/vx-frv-fcrv.h
+  GEN      liboctave/operators/vx-frv-fcs.h
+  GEN      liboctave/operators/vx-fs-fccv.h
+  GEN      liboctave/operators/vx-fs-fcrv.h
+  GEN      liboctave/operators/smx-sm-cs.h
+  GEN      liboctave/operators/smx-cs-sm.h
+  GEN      liboctave/operators/smx-scm-s.h
+  GEN      liboctave/operators/smx-s-scm.h
+  GEN      liboctave/operators/smx-scm-sm.h
+  GEN      liboctave/operators/smx-sm-scm.h
+  GEN      liboctave/operators/smx-m-sm.h
+  GEN      liboctave/operators/smx-m-scm.h
+  GEN      liboctave/operators/smx-cm-sm.h
+  GEN      liboctave/operators/smx-cm-scm.h
+  GEN      liboctave/operators/smx-sm-m.h
+  GEN      liboctave/operators/smx-scm-m.h
+  GEN      liboctave/operators/smx-sm-cm.h
+  GEN      liboctave/operators/smx-scm-cm.h
+  GEN      liboctave/operators/smx-bm-sbm.h
+  GEN      liboctave/operators/smx-sbm-bm.h
+  GEN      liboctave/numeric/DASPK-opts.h
+  GEN      liboctave/numeric/DASRT-opts.h
+  GEN      liboctave/numeric/DASSL-opts.h
+  GEN      liboctave/numeric/LSODE-opts.h
+  GEN      liboctave/numeric/Quad-opts.h
+  GEN      liboctave/operators/mx-cdm-dm.cc
+  GEN      liboctave/operators/mx-dm-cdm.cc
+  GEN      liboctave/operators/mx-cs-dm.cc
+  GEN      liboctave/operators/mx-cs-m.cc
+  GEN      liboctave/operators/mx-cs-nda.cc
+  GEN      liboctave/operators/mx-cdm-cm.cc
+  GEN      liboctave/operators/mx-cdm-m.cc
+  GEN      liboctave/operators/mx-cdm-s.cc
+  GEN      liboctave/operators/mx-cm-cdm.cc
+  GEN      liboctave/operators/mx-cm-dm.cc
+  GEN      liboctave/operators/mx-cm-m.cc
+  GEN      liboctave/operators/mx-cnda-nda.cc
+  GEN      liboctave/operators/mx-cm-s.cc
+  GEN      liboctave/operators/mx-cnda-s.cc
+  GEN      liboctave/operators/mx-dm-cs.cc
+  GEN      liboctave/operators/mx-dm-cm.cc
+  GEN      liboctave/operators/mx-m-cs.cc
+  GEN      liboctave/operators/mx-nda-cs.cc
+  GEN      liboctave/operators/mx-m-cdm.cc
+  GEN      liboctave/operators/mx-m-cm.cc
+  GEN      liboctave/operators/mx-nda-cnda.cc
+  GEN      liboctave/operators/mx-s-cdm.cc
+  GEN      liboctave/operators/mx-s-cm.cc
+  GEN      liboctave/operators/mx-s-cnda.cc
+  GEN      liboctave/operators/mx-dm-m.cc
+  GEN      liboctave/operators/mx-m-dm.cc
+  GEN      liboctave/operators/mx-fcdm-fdm.cc
+  GEN      liboctave/operators/mx-fdm-fcdm.cc
+  GEN      liboctave/operators/mx-fcs-fdm.cc
+  GEN      liboctave/operators/mx-fcs-fm.cc
+  GEN      liboctave/operators/mx-fcs-fnda.cc
+  GEN      liboctave/operators/mx-fcdm-fcm.cc
+  GEN      liboctave/operators/mx-fcdm-fm.cc
+  GEN      liboctave/operators/mx-fcdm-fs.cc
+  GEN      liboctave/operators/mx-fcm-fcdm.cc
+  GEN      liboctave/operators/mx-fcm-fdm.cc
+  GEN      liboctave/operators/mx-fcm-fm.cc
+  GEN      liboctave/operators/mx-fcnda-fnda.cc
+  GEN      liboctave/operators/mx-fcm-fs.cc
+  GEN      liboctave/operators/mx-fcnda-fs.cc
+  GEN      liboctave/operators/mx-fdm-fcs.cc
+  GEN      liboctave/operators/mx-fdm-fcm.cc
+  GEN      liboctave/operators/mx-fm-fcs.cc
+  GEN      liboctave/operators/mx-fnda-fcs.cc
+  GEN      liboctave/operators/mx-fm-fcdm.cc
+  GEN      liboctave/operators/mx-fm-fcm.cc
+  GEN      liboctave/operators/mx-fnda-fcnda.cc
+  GEN      liboctave/operators/mx-fs-fcdm.cc
+  GEN      liboctave/operators/mx-fs-fcm.cc
+  GEN      liboctave/operators/mx-fs-fcnda.cc
+  GEN      liboctave/operators/mx-fdm-fm.cc
+  GEN      liboctave/operators/mx-fm-fdm.cc
+  GEN      liboctave/operators/mx-pm-m.cc
+  GEN      liboctave/operators/mx-m-pm.cc
+  GEN      liboctave/operators/mx-pm-cm.cc
+  GEN      liboctave/operators/mx-cm-pm.cc
+  GEN      liboctave/operators/mx-pm-fm.cc
+  GEN      liboctave/operators/mx-fm-pm.cc
+  GEN      liboctave/operators/mx-pm-fcm.cc
+  GEN      liboctave/operators/mx-fcm-pm.cc
+  GEN      liboctave/operators/mx-s-i8nda.cc
+  GEN      liboctave/operators/mx-i8nda-s.cc
+  GEN      liboctave/operators/mx-s-ui8nda.cc
+  GEN      liboctave/operators/mx-ui8nda-s.cc
+  GEN      liboctave/operators/mx-s-i16nda.cc
+  GEN      liboctave/operators/mx-i16nda-s.cc
+  GEN      liboctave/operators/mx-s-ui16nda.cc
+  GEN      liboctave/operators/mx-ui16nda-s.cc
+  GEN      liboctave/operators/mx-s-i32nda.cc
+  GEN      liboctave/operators/mx-i32nda-s.cc
+  GEN      liboctave/operators/mx-s-ui32nda.cc
+  GEN      liboctave/operators/mx-ui32nda-s.cc
+  GEN      liboctave/operators/mx-s-i64nda.cc
+  GEN      liboctave/operators/mx-i64nda-s.cc
+  GEN      liboctave/operators/mx-s-ui64nda.cc
+  GEN      liboctave/operators/mx-ui64nda-s.cc
+  GEN      liboctave/operators/mx-fs-i8nda.cc
+  GEN      liboctave/operators/mx-i8nda-fs.cc
+  GEN      liboctave/operators/mx-fs-ui8nda.cc
+  GEN      liboctave/operators/mx-ui8nda-fs.cc
+  GEN      liboctave/operators/mx-fs-i16nda.cc
+  GEN      liboctave/operators/mx-i16nda-fs.cc
+  GEN      liboctave/operators/mx-fs-ui16nda.cc
+  GEN      liboctave/operators/mx-ui16nda-fs.cc
+  GEN      liboctave/operators/mx-fs-i32nda.cc
+  GEN      liboctave/operators/mx-i32nda-fs.cc
+  GEN      liboctave/operators/mx-fs-ui32nda.cc
+  GEN      liboctave/operators/mx-ui32nda-fs.cc
+  GEN      liboctave/operators/mx-fs-i64nda.cc
+  GEN      liboctave/operators/mx-i64nda-fs.cc
+  GEN      liboctave/operators/mx-fs-ui64nda.cc
+  GEN      liboctave/operators/mx-ui64nda-fs.cc
+  GEN      liboctave/operators/mx-nda-i8.cc
+  GEN      liboctave/operators/mx-i8-nda.cc
+  GEN      liboctave/operators/mx-nda-ui8.cc
+  GEN      liboctave/operators/mx-ui8-nda.cc
+  GEN      liboctave/operators/mx-nda-i16.cc
+  GEN      liboctave/operators/mx-i16-nda.cc
+  GEN      liboctave/operators/mx-nda-ui16.cc
+  GEN      liboctave/operators/mx-ui16-nda.cc
+  GEN      liboctave/operators/mx-nda-i32.cc
+  GEN      liboctave/operators/mx-i32-nda.cc
+  GEN      liboctave/operators/mx-nda-ui32.cc
+  GEN      liboctave/operators/mx-ui32-nda.cc
+  GEN      liboctave/operators/mx-nda-i64.cc
+  GEN      liboctave/operators/mx-i64-nda.cc
+  GEN      liboctave/operators/mx-nda-ui64.cc
+  GEN      liboctave/operators/mx-ui64-nda.cc
+  GEN      liboctave/operators/mx-fnda-i8.cc
+  GEN      liboctave/operators/mx-i8-fnda.cc
+  GEN      liboctave/operators/mx-fnda-ui8.cc
+  GEN      liboctave/operators/mx-ui8-fnda.cc
+  GEN      liboctave/operators/mx-fnda-i16.cc
+  GEN      liboctave/operators/mx-i16-fnda.cc
+  GEN      liboctave/operators/mx-fnda-ui16.cc
+  GEN      liboctave/operators/mx-ui16-fnda.cc
+  GEN      liboctave/operators/mx-fnda-i32.cc
+  GEN      liboctave/operators/mx-i32-fnda.cc
+  GEN      liboctave/operators/mx-fnda-ui32.cc
+  GEN      liboctave/operators/mx-ui32-fnda.cc
+  GEN      liboctave/operators/mx-fnda-i64.cc
+  GEN      liboctave/operators/mx-i64-fnda.cc
+  GEN      liboctave/operators/mx-fnda-ui64.cc
+  GEN      liboctave/operators/mx-ui64-fnda.cc
+  GEN      liboctave/operators/mx-nda-i8nda.cc
+  GEN      liboctave/operators/mx-i8nda-nda.cc
+  GEN      liboctave/operators/mx-nda-ui8nda.cc
+  GEN      liboctave/operators/mx-ui8nda-nda.cc
+  GEN      liboctave/operators/mx-nda-i16nda.cc
+  GEN      liboctave/operators/mx-i16nda-nda.cc
+  GEN      liboctave/operators/mx-nda-ui16nda.cc
+  GEN      liboctave/operators/mx-ui16nda-nda.cc
+  GEN      liboctave/operators/mx-nda-i32nda.cc
+  GEN      liboctave/operators/mx-i32nda-nda.cc
+  GEN      liboctave/operators/mx-nda-ui32nda.cc
+  GEN      liboctave/operators/mx-ui32nda-nda.cc
+  GEN      liboctave/operators/mx-nda-i64nda.cc
+  GEN      liboctave/operators/mx-i64nda-nda.cc
+  GEN      liboctave/operators/mx-nda-ui64nda.cc
+  GEN      liboctave/operators/mx-ui64nda-nda.cc
+  GEN      liboctave/operators/mx-fnda-i8nda.cc
+  GEN      liboctave/operators/mx-i8nda-fnda.cc
+  GEN      liboctave/operators/mx-fnda-ui8nda.cc
+  GEN      liboctave/operators/mx-ui8nda-fnda.cc
+  GEN      liboctave/operators/mx-fnda-i16nda.cc
+  GEN      liboctave/operators/mx-i16nda-fnda.cc
+  GEN      liboctave/operators/mx-fnda-ui16nda.cc
+  GEN      liboctave/operators/mx-ui16nda-fnda.cc
+  GEN      liboctave/operators/mx-fnda-i32nda.cc
+  GEN      liboctave/operators/mx-i32nda-fnda.cc
+  GEN      liboctave/operators/mx-fnda-ui32nda.cc
+  GEN      liboctave/operators/mx-ui32nda-fnda.cc
+  GEN      liboctave/operators/mx-fnda-i64nda.cc
+  GEN      liboctave/operators/mx-i64nda-fnda.cc
+  GEN      liboctave/operators/mx-fnda-ui64nda.cc
+  GEN      liboctave/operators/mx-ui64nda-fnda.cc
+  GEN      liboctave/operators/mx-i8nda-ui8.cc
+  GEN      liboctave/operators/mx-i8nda-i16.cc
+  GEN      liboctave/operators/mx-i8nda-ui16.cc
+  GEN      liboctave/operators/mx-i8nda-i32.cc
+  GEN      liboctave/operators/mx-i8nda-ui32.cc
+  GEN      liboctave/operators/mx-i8nda-i64.cc
+  GEN      liboctave/operators/mx-i8nda-ui64.cc
+  GEN      liboctave/operators/mx-i16nda-i8.cc
+  GEN      liboctave/operators/mx-i16nda-ui8.cc
+  GEN      liboctave/operators/mx-i16nda-ui16.cc
+  GEN      liboctave/operators/mx-i16nda-i32.cc
+  GEN      liboctave/operators/mx-i16nda-ui32.cc
+  GEN      liboctave/operators/mx-i16nda-i64.cc
+  GEN      liboctave/operators/mx-i16nda-ui64.cc
+  GEN      liboctave/operators/mx-i32nda-i8.cc
+  GEN      liboctave/operators/mx-i32nda-ui8.cc
+  GEN      liboctave/operators/mx-i32nda-i16.cc
+  GEN      liboctave/operators/mx-i32nda-ui16.cc
+  GEN      liboctave/operators/mx-i32nda-ui32.cc
+  GEN      liboctave/operators/mx-i32nda-i64.cc
+  GEN      liboctave/operators/mx-i32nda-ui64.cc
+  GEN      liboctave/operators/mx-i64nda-i8.cc
+  GEN      liboctave/operators/mx-i64nda-ui8.cc
+  GEN      liboctave/operators/mx-i64nda-i16.cc
+  GEN      liboctave/operators/mx-i64nda-ui16.cc
+  GEN      liboctave/operators/mx-i64nda-i32.cc
+  GEN      liboctave/operators/mx-i64nda-ui32.cc
+  GEN      liboctave/operators/mx-i64nda-ui64.cc
+  GEN      liboctave/operators/mx-ui8nda-i8.cc
+  GEN      liboctave/operators/mx-ui8nda-i16.cc
+  GEN      liboctave/operators/mx-ui8nda-ui16.cc
+  GEN      liboctave/operators/mx-ui8nda-i32.cc
+  GEN      liboctave/operators/mx-ui8nda-ui32.cc
+  GEN      liboctave/operators/mx-ui8nda-i64.cc
+  GEN      liboctave/operators/mx-ui8nda-ui64.cc
+  GEN      liboctave/operators/mx-ui16nda-i8.cc
+  GEN      liboctave/operators/mx-ui16nda-ui8.cc
+  GEN      liboctave/operators/mx-ui16nda-i16.cc
+  GEN      liboctave/operators/mx-ui16nda-i32.cc
+  GEN      liboctave/operators/mx-ui16nda-ui32.cc
+  GEN      liboctave/operators/mx-ui16nda-i64.cc
+  GEN      liboctave/operators/mx-ui16nda-ui64.cc
+  GEN      liboctave/operators/mx-ui32nda-i8.cc
+  GEN      liboctave/operators/mx-ui32nda-ui8.cc
+  GEN      liboctave/operators/mx-ui32nda-i16.cc
+  GEN      liboctave/operators/mx-ui32nda-ui16.cc
+  GEN      liboctave/operators/mx-ui32nda-i32.cc
+  GEN      liboctave/operators/mx-ui32nda-i64.cc
+  GEN      liboctave/operators/mx-ui32nda-ui64.cc
+  GEN      liboctave/operators/mx-ui64nda-i8.cc
+  GEN      liboctave/operators/mx-ui64nda-ui8.cc
+  GEN      liboctave/operators/mx-ui64nda-i16.cc
+  GEN      liboctave/operators/mx-ui64nda-ui16.cc
+  GEN      liboctave/operators/mx-ui64nda-i32.cc
+  GEN      liboctave/operators/mx-ui64nda-ui32.cc
+  GEN      liboctave/operators/mx-ui64nda-i64.cc
+  GEN      liboctave/operators/mx-i8-ui8nda.cc
+  GEN      liboctave/operators/mx-i8-i16nda.cc
+  GEN      liboctave/operators/mx-i8-ui16nda.cc
+  GEN      liboctave/operators/mx-i8-i32nda.cc
+  GEN      liboctave/operators/mx-i8-ui32nda.cc
+  GEN      liboctave/operators/mx-i8-i64nda.cc
+  GEN      liboctave/operators/mx-i8-ui64nda.cc
+  GEN      liboctave/operators/mx-i16-i8nda.cc
+  GEN      liboctave/operators/mx-i16-ui8nda.cc
+  GEN      liboctave/operators/mx-i16-ui16nda.cc
+  GEN      liboctave/operators/mx-i16-i32nda.cc
+  GEN      liboctave/operators/mx-i16-ui32nda.cc
+  GEN      liboctave/operators/mx-i16-i64nda.cc
+  GEN      liboctave/operators/mx-i16-ui64nda.cc
+  GEN      liboctave/operators/mx-i32-i8nda.cc
+  GEN      liboctave/operators/mx-i32-ui8nda.cc
+  GEN      liboctave/operators/mx-i32-i16nda.cc
+  GEN      liboctave/operators/mx-i32-ui16nda.cc
+  GEN      liboctave/operators/mx-i32-ui32nda.cc
+  GEN      liboctave/operators/mx-i32-i64nda.cc
+  GEN      liboctave/operators/mx-i32-ui64nda.cc
+  GEN      liboctave/operators/mx-i64-i8nda.cc
+  GEN      liboctave/operators/mx-i64-ui8nda.cc
+  GEN      liboctave/operators/mx-i64-i16nda.cc
+  GEN      liboctave/operators/mx-i64-ui16nda.cc
+  GEN      liboctave/operators/mx-i64-i32nda.cc
+  GEN      liboctave/operators/mx-i64-ui32nda.cc
+  GEN      liboctave/operators/mx-i64-ui64nda.cc
+  GEN      liboctave/operators/mx-ui8-i8nda.cc
+  GEN      liboctave/operators/mx-ui8-i16nda.cc
+  GEN      liboctave/operators/mx-ui8-ui16nda.cc
+  GEN      liboctave/operators/mx-ui8-i32nda.cc
+  GEN      liboctave/operators/mx-ui8-ui32nda.cc
+  GEN      liboctave/operators/mx-ui8-i64nda.cc
+  GEN      liboctave/operators/mx-ui8-ui64nda.cc
+  GEN      liboctave/operators/mx-ui16-i8nda.cc
+  GEN      liboctave/operators/mx-ui16-ui8nda.cc
+  GEN      liboctave/operators/mx-ui16-i16nda.cc
+  GEN      liboctave/operators/mx-ui16-i32nda.cc
+  GEN      liboctave/operators/mx-ui16-ui32nda.cc
+  GEN      liboctave/operators/mx-ui16-i64nda.cc
+  GEN      liboctave/operators/mx-ui16-ui64nda.cc
+  GEN      liboctave/operators/mx-ui32-i8nda.cc
+  GEN      liboctave/operators/mx-ui32-ui8nda.cc
+  GEN      liboctave/operators/mx-ui32-i16nda.cc
+  GEN      liboctave/operators/mx-ui32-ui16nda.cc
+  GEN      liboctave/operators/mx-ui32-i32nda.cc
+  GEN      liboctave/operators/mx-ui32-i64nda.cc
+  GEN      liboctave/operators/mx-ui32-ui64nda.cc
+  GEN      liboctave/operators/mx-ui64-i8nda.cc
+  GEN      liboctave/operators/mx-ui64-ui8nda.cc
+  GEN      liboctave/operators/mx-ui64-i16nda.cc
+  GEN      liboctave/operators/mx-ui64-ui16nda.cc
+  GEN      liboctave/operators/mx-ui64-i32nda.cc
+  GEN      liboctave/operators/mx-ui64-ui32nda.cc
+  GEN      liboctave/operators/mx-ui64-i64nda.cc
+  GEN      liboctave/operators/mx-i8nda-ui8nda.cc
+  GEN      liboctave/operators/mx-i8nda-i16nda.cc
+  GEN      liboctave/operators/mx-i8nda-ui16nda.cc
+  GEN      liboctave/operators/mx-i8nda-i32nda.cc
+  GEN      liboctave/operators/mx-i8nda-ui32nda.cc
+  GEN      liboctave/operators/mx-i8nda-i64nda.cc
+  GEN      liboctave/operators/mx-i8nda-ui64nda.cc
+  GEN      liboctave/operators/mx-i16nda-i8nda.cc
+  GEN      liboctave/operators/mx-i16nda-ui8nda.cc
+  GEN      liboctave/operators/mx-i16nda-ui16nda.cc
+  GEN      liboctave/operators/mx-i16nda-i32nda.cc
+  GEN      liboctave/operators/mx-i16nda-ui32nda.cc
+  GEN      liboctave/operators/mx-i16nda-i64nda.cc
+  GEN      liboctave/operators/mx-i16nda-ui64nda.cc
+  GEN      liboctave/operators/mx-i32nda-i8nda.cc
+  GEN      liboctave/operators/mx-i32nda-ui8nda.cc
+  GEN      liboctave/operators/mx-i32nda-i16nda.cc
+  GEN      liboctave/operators/mx-i32nda-ui16nda.cc
+  GEN      liboctave/operators/mx-i32nda-ui32nda.cc
+  GEN      liboctave/operators/mx-i32nda-i64nda.cc
+  GEN      liboctave/operators/mx-i32nda-ui64nda.cc
+  GEN      liboctave/operators/mx-i64nda-i8nda.cc
+  GEN      liboctave/operators/mx-i64nda-ui8nda.cc
+  GEN      liboctave/operators/mx-i64nda-i16nda.cc
+  GEN      liboctave/operators/mx-i64nda-ui16nda.cc
+  GEN      liboctave/operators/mx-i64nda-i32nda.cc
+  GEN      liboctave/operators/mx-i64nda-ui32nda.cc
+  GEN      liboctave/operators/mx-i64nda-ui64nda.cc
+  GEN      liboctave/operators/mx-ui8nda-i8nda.cc
+  GEN      liboctave/operators/mx-ui8nda-i16nda.cc
+  GEN      liboctave/operators/mx-ui8nda-ui16nda.cc
+  GEN      liboctave/operators/mx-ui8nda-i32nda.cc
+  GEN      liboctave/operators/mx-ui8nda-ui32nda.cc
+  GEN      liboctave/operators/mx-ui8nda-i64nda.cc
+  GEN      liboctave/operators/mx-ui8nda-ui64nda.cc
+  GEN      liboctave/operators/mx-ui16nda-i8nda.cc
+  GEN      liboctave/operators/mx-ui16nda-ui8nda.cc
+  GEN      liboctave/operators/mx-ui16nda-i16nda.cc
+  GEN      liboctave/operators/mx-ui16nda-i32nda.cc
+  GEN      liboctave/operators/mx-ui16nda-ui32nda.cc
+  GEN      liboctave/operators/mx-ui16nda-i64nda.cc
+  GEN      liboctave/operators/mx-ui16nda-ui64nda.cc
+  GEN      liboctave/operators/mx-ui32nda-i8nda.cc
+  GEN      liboctave/operators/mx-ui32nda-ui8nda.cc
+  GEN      liboctave/operators/mx-ui32nda-i16nda.cc
+  GEN      liboctave/operators/mx-ui32nda-ui16nda.cc
+  GEN      liboctave/operators/mx-ui32nda-i32nda.cc
+  GEN      liboctave/operators/mx-ui32nda-i64nda.cc
+  GEN      liboctave/operators/mx-ui32nda-ui64nda.cc
+  GEN      liboctave/operators/mx-ui64nda-i8nda.cc
+  GEN      liboctave/operators/mx-ui64nda-ui8nda.cc
+  GEN      liboctave/operators/mx-ui64nda-i16nda.cc
+  GEN      liboctave/operators/mx-ui64nda-ui16nda.cc
+  GEN      liboctave/operators/mx-ui64nda-i32nda.cc
+  GEN      liboctave/operators/mx-ui64nda-ui32nda.cc
+  GEN      liboctave/operators/mx-ui64nda-i64nda.cc
+  GEN      liboctave/operators/vx-ccv-cv.cc
+  GEN      liboctave/operators/vx-ccv-s.cc
+  GEN      liboctave/operators/vx-crv-rv.cc
+  GEN      liboctave/operators/vx-crv-s.cc
+  GEN      liboctave/operators/vx-cs-cv.cc
+  GEN      liboctave/operators/vx-cs-rv.cc
+  GEN      liboctave/operators/vx-cv-ccv.cc
+  GEN      liboctave/operators/vx-cv-cs.cc
+  GEN      liboctave/operators/vx-rv-crv.cc
+  GEN      liboctave/operators/vx-rv-cs.cc
+  GEN      liboctave/operators/vx-s-ccv.cc
+  GEN      liboctave/operators/vx-s-crv.cc
+  GEN      liboctave/operators/vx-fccv-fcv.cc
+  GEN      liboctave/operators/vx-fccv-fs.cc
+  GEN      liboctave/operators/vx-fcrv-frv.cc
+  GEN      liboctave/operators/vx-fcrv-fs.cc
+  GEN      liboctave/operators/vx-fcs-fcv.cc
+  GEN      liboctave/operators/vx-fcs-frv.cc
+  GEN      liboctave/operators/vx-fcv-fccv.cc
+  GEN      liboctave/operators/vx-fcv-fcs.cc
+  GEN      liboctave/operators/vx-frv-fcrv.cc
+  GEN      liboctave/operators/vx-frv-fcs.cc
+  GEN      liboctave/operators/vx-fs-fccv.cc
+  GEN      liboctave/operators/vx-fs-fcrv.cc
+  GEN      liboctave/operators/smx-sm-cs.cc
+  GEN      liboctave/operators/smx-cs-sm.cc
+  GEN      liboctave/operators/smx-scm-s.cc
+  GEN      liboctave/operators/smx-s-scm.cc
+  GEN      liboctave/operators/smx-scm-sm.cc
+  GEN      liboctave/operators/smx-sm-scm.cc
+  GEN      liboctave/operators/smx-m-sm.cc
+  GEN      liboctave/operators/smx-m-scm.cc
+  GEN      liboctave/operators/smx-cm-sm.cc
+  GEN      liboctave/operators/smx-cm-scm.cc
+  GEN      liboctave/operators/smx-sm-m.cc
+  GEN      liboctave/operators/smx-scm-m.cc
+  GEN      liboctave/operators/smx-sm-cm.cc
+  GEN      liboctave/operators/smx-scm-cm.cc
+  GEN      liboctave/operators/smx-bm-sbm.cc
+  GEN      liboctave/operators/smx-sbm-bm.cc
+  GEN      libinterp/corefcn/.octave-dirstamp
+  GEN      libinterp/corefcn/DASPK-opts.cc
+  GEN      libinterp/corefcn/DASRT-opts.cc
+  GEN      libinterp/corefcn/DASSL-opts.cc
+  GEN      libinterp/corefcn/LSODE-opts.cc
+  GEN      libinterp/corefcn/Quad-opts.cc
+  GEN      libinterp/.octave-dirstamp
+  GEN      libinterp/builtin-defun-decls.h
+  GEN      libinterp/corefcn/default-defs.h
+  GEN      libinterp/corefcn/graphics-props.cc
+  GEN      libinterp/corefcn/graphics.h
+  GEN      libinterp/corefcn/mxarray.h
+  GEN      libinterp/corefcn/oct-tex-parser.yy
+  YACC     libinterp/corefcn/oct-tex-parser.h
+updating libinterp/corefcn/oct-tex-parser.output
+updating libinterp/corefcn/oct-tex-parser.h
+  GEN      libinterp/corefcn/oct-tex-symbols.cc
+  GEN      libinterp/parse-tree/oct-gperf.h
+  GEN      libinterp/parse-tree/oct-parse.yy
+  YACC     libinterp/parse-tree/oct-parse.h
+updating libinterp/parse-tree/oct-parse.output
+updating libinterp/parse-tree/oct-parse.h
+  GEN      libinterp/version.h
+  GEN      libgui/src/.octave-dirstamp
+  GEN      libgui/src/ui-settings-dialog.h
+  GEN      libgui/graphics/.octave-dirstamp
+  GEN      libgui/graphics/ui-annotation-dialog.h
+  GEN      test/.octave-dirstamp
+  GEN      test/conv.tst
+  GEN      test/sparse.tst
+  GEN      test/.bc-overload-tests-stamp
+  GEN      octave-config.h
+  GEN      run-octave
+  GEN      liboctave/external/ranlib/.octave-dirstamp
+  GEN      liboctave/external/slatec-fn/.octave-dirstamp
+  GEN      liboctave/.octave-dirstamp
+  GEN      libgui/src/m-editor/.octave-dirstamp
+  GEN      libgui/qterminal/libqterminal/.octave-dirstamp
+  GEN      libgui/qterminal/libqterminal/unix/.octave-dirstamp
+  GEN      libgui/.octave-dirstamp
+  GEN      libgui/languages/.octave-dirstamp
+  GEN      src/.octave-dirstamp
+  GEN      scripts/+containers/.octave-dirstamp
+  GEN      scripts/audio/.octave-dirstamp
+  GEN      scripts/deprecated/.octave-dirstamp
+  GEN      scripts/elfun/.octave-dirstamp
+  GEN      scripts/general/.octave-dirstamp
+  GEN      scripts/geometry/.octave-dirstamp
+  GEN      scripts/gui/.octave-dirstamp
+  GEN      scripts/help/.octave-dirstamp
+  GEN      scripts/image/.octave-dirstamp
+  GEN      scripts/io/.octave-dirstamp
+  GEN      scripts/java/.octave-dirstamp
+  GEN      scripts/linear-algebra/.octave-dirstamp
+  GEN      scripts/miscellaneous/.octave-dirstamp
+  GEN      scripts/ode/.octave-dirstamp
+  GEN      scripts/optimization/.octave-dirstamp
+  GEN      scripts/path/.octave-dirstamp
+  GEN      scripts/pkg/.octave-dirstamp
+  GEN      scripts/plot/appearance/.octave-dirstamp
+  GEN      scripts/plot/draw/.octave-dirstamp
+  GEN      scripts/plot/util/.octave-dirstamp
+  GEN      scripts/polynomial/.octave-dirstamp
+  GEN      scripts/prefs/.octave-dirstamp
+  GEN      scripts/profiler/.octave-dirstamp
+  GEN      scripts/set/.octave-dirstamp
+  GEN      scripts/signal/.octave-dirstamp
+  GEN      scripts/sparse/.octave-dirstamp
+  GEN      scripts/specfun/.octave-dirstamp
+  GEN      scripts/special-matrix/.octave-dirstamp
+  GEN      scripts/startup/.octave-dirstamp
+  GEN      scripts/statistics/.octave-dirstamp
+  GEN      scripts/strings/.octave-dirstamp
+  GEN      scripts/testfun/.octave-dirstamp
+  GEN      scripts/time/.octave-dirstamp
+  GEN      scripts/@ftp/.octave-dirstamp
+  GEN      scripts/.octave-dirstamp
+  GEN      doc/doxyhtml/.octave-dirstamp
+  GEN      doc/interpreter/.octave-dirstamp
+  GEN      doc/liboctave/.octave-dirstamp
+  GEN      doc/refcard/.octave-dirstamp
+  GEN      etc/icons/.octave-dirstamp
+make  check-recursive
+make[1] : on entre dans le répertoire « /home/bect/.local/src/octave »
+Making check in libgnu
+make[2] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+make  check-recursive
+make[3] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+make[4] : on entre dans le répertoire « /home/bect/.local/src/octave/libgnu »
+make[4]: rien à faire pour « check-am ».
+make[4] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+make[3] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+make[2] : on quitte le répertoire « /home/bect/.local/src/octave/libgnu »
+make[2] : on entre dans le répertoire « /home/bect/.local/src/octave »
+make[3] : on entre dans le répertoire « /home/bect/.local/src/octave »
+make[3] : on quitte le répertoire « /home/bect/.local/src/octave »
+Updating ./doc/interpreter/version-octave.texi
+  GEN      liboctave/array/CMatrix.cc-tst
+  GEN      liboctave/array/CSparse.cc-tst
+  GEN      liboctave/array/dMatrix.cc-tst
+  GEN      liboctave/array/dSparse.cc-tst
+  GEN      liboctave/array/fCMatrix.cc-tst
+  GEN      liboctave/array/fMatrix.cc-tst
+  GEN      liboctave/array/idx-vector.cc-tst
+  GEN      liboctave/util/oct-inttypes.cc-tst
+  GEN      liboctave/array/Array.cc-tst
+  GEN      liboctave/array/Sparse.cc-tst
+  CXX      libinterp/dldfcn/libinterp_dldfcn___delaunayn___la-__delaunayn__.lo
+  CXX      libinterp/libinterp_liboctinterp_la-octave.lo
+  CXX      libinterp/libinterp_liboctinterp_la-version.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-b-b.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-b-bm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-b-sbm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-bm-b.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-bm-bm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-bm-sbm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cdm-cdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cdm-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cdm-cs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cdm-dm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cdm-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cdm-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cell.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-chm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-class.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-cdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-cs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-dm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-pm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-scm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cm-sm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cs-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cs-cs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cs-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cs-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cs-scm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-cs-sm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-dm-cdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-dm-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-dm-cs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-dm-dm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-dm-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-dm-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-dm-scm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-dm-sm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcdm-fcdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcdm-fcm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcdm-fcs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcdm-fdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcdm-fm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcdm-fs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcm-fcdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcm-fcm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcm-fcs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcm-fdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcm-fm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcm-fs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcm-pm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcn.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcs-fcm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcs-fcs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcs-fm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fcs-fs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fdm-fcdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fdm-fcm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fdm-fcs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fdm-fdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fdm-fm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fdm-fs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fm-fcdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fm-fcm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fm-fcs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fm-fdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fm-fm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fm-fs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fm-pm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fs-fcm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fs-fcs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fs-fm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-fs-fs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-i16-i16.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-i32-i32.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-i64-i64.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-i8-i8.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-int-concat.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-cdm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-cs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-dm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-pm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-scm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-m-sm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-pm-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-pm-fcm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-pm-fm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-pm-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-pm-pm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-pm-scm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-pm-sm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-range.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-s-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-s-cs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-s-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-s-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-s-scm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-s-sm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sbm-b.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sbm-bm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sbm-sbm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-scm-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-scm-cs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-scm-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-scm-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-scm-scm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-scm-sm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sm-cm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sm-cs.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sm-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sm-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sm-scm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-sm-sm.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-str-m.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-str-s.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-str-str.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-struct.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-ui16-ui16.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-ui32-ui32.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-ui64-ui64.lo
+  CXX      libinterp/operators/libinterp_liboctinterp_la-op-ui8-ui8.lo
+  CXX      libinterp/template-inst/libinterp_liboctinterp_la-Array-tc.lo
+  CXX      libinterp/template-inst/libinterp_liboctinterp_la-Array-jit.lo
+  GEN      libinterp/build-env-features.cc
+  CXX      libinterp/libinterp_liboctinterp_la-build-env-features.lo
+  GEN      libinterp/build-env.cc
+  CXX      libinterp/libinterp_liboctinterp_la-build-env.lo
+  GEN      libinterp/builtins.cc
+  CXX      libinterp/libinterp_liboctinterp_la-builtins.lo
+  GEN      libinterp/corefcn/oct-errno.cc
+  CXX      libinterp/corefcn/libinterp_liboctinterp_la-oct-errno.lo
+  GEN      libinterp/liboctinterp-build-info.cc
+  CXX      libinterp/libinterp_liboctinterp_la-liboctinterp-build-info.lo
+  GEN      libinterp/operators/ops.cc
+  CXX      libinterp/operators/libinterp_liboctinterp_la-ops.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-base.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-bool-mat.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-bool.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-builtin.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-cell.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-ch-mat.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-class.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-classdef.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-colon.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-complex.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-cs-list.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-cx-diag.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-cx-mat.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-dld-fcn.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-fcn-handle.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-fcn-inline.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-fcn.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-float.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-flt-complex.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-flt-cx-diag.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-flt-cx-mat.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-flt-re-diag.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-flt-re-mat.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-java.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-lazy-idx.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-mex-fcn.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-null-mat.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-oncleanup.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-perm.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-range.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-re-diag.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-re-mat.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-scalar.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-str-mat.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-struct.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-typeinfo.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-usr-fcn.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ovl.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-int16.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-int32.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-int64.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-int8.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-uint16.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-uint32.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-uint64.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-uint8.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-bool-sparse.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-cx-sparse.lo
+  CXX      libinterp/octave-value/libinterp_octave_value_liboctave_value_la-ov-re-sparse.lo
+  CXXLD    libinterp/octave-value/liboctave-value.la
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-bp-table.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-comment-list.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-jit-ir.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-jit-typeinfo.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-jit-util.lo
+  LEX      libinterp/parse-tree/lex.cc
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-lex.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-oct-lvalue.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-oct-parse.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-profiler.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-arg-list.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-array-list.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-assign.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-binop.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-bp.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-cbinop.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-cell.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-check.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-classdef.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-colon.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-const.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-decl.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-eval.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-except.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-exp.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-fcn-handle.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-funcall.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-id.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-idx.lo
+  CXX      libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-jit.lo
+libinterp/parse-tree/pt-jit.cc: In member function ‘llvm::Function* octave::jit_convert_llvm::convert_loop(const octave::jit_module&, const octave::jit_block_list&, const std::__cxx11::list<octave::jit_value*>&, const string&)’:
+libinterp/parse-tree/pt-jit.cc:1368:91: error: no matching function for call to ‘llvm::IRBuilder<true, llvm::ConstantFolder, llvm::IRBuilderDefaultInserter<true> >::CreateConstInBoundsGEP1_32(llvm::Type*&, llvm::Value*&, size_t&)’
+             llvm::Value *loaded_arg = builder.CreateConstInBoundsGEP1_32 (arg_type, arg, i);
+                                                                                           ^
+In file included from libinterp/parse-tree/pt-jit.cc:95:0:
+/home/bect/.local/include/llvm/IR/IRBuilder.h:1058:10: note: candidate: llvm::Value* llvm::IRBuilder<preserveNames, T, Inserter>::CreateConstInBoundsGEP1_32(llvm::Value*, unsigned int, const llvm::Twine&) [with bool preserveNames = true; T = llvm::ConstantFolder; Inserter = llvm::IRBuilderDefaultInserter<true>]
+   Value *CreateConstInBoundsGEP1_32(Value *Ptr, unsigned Idx0,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bect/.local/include/llvm/IR/IRBuilder.h:1058:10: note:   no known conversion for argument 1 from ‘llvm::Type*’ to ‘llvm::Value*’
+libinterp/parse-tree/pt-jit.cc: In member function ‘bool octave::tree_jit::do_initialize()’:
+libinterp/parse-tree/pt-jit.cc:2230:47: error: no matching function for call to ‘llvm::EngineBuilder::EngineBuilder()’
+         target_machine = llvm::EngineBuilder ().selectTarget ();
+                                               ^
+In file included from libinterp/parse-tree/pt-jit.cc:69:0:
+/home/bect/.local/include/llvm/ExecutionEngine/ExecutionEngine.h:510:3: note: candidate: llvm::EngineBuilder::EngineBuilder(std::unique_ptr<llvm::Module>)
+   EngineBuilder(std::unique_ptr<Module> M);
+   ^~~~~~~~~~~~~
+/home/bect/.local/include/llvm/ExecutionEngine/ExecutionEngine.h:510:3: note:   candidate expects 1 argument, 0 provided
+libinterp/parse-tree/pt-jit.cc: In member function ‘octave::jit::ModuleOwner octave::tree_jit::do_open_new_module(const string&) const’:
+libinterp/parse-tree/pt-jit.cc:2254:41: error: ‘class llvm::TargetMachine’ has no member named ‘createDataLayout’
+       m->setDataLayout (target_machine->createDataLayout ());
+                                         ^~~~~~~~~~~~~~~~
+libinterp/parse-tree/pt-jit.cc: In constructor ‘octave::jit_function_info::jit_function_info(octave_user_function&, const octave_value_list&)’:
+libinterp/parse-tree/pt-jit.cc:2568:69: error: no matching function for call to ‘llvm::IRBuilder<true, llvm::ConstantFolder, llvm::IRBuilderDefaultInserter<true> >::CreateConstInBoundsGEP1_32(llvm::Type*, llvm::Value*&, size_t&)’
+                                                       wrapper_arg, i);
+                                                                     ^
+In file included from libinterp/parse-tree/pt-jit.cc:95:0:
+/home/bect/.local/include/llvm/IR/IRBuilder.h:1058:10: note: candidate: llvm::Value* llvm::IRBuilder<preserveNames, T, Inserter>::CreateConstInBoundsGEP1_32(llvm::Value*, unsigned int, const llvm::Twine&) [with bool preserveNames = true; T = llvm::ConstantFolder; Inserter = llvm::IRBuilderDefaultInserter<true>]
+   Value *CreateConstInBoundsGEP1_32(Value *Ptr, unsigned Idx0,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bect/.local/include/llvm/IR/IRBuilder.h:1058:10: note:   no known conversion for argument 1 from ‘llvm::Type*’ to ‘llvm::Value*’
+Makefile:20204 : la recette pour la cible « libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-jit.lo » a échouée
+make[2]: *** [libinterp/parse-tree/libinterp_parse_tree_libparse_tree_la-pt-jit.lo] Erreur 1
+make[2] : on quitte le répertoire « /home/bect/.local/src/octave »
+Makefile:26457 : la recette pour la cible « check-recursive » a échouée
+make[1]: *** [check-recursive] Erreur 1
+make[1] : on quitte le répertoire « /home/bect/.local/src/octave »
+Makefile:26748 : la recette pour la cible « check » a échouée
+make: *** [check] Erreur 2
