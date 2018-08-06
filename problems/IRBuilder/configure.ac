@@ -17,12 +17,33 @@ LLVM_BUILD=${LLVM_SRC}/build
 LLVM_CONFIG_H=${LLVM_BUILD}/include/llvm/Config/llvm-config.h
 AC_CHECK_FILE([${LLVM_CONFIG_H}])
 
-CPPFLAGS="${CPPFLAGS} -I${LLVM_SRC}/include -I${LLVM_SRC}/build/include"
+# This is only needed for LLVM <= 4 apparently
+# (but even in Octave this is currently done unconditionnally)
+CPPFLAGS="-D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS $CPPFLAGS"
+
+# Add LLVM include directories
+CPPFLAGS="-I${LLVM_SRC}/include -I${LLVM_SRC}/build/include ${CPPFLAGS}"
+
 AC_MSG_NOTICE([CPPFLAGS=${CPPFLAGS}])
+
 AC_LANG_PUSH([C++])
 
-AC_CHECK_HEADER([llvm/IR/LLVMContext.h],, [AC_MSG_ERROR([llvm/IR/LLVMContext.h not found])])
-AC_CHECK_HEADER([llvm/IR/IRBuilder.h],, [AC_MSG_ERROR([llvm/IR/IRBuilder.h header not found])])
+# This comes from Octave's configure.ac (with AC_MSG_ERROR instead of warn_llvm)
+have_llvmcontext_h=no
+AC_CHECK_HEADERS([llvm/IR/LLVMContext.h llvm/LLVMContext.h],
+                 [have_llvmcontext_h=yes; break])
+if test $have_llvmcontext_h = no; then
+  AC_MSG_ERROR([LLVMContext.h not found])
+fi
+
+# This also comes from Octave's configure.ac
+# but the third case has been added to support LLVM <= 3.2
+have_irbuilder_h=no
+AC_CHECK_HEADERS([llvm/IR/IRBuilder.h llvm/IRBuilder.h llvm/Support/IRBuilder.h],
+                 [have_irbuilder_h=yes; break])
+if test $have_irbuilder_h = no; then
+  AC_MSG_ERROR([IRBuilder.h not found])
+fi
 
 
 ### Check if llvm::IRBuilder's template has two arguments
@@ -32,8 +53,18 @@ AC_MSG_CHECKING([Checking if llvm::IRBuilder's template has two arguments])
 AC_COMPILE_IFELSE(
   [
     AC_LANG_SOURCE([[
-#include <llvm/IR/LLVMContext.h>
-#include <llvm/IR/IRBuilder.h>
+#if defined (HAVE_LLVM_IR_LLVMCONTEXT_H)
+  #include <llvm/IR/LLVMContext.h>
+#else
+  #include <llvm/LLVMContext.h>
+#endif
+#if defined (HAVE_LLVM_IR_IRBUILDER_H)
+  #include <llvm/IR/IRBuilder.h>
+#elif defined (HAVE_LLVM_SUPPORT_IRBUILDER_H)
+  #include <llvm/Support/IRBuilder.h>
+#else
+  #include <llvm/IRBuilder.h>
+#endif
 using namespace llvm;
 int main ()
 {
@@ -61,8 +92,18 @@ AC_MSG_CHECKING([Checking if llvm::IRBuilder's template has three arguments])
 AC_COMPILE_IFELSE(
   [
     AC_LANG_SOURCE([[
-#include <llvm/IR/LLVMContext.h>
-#include <llvm/IR/IRBuilder.h>
+#if defined (HAVE_LLVM_IR_LLVMCONTEXT_H)
+  #include <llvm/IR/LLVMContext.h>
+#else
+  #include <llvm/LLVMContext.h>
+#endif
+#if defined (HAVE_LLVM_IR_IRBUILDER_H)
+  #include <llvm/IR/IRBuilder.h>
+#elif defined (HAVE_LLVM_SUPPORT_IRBUILDER_H)
+  #include <llvm/Support/IRBuilder.h>
+#else
+  #include <llvm/IRBuilder.h>
+#endif
 using namespace llvm;
 int main ()
 {
