@@ -17,8 +17,7 @@ LLVM_BUILD=${LLVM_SRC}/build
 LLVM_CONFIG_H=${LLVM_BUILD}/include/llvm/Config/llvm-config.h
 AC_CHECK_FILE([${LLVM_CONFIG_H}])
 
-# This is only needed for LLVM <= 4 apparently
-# (but even in Octave this is currently done unconditionnally)
+# Required by DataTypes.h (in all releases of LLVM ?)
 CPPFLAGS="-D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS $CPPFLAGS"
 
 # Add LLVM include directories
