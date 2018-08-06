@@ -36,10 +36,9 @@ if test $have_llvmcontext_h = no; then
 fi
 
 # This also comes from Octave's configure.ac
-# but the third case has been added to support LLVM <= 3.2
 have_irbuilder_h=no
-AC_CHECK_HEADERS([llvm/IR/IRBuilder.h llvm/IRBuilder.h llvm/Support/IRBuilder.h],
-                 [have_irbuilder_h=yes; break])
+AC_CHECK_HEADERS([llvm/IR/IRBuilder.h llvm/IRBuilder.h \
+                  llvm/Support/IRBuilder.h], [have_irbuilder_h=yes; break])
 if test $have_irbuilder_h = no; then
   AC_MSG_ERROR([IRBuilder.h not found])
 fi
