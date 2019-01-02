@@ -1,4 +1,4 @@
-# Problem with the IRBuilder<> template
+# Problem with llvm::createAlwaysInlinerPass
 
 ## The problem
 
